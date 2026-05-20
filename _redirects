@@ -13,7 +13,13 @@
 /town/*                     /navinam/town/:splat                       200
 /mokdong/*                  /navinam/mokdong/:splat                    200
 /yangcheon-archivist/*      /navinam/yangcheon-archivist/:splat        200
-/yangcheon_museum/*         /navinam/yangcheon_museum/html/:splat      200
+# yangcheon_museum 은 페이지가 html/ 안인데 자원은 부모 폴더(css/js/images)에 있음.
+# 페이지의 ../css/, ../js/, ../images/ 참조가 안 깨지도록 부모 폴더도 매핑.
+/yangcheon_museum/           /navinam/yangcheon_museum/html/index.html  200
+/yangcheon_museum/html/*     /navinam/yangcheon_museum/html/:splat      200
+/yangcheon_museum/css/*      /navinam/yangcheon_museum/css/:splat       200
+/yangcheon_museum/js/*       /navinam/yangcheon_museum/js/:splat        200
+/yangcheon_museum/images/*   /navinam/yangcheon_museum/images/:splat    200
 # 옛 navinam/ 경로로 들어와도 새 짧은 URL 로 정리해서 보여줌
 /navinam/town/*                  /town/:splat                  301
 /navinam/mokdong/*               /mokdong/:splat               301
