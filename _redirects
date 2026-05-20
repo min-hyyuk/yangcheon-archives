@@ -1,6 +1,12 @@
 # 사이트 루트 → 메인
 /    /main.html    301
 
+# Cloudflare Pages 는 디렉터리 인덱스로 index.html 만 인식한다.
+# navinam/ 와 navinam/m/ 는 index.htm 만 있어서 fallback 으로 빠지므로 명시 rewrite.
+# (status 200 = rewrite. URL 은 그대로, 내용만 해당 파일에서)
+/navinam/      /navinam/index.htm      200
+/navinam/m/    /navinam/m/index.htm    200
+
 # Deep path 의 main.html 은 그 콘텐츠 메인으로 (Cloudflare 404 fallback 루프 방지)
 /navinam/main.html                        /navinam/                        301
 /navinam/yangcheon_museum/main.html       /navinam/yangcheon_museum/html/  301
