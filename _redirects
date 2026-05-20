@@ -1,1 +1,12 @@
+# 사이트 루트 → 메인
 /    /main.html    301
+
+# Deep path 의 main.html 은 그 콘텐츠 메인으로 (Cloudflare 404 fallback 루프 방지)
+/navinam/main.html                        /navinam/                        301
+/navinam/yangcheon_museum/main.html       /navinam/yangcheon_museum/html/  301
+/navinam/yangcheon-archivist/main.html    /navinam/yangcheon-archivist/    301
+/navinam/town/main.html                   /navinam/town/                   301
+/navinam/mokdong/main.html                /navinam/mokdong/                301
+/ycpark/main.html                         /ycpark/                         301
+/yclibrary/main.html                      /yclibrary/                      301
+/sinwol07/main.html                       /sinwol07/                       301
