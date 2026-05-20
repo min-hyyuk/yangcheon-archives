@@ -3,11 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<title>양천구 기록관</title>
-	<meta http-equiv="refresh" content="0; url=main.html">
-	<link rel="canonical" href="main.html">
-	<script>location.replace('main.html');</script>
+	<!--
+	  중요: 모든 redirect 경로는 / 로 시작하는 절대경로여야 함.
+	  상대경로(main.html) 로 두면 Cloudflare Pages 가 임의 deep path 의 404
+	  fallback 으로 이 파일을 돌려줄 때 같은 deep path 에서 다시 main.html 을
+	  찾으려다 무한 루프에 빠진다.
+	-->
+	<meta http-equiv="refresh" content="0; url=/main.html">
+	<link rel="canonical" href="/main.html">
+	<script>
+	  // 이미 /main.html 이 아니라면 한 번만 사이트 루트 main 으로 이동.
+	  // 어떤 deep path 의 404 fallback 으로 이 파일이 반환돼도 루프 안 빠짐.
+	  if (location.pathname !== '/main.html') {
+	    location.replace('/main.html');
+	  }
+	</script>
 </head>
 <body>
-	<p>이동 중입니다… <a href="main.html">main.html 로 이동</a></p>
+	<p>이동 중입니다… <a href="/main.html">main.html 로 이동</a></p>
 </body>
 </html>
