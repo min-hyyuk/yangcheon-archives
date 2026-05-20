@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+
+#content {
+  display: inline-block;
+  float:left;
+  font-family:"Nanum Gothic", "맑은 고딕", "돋움" !important;
+  margin:0 auto;
+  width:550px;
+  height:300px;
+  text-align: center;
+  padding:100px 50px;
+  background:rgba(35,35,35,0.6);
+  box-sizing: border-box;
+}
+
+h1 {
+  color:white;
+  font-size:4em;
+  text-shadow:1px 1px 2px black;
+  font-family:"Nanum Gothic","맑은 고딕", "돋움";
+  font-weight: bold;
+  line-height: 60px
+ }
+
+p {
+  color:white;
+  font-family:"Nanum Gothic", "맑은 고딕", "돋움";
+  font-size:1.5em;
+  font-weight:bold;
+  line-height:2em;
+  text-shadow:1px 1px 1px black;
+}
+
+a, a:visited {
+text-decoration:none;
+color:white;
+}

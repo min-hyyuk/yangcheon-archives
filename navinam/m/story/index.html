@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>나비남 프로젝트 - 나는 혼자가 아니다</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" >
+	<link rel="stylesheet" type="text/css" href="../css/style.css" >
+	<link rel="stylesheet" type="text/css" href="../css/jquery.fullPage.css" >
+	<link rel="stylesheet" type="text/css" href="../css/basic.css" />
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+
+	<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.scrollTo.min.js"></script>
+	<script type="text/javascript" src="../js/basic.js"></script>
+	<script type="text/javascript"  src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.fullPage.js"></script>
+
+<!-- 팝업중앙 띄우기 -->
+<script language="javascript">
+<!--
+var win = null;
+function NewWindow(mypage,myname,w,h,scroll){
+LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+settings = 'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+win=window.open(mypage,myname,settings)
+}
+//-->
+</script>
+
+	<script>
+	$(function()){
+		$('nav a').click(function(e){
+			$.scrollTo(this.hash || 0, 1500);
+			e.preventDefault();
+		});
+	});
+	</script>
+</head>
+
+<body style="border:0; padding:0; margin:0; background:url('../img/story/index.jpg')no-repeat top fixed; background-size: cover; margin:-10px 0; padding:50px 0" onload="OpenWin()">
+	<!--상단고정레이어 #s-->
+	<div id="menu_fixed">
+		<div class="ci"><a href="http://www.yangcheon.go.kr/" target="_blank"><img src="../img/common/ci.png" alt="양천구청"></a></div>
+
+		<div class="link">
+			<li><a href="../index.htm"><img src="../img/common/ic_home.png" alt="나비잠프로젝트 홈으로 이동"></a></li>
+			<li><a href="https://www.facebook.com/sharer/?u=%2Fnavinam%2F" target="_blank"><img src="../img/common/ic_fb.png" alt="페이스북으로 이동"></a></li>
+			<li><a href="http://twitter.com/share?url=[navinam1.godohosting.com]&text=[양천구청-나비남프로젝트나는혼자가아니다navinam1.godohosting.com]" target="_blank"><img src="../img/common/ic_tw.png" alt="트위터로 이동"></a></li>
+			<!--li><a href="#"><img src="img/common/ic_link.png" alt="링크 이동"></a></li-->
+		</div>
+	</div>
+	<!--상단고정레이어 #e-->
+
+	<div id="fullpage">
+		<div id="top" class="book-container section" data-anchor="top"">
+			<div style="display: table; width:100%; height:100%; color:#fff;">
+				<div style="display:table-cell; vertical-align: middle; text-align: center; width:auto; height:auto">
+						<h1 style="margin-bottom:30px"><img src="../img/story/greeting.png" alt="계세요?"></h1>
+						<div class="m_navi"><a href="index_01.html">복지<br>사각지대</a></div>
+						<div class="m_navi"><a href="index_02.html">세상과<br>만나다</a></div>
+						<div class="m_navi"><a href="index_03.html">세상과<br>관계맺기</a></div>
+						<div class="m_navi"><a href="index_04.html">민·관의<br>문제해결</a></div>
+						<div class="m_navi"><a href="index_05.html">커뮤니티<br>공간마련</a></div>
+						<div class="m_navi"><a href="index_06.html">희망을<br>찾아</a></div>
+						<div class="m_navi"><a href="index_07.html">나는 혼자<br>가 아니다</a></div>
+						<div class="m_navi"><a href="index_08.html">참여자들의<br>이야기</a></div>
+						<div class="m_navi"><a href="index_09.html">제작/<br>기록제공</a></div>
+						<h1 style="margin-top:30px"><img src="../img/story/mouse.png" alt="아래로 스크롤"</h1>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

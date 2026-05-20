@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>나비남 프로젝트 - 나는 혼자가 아니다</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../오전 10:04 2019-09-30css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../css/basic.css" />
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="../js/basic.js"></script>
+	<!-- 팝업 #s-->
+	<style>
+	        	.popup {position:absolute; left:50%;  top:9000px; transform:translate(-50%, -50%); width:1000px; height:800px; box-shadow: 2px 2px 10px rgba(0,0,0, 0.5 ); border-radius: 5px;text-align: right; padding:20px; box-sizing:border-box; background: #fff; opacity:0;
+	                 transition:all 0.5s; z-index:5; transition:all 0.5s}
+	        	.popup a{color:grey; text-decoration: none}
+        		.popup:target{opacity:1;}
+						.popup:target + .dim {opacity:1; z-index:2}
+	          .dim {position: absolute; left:0; top:0; z-index:5; width:100%; height:100vh; background: rgba(0,0,0,0.6); opacity:1; }
+						.h4 {color:#fff; font-size: 25px;  font-family: 나눔고딕; line-height: 35px; text-align: center; }
+						.cmt {color:#fff; font-size: 18px; font-family: 나눔고딕; line-height:30px; text-align: center;}
+						.cmt_pt {color:#ff6600}
+	</style>
+	<!-- 팝업 #s-->
+	<!-- 탑 고정레이어 #s-->
+	<script type="text/javascript">
+		if(typeof document.compatMode!='undefined'&&document.compatMode!='BackCompat'){
+		cot_t1_DOCtp="_top:expression(document.documentElement.scrollTop+document.documentElement.clientHeight-this.clientHeight);_left:expression(document.documentElement.scrollLeft + document.documentElement.clientWidth - offsetWidth);}";
+		}
+		else{
+		cot_t1_DOCtp="_top:expression(document.body.scrollTop+document.body.clientHeight-this.clientHeight);_left:expression(document.body.scrollLeft + document.body.clientWidth - offsetWidth);}";
+		}
+		var menu_bodyCSS='* html {background:#fff1b8;}';
+		var menu_fixedCSS='#menu_fixed{position:fixed;';
+		var menu_fixedCSS=menu_fixedCSS+'_position:absolute;';
+		var menu_fixedCSS=menu_fixedCSS+'z-index:999;';
+		var menu_fixedCSS=menu_fixedCSS+'width:100%;';
+		var menu_fixedCSS=menu_fixedCSS+'top:0px;';
+		var menu_fixedCSS=menu_fixedCSS+'right:0px;';
+		var menu_fixedCSS=menu_fixedCSS+'clip:rect(0 100% 100% 0);';
+		var menu_fixedCSS=menu_fixedCSS+cot_t1_DOCtp;
+		document.write('<style type="text/css">'+menu_bodyCSS+menu_fixedCSS+'</style>');
+	</script>
+	<!-- 탑 고정레이어 #e-->
+</head>
+	<!--body style="border:0; padding:0; margin:0; width:1920px; height:6932px; background: url('0812_sian_01.png') 0 0 no-repeat !important;"-->
+
+	<!-- 그래프 #s-->
+	<style>
+	.graph {height:35px; margin:0 0 23px;  border-radius:1px;}
+	.graph span {display:block; padding:0 10px;  height:35px;
+	line-height:38px; text-align: right; border-radius:1px;
+	box-sizing:border-box; color:#fff ; }
+
+
+	.graph.stack1 span { background:#4285f4; animation:stack1 2s 1;}
+	.graph.stack2 span { background:#316cf1; animation:stack2 2s 1;}
+	.graph.stack3 span { background:#2e64e0; animation:stack3 2s 1;}
+	.graph.stack4 span { background:#2a5dd0; animation:stack4 2s 1;}
+	.graph.stack5 span { background:#2857c1; animation:stack5 2s 1;}
+	.graph.stack6 span { background:#1d48ea; animation:stack5 2s 1;}
+	.graph.stack7 span { background:#1330e2; animation:stack5 2s 1;}
+	.graph.stack8 span { background:#0d20d7; animation:stack5 2s 1;}
+
+
+	@keyframes stack1{
+		0% {width:0 ; color:rgba(255,255,255,0);}
+		40% { color:rgba(66,133,244,1);}
+		100% {width:96.12%; }
+	}
+	@keyframes stack2{
+		0% {width:0 ; color:rgba(66,133,244,0);}
+		40% { color:rgba(66,133,244,1);}
+		100% {width:75.12%; }
+	}
+
+	@keyframes stack3{
+		0% {width:0 ; color:rgba(66,133,244,0);}
+		40% { color:rgba(66,133,244,1);}
+		100% {width:64%; }
+	}
+	@keyframes stack4{
+		0% {width:0 ; color:rgba(66,133,244,0);}
+		40% { color:rgba(66,133,244,1);}
+		100% {width:28.68%; }
+	}
+	@keyframes stack5{
+		0% {width:0 ; color:rgba(66,133,244,0);}
+		40% { color:rgba(66,133,244,1);}
+		100% {width:26.44%; }
+	}
+	@keyframes stack6{
+		0% {width:0 ; color:rgba(66,133,244,0);}
+		40% { color:rgba(66,133,244,1);}
+		100% {width:18.4%; }
+	}
+	@keyframes stack7{
+		0% {width:0 ; color:rgba(66,133,244,0);}
+		40% { color:rgba(66,133,244,1);}
+		100% {width:12.6%; }
+	}
+	@keyframes stack8{
+		0% {width:0 ; color:rgba(66,133,244,0);}
+		40% { color:rgba(66,133,244,1);}
+		100% {width:8.25%; }
+	}
+
+
+</style>
+
+	<!-- 그래프 #e-->
+
+	<body style="border:0; padding:0; margin:0; background: #110e09">
+	<!-- 고정레이어 #s-->
+	<div id="menu_fixed" class="header" style="text-align:center; left:0px; width:100%;height:40px; background:#170f06;">
+		<div class="ci"><a href="http://www.yangcheon.go.kr/" target="_blank"><img src="../img/common/ci.png" alt="양천구청"></a></div>
+		<div class="p_link">
+			<li> | <a href="#p_00">00</a> | </li>
+			<li> | <a href="#p_01">01</a> | </li>
+			<li><a href="#p_02">02</a> | </li>
+			<li><a href="#p_03">03</a> | </li>
+			<li><a href="#p_04">04</a> | </li>
+			<li><a href="#p_05">05</a> | </li>
+			<li><a href="#p_06">06</a> | </li>
+			<li><a href="#p_07">07</a> | </li>
+			<li><a href="#p_08">08</a> | </li>
+			<li><a href="#p_09">09</a> | </li>
+		</div>
+		<div class="link">
+			<li><a href="#"><img src="../img/common/ic_speaker.png"></a></li>
+			<li><a href="#"><img src="../img/common/ic_fb.png"></a></li>
+			<li><a href="#"><img src="../img/common/ic_tw.png"></a></li>
+			<li><a href="#"><img src="../img/common/ic_link.png"></a></li>
+		</div>
+	</div>
+	<!-- 고정레이어 #e-->
+		<div style="position:absoulte; top:0; left:0">
+			<a href="p_00">
+			<div><img src="../img/story/index.jpg"></div>
+			<a name="p_01">
+			<div style="display:block; width:1920px; height:1268px; background:#140f0b url('../img/story/link_bg.jpg') no-repeat; position:relative">
+				<div  style="float:left; position:absolute; top:100px; left:520px">
+						<li class="h4">며칠째 인기척이 없는 집. 열리지 않는 문</li>
+						<li class="h4">그리고 말로 표현할 수 없는 악취</li>
+						<li class="h4"><span class="cmt_pt">고독사</span>를 의심할 수 있는 정황들</li>
+						<li class="h4" style="padding:15px 0">"<span class="cmt_pt">홀로 생을 살아가던 사람이 사망 후 3일이 지난 뒤 발견 된 죽음</span>"으로 정의되는 <span class="cmt_pt">고독사</span></li>
+						<li class="cmt">'무연사'라는 이름으로 일본 사회에 충격을 준 고독사 현상이 어느덧 한국에서도 나타나기 시작했다</li>
+						<li class="cmt">고령화, 1인 가구의 급증, 전통적 가족문화의 단절과 가족 해체, 그리고 빈곤층이 급증했기 때문이다</li>
+				</div>
+				<li style="float:left; position:absolute; top:380px; left:450px"><a href="https://www2.nhk.or.jp/archives/tv60bin/detail/index.cgi?das_id=D0009010577_00000
+" target="_blank"><img src="../img/story/link_nhk.jpg"></a> </li>
+				<li style="float:left; position:absolute; top:380px; right:500px"><a href="http://vod.kbs.co.kr/index.html?source=episode&sname=vod&stype=vod&program_code=T2013-0132&program_id=PS-2013163460-01-000&section_code=05&broadcast_complete_yn=Y&local_station_code=00
+" target="_blank"><img src="../img/story/link_kbs.jpg"></a></li>
+			</div>
+			<!-- 움직이는 그래프 #s-->
+			<a name="p_02">
+			<div style="display:block; width:1920px; height:822px; background:#140f0b url('../img/story/graph_moving.jpg') no-repeat; position:relative">
+				<div style="display:block; position:absolute; top:310px; left:402px; width:1200px; height:428px;">
+					<div class="graph stack1"><span style="width:96.12%;">2,403명 (29.40%)</span></div>
+					<div class="graph stack2"><span style="width:75.12%;">1,878명 (22.98%)</span></div>
+					<div class="graph stack3"><span style="width:64%;">1,525명 (18.66%)</span></div>
+					<div class="graph stack4"><span style="width:28.68%;">717명 (8.77%)</span></div>
+					<div class="graph stack5"><span style="width:26.44%;">661명 (8.09%)</span></div>
+					<div class="graph stack6"><span style="width:18.4%;">460명 (5.63%)</span></div>
+					<div class="graph stack7"><span style="width:12.6%;">315명 (3.85%)</span></div>
+					<div class="graph stack8"><span style="width:8.25%;">214명 (2.62%)</span></div>
+				</div>
+			</div>
+			<!-- 움직이는 그래프 #e-->
+			<a name="p_03">
+			<div><img src="../img/story/graph.jpg"></div>
+			<!-- 팝업띄우기 #s -->
+			<!--div style="display:block; width:1920px; height:1080px; background:#140f0b url('../img/story/06_contents.jpg') no-repeat; position:relative">
+				<div style="float:left; position:absolute; top:175px; left:1306px"><a href="#pop1"><img src="../img/story/popup_link.png"></a> </div>
+			</div>
+			<!-- 팝업창 #s -->
+			<!--div class="popup" id="pop1">
+			        <a href="#a">닫기</a>
+			        <div style="text-align:center; padding-top:30px"><img src="../img/story/popup_hw.jpg"></div>
+		            </div>
+			<!-- 팝업창 #e -->
+			<!-- 팝업띄우기 #e -->
+			<a name="p_04">
+			<div><img src="../img/story/06_contents.jpg"></div>
+			<a name="p_05">
+			<div><img src="../img/story/07_08_contents.jpg"></div>
+			<!--a name="p_05">
+			<div><img src="../img/story/09_11_contents.jpg"></div>
+			<a name="p_06">
+			<div><img src="../img/story/12_14_contents.jpg"></div>
+			<a name="p_07">
+			<div><img src="../img/story/15_16_contents.jpg"></div>
+			<a name="p_08">
+			<div><img src="../img/story/17_contents.jpg"></div>
+			<a name="p_09">
+			<div><img src="../img/story/18_ending.jpg"></div-->
+
+		</div>
+
+	</body>
+</html>

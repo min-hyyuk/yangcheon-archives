@@ -1,0 +1,84 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>나비남 프로젝트 - 나는 혼자가 아니다</title>
+
+
+		<link href="css/vg.css" rel="stylesheet">
+		<link href="css/vegas.min.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/vg.css" />
+
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/basic.js"></script>
+		<script src="js/jquery-2.2.4.min.js"></script>
+		<script src="js/vegas.min.js"></script>
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.min.js"></script>
+		<![endif]-->
+
+		<!-- 모바일웹 포워딩 -->
+		<script type="text/javascript">
+		var mobileKeyWords = new Array('iPhone','iPod','BlackBerry', 'Android','Windows CE', 'LG','NOT','SAMSUNG','SonyEricsson','Mobile','Symbian','Opera Mobi','Opera Mini','IEmobile');
+		for (var word in mobileKeyWords){
+			if (navigator.userAgent.match(mobileKeyWords[word]) != null){
+				location.href = "/navinam/m/";
+				break;
+			}
+		}
+		</script>
+
+		<!--상단 고정레이어 #s -->
+
+		<script>
+			$(function(){
+				$('body').vegas({
+					slides:[
+						{src:'img/main_01.jpg'},
+						{src:'img/main_02.jpg'},
+						{src:'img/main_03.jpg'},
+						{src:'img/main_04.jpg'}
+					],
+					delay:3500
+				});
+			});
+		</script>
+		<style type="text/css">
+		#menu_fixed		{	height:40px;			width:100%;			color: #555;			font-size:12px;			position:fixed;			z-index:999;			top:0px;			left:0px;			background-color:#170f06;		}
+		#menu_fixed .ci {position:absolute; top:-3px; left:30px; padding:10px 0 5px 30px; transparent:25%; }
+		#menu_fixed .p_link {position:absolute; top:8px; left:calc(50% - 140px); color:#6e5e54; font-size:11px; font-family: 'NanumGothic'}
+		#menu_fixed .p_link li{display:inline-block; float:left; padding-left:10px }
+		#menu_fixed .p_link li a{color:#8d8078; text-decoration:none; font-size:16px; }
+		#menu_fixed .p_link li a:hover {color:#fff}
+		#menu_fixed .link {position:absolute; top:8px; right:30px}
+		#menu_fixed .link li{display:inline-block; float:left; padding-left:10px }
+		</style>
+		<!--상단 고정레이어 #e -->
+	</head>
+	<body>
+		<div id="menu_fixed">
+			<div class="ci"><a href="http://www.yangcheon.go.kr/" target="_blank"><img src="img/common/ci.png" alt="양천구청"></a></div>
+			<div class="link">
+				<li><a href="index.htm"><img src="img/common/ic_home.png" alt="나비잠프로젝트 홈으로 이동"></a></li>
+				<li><a href="https://www.facebook.com/sharer/?u=%2Fnavinam%2F" target="_blank"><img src="img/common/ic_fb.png" alt="페이스북으로 이동"></a></li>
+				<li><a href="http://twitter.com/share?url=[navinam1.godohosting.com]&text=[양천구청-나비남프로젝트나는혼자가아니다navinam1.godohosting.com]" target="_blank"><img src="img/common/ic_tw.png" alt="트위터로 이동"></a></li>
+				<!--li><a href="#"><img src="img/common/ic_link.png" alt="링크 이동"></a></li-->
+			</div>
+		</div>
+		<div style="display: table; width:945px; color:#fff; margin:16% auto 0 auto; ">
+				<div style="display: inline-block; float:left; margin-top:10%; transparent:25%"><a  href="rec/index_y_01.html"><img src="img/btn_rec_go1.png"></a></div>
+				<div id="content">
+		      <h1>나는 혼자가 아니다</h1>
+		      <p>나비남 프로젝트</p>
+			  </div>
+				<div style="display: inline-block;  float:right; margin-top:10%; top:10%; transparent:25%; "><a  href="story/index.html"><img src="img/btn_story_go1.png"></a></div>
+		</div>
+		<div style="position:absolute; width:100%; text-align: center; bottom:10px"><img src="img/img_opentype04.png"></div>
+
+
+	</body>
+</html>

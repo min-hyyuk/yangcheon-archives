@@ -1,0 +1,32 @@
+* {padding:0; margin:0; list-style: none; text-decoration: none}
+.sliderwrap01 {position:relative; width:820px}
+.sliderwrap01 img {height:425px; }
+/*.sliderwrap01 .bx-pager {position:absolute; right:0; top:0}
+.sliderwrap01 .bx-pager div {display:inline-block; padding:0 3px}
+.sliderwrap01 .bx-pager div a {display:block; width:15px; height:15px; font-size:0; background: lightgray; border-radius:100%; color:transparent}
+
+.sliderwrap01 .bx-pager div .active {background: violet}*/
+.sliderwrap01 .bx-pager {position:absolute; left:0; right:0; bottom:10px; text-align:center; color:#fff; font-size:30px}
+.sliderwrap01 .bx-pager span{display:inline-block; width:2px; height:15px; background: red; vertical-align: 3px; margin:0 11px; transform:rotate(26deg)}
+.sliderwrap01 .bx-controls-direction{display:none}
+
+.paging01 {display:flex; flex-direction:  row; position:absolute; right:0; top:0; height:500px}
+.paging01 li {flex:1; }
+.paging01 li a{ background:#000; color:#fff; box-sizing: border-box; display:flex; justify-content: center; align-items:center; height:100%; transition:
+all .3s; border:3px solid #000}
+.paging01 li .active {border:3px solid red; background: #fff; color:#000; }
+.paging01 li img {width:100px; height:100px}
+
+
+.sliderwrap02 {position:relative; width:333px}
+.slider02 img {height:500px; }
+.sliderwrap02 .bx-pager {position:absolute; left:0; right:0; bottom:10px; text-align:center; color:#fff; font-size:30px}
+.sliderwrap02 .bx-pager span{display:inline-block; width:2px; height:15px; background: red; vertical-align: 3px; margin:0 11px; transform:rotate(26deg)}
+.sliderwrap02 .bx-controls-direction{display:none}
+
+.paging02 {display:flex; flex-direction:  column; position:absolute; right:0; top:0; height:500px}
+.paging02 li {flex:1; }
+.paging02 li a{ background:#000; color:#fff; box-sizing: border-box; display:flex; justify-content: center; align-items:center; height:100%; transition:
+all .3s; border:3px solid #000}
+.paging02 li .active {border:3px solid red; background: #fff; color:#000; }
+.paging02 li img {width:100px; height:100px}

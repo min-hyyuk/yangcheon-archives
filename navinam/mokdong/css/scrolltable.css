@@ -1,0 +1,50 @@
+.scrolltable{
+   width:1024px;
+    table-layout: fixed;
+    border-collapse: collapse;
+
+}
+.scrolltable thead {
+    display:block;
+    width:1024px
+}
+.scrolltable thead tr{display:block; width:1024px !important}
+.scrolltable tbody{
+    display:block;
+    overflow:auto;
+    height:612px;
+    width:1024px
+}
+/* 행 장식 */
+.scrolltable th{
+  height:60px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight:normal;
+  border-bottom:1px solid #5d7ebc;
+  border-top:3px solid #5d7ebc;
+  box-sizing:border-box;
+  color:#3761a0;
+  background: #eefcff
+}
+
+.scrolltable td {    height:50px; font-size:1.6em}
+
+.scrolltable .num {width:102px; text-align: center}
+.scrolltable .subj {width:718px; text-align: center}
+.scrolltable .down {width:204px; text-align: center}
+
+.scrolltable tbody .num {width:102px; text-align: center}
+.scrolltable tbody .subj {width:758px; text-align: left}
+.scrolltable tbody img{width:50px; height:50px}
+.scrolltable tbody .subj a{color:#333; text-decoration: none; text-shadow: none}
+.scrolltable tbody .subj a:hover {text-decoration: underline;}
+.scrolltable tbody .down {width:164px; text-align: center}
+.scrolltable tbody .down button{width:38px; height:43px; background: url('../img/btn_pdf_down.png') no-repeat center;)}
+
+
+
+.scrolltable td img {padding:5px}
+.scrolltable tr:nth-child(even) { background:#f4f9fd; border-bottom:1px solid #ddd  }
+.scrolltable tr:nth-child(odd) { background:#fff; border-bottom:1px solid #ddd}
+.scrolltable tr:last-child {border-bottom:1px solid #5d7ebc}

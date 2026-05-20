@@ -1,0 +1,226 @@
+.hamburger {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  top: 30px;
+  right: 75px;
+  z-index: 10000;
+  padding: 3px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+.no-scroll .hamburger {
+  position: fixed;
+}
+.hamburger__icon {
+  position: relative;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+	
+.hamburger__icon, .hamburger__icon:before, .hamburger__icon:after {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #111;
+  -moz-transition-property: background-color, -moz-transform;
+  -o-transition-property: background-color, -o-transform;
+  -webkit-transition-property: background-color, -webkit-transform;
+  transition-property: background-color, transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.main .hamburger__icon, .main .hamburger__icon:before, .main .hamburger__icon:after {
+  background-color: #fff;
+}
+
+.hamburger__icon:before, .hamburger__icon:after {
+  position: absolute;
+  content: "";
+    width: 20px;
+}
+.hamburger__icon:before {
+  top: -8px;
+}
+.hamburger__icon:after {
+  top: 8px;
+  width:10px;
+}
+.hamburger.active .hamburger__icon {
+  background-color: transparent;
+}
+.hamburger.active .hamburger__icon:before, .hamburger.active .hamburger__icon:after {
+  background-color: #fff;
+}
+.hamburger.active .hamburger__icon:before {	
+  -moz-transform: translateY(8px) rotate(45deg);
+  -ms-transform: translateY(8px) rotate(45deg);
+  -webkit-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .hamburger__icon:after {
+    width: 20px;
+  -moz-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.fat-nav {
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: #fff;/*
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;*/
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.fat-nav__wrapper {
+  width: 100%;
+  height: 100%;
+  display: table;
+  table-layout: fixed;
+	background: #000;
+}
+.fat-nav.active {
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.fat-nav ul {
+  width:100%;
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+}
+.fat-nav li {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  font-size: 40px;;
+  line-height:3vw;
+  margin-bottom: 50px;
+}
+.fat-nav li, .fat-nav li a {
+  color: #fff;
+}
+	
+.fat-nav li a {
+  text-decoration: none;
+    display: inline-block;
+	font-family: popins;
+	font-weight: bold;
+}
+.fat-nav li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    margin-top: 20px;
+    transition: width .3s;
+}
+.fat-nav li a:hover::after {
+    width: 100%;
+}
+.fat-company {display:none}
+
+/* pc 화면 */
+@media screen and (min-width: 999px){
+	.fat-nav__wrapper {
+		display: flex;
+		align-items: center;
+	}
+	.fat-nav ul{
+		position: relative;
+		width: 70%;
+		margin: 0 auto;
+	}
+	.fat-nav li {
+		text-align: left;
+		padding: 0;
+	}
+	.fat-nav dt{
+		font-size:15px;
+		color:#777;
+		margin-top:35px;
+	}
+	.fat-nav dd{
+		font-size:20px;
+		color:#fff;
+		margin-top:10px;
+	}
+	.fat-company{
+		display: flex;
+		flex-direction: column;	
+		justify-content: flex-start;
+		position: absolute;
+		right:0;
+		bottom:20px;
+		color:#fff;
+	}
+	.fat-company .fat-sns{
+		display: flex;
+		gap:20px;
+		margin-top: 50px;
+	}
+	
+}
+
+
+@media screen and (max-width: 1200px){
+	.hamburger{
+		right:20px;
+	}
+	.fat-nav li {
+		font-size:4vw;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

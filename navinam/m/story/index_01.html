@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>나비남 프로젝트 - 나는 혼자가 아니다</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" >
+	<link rel="stylesheet" type="text/css" href="../css/style.css" >
+	<link rel="stylesheet" type="text/css" href="../css/jquery.fullPage.css" >
+	<link rel="stylesheet" type="text/css" href="../css/basic.css" />
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+
+	<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.scrollTo.min.js"></script>
+	<script type="text/javascript" src="../js/basic.js"></script>
+	<script type="text/javascript"  src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.fullPage.js"></script>
+
+<!-- 팝업중앙 띄우기 -->
+<script language="javascript">
+<!--
+var win = null;
+function NewWindow(mypage,myname,w,h,scroll){
+LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+settings = 'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+win=window.open(mypage,myname,settings)
+}
+//-->
+</script>
+
+	<script>
+	$(function()){
+		$('nav a').click(function(e){
+			$.scrollTo(this.hash || 0, 1500);
+			e.preventDefault();
+		});
+	});
+	</script>
+	<!-- 그래프1 #s-->
+<style>
+	.graph1 {height:20px; margin:0 0 5px;  border-radius:1px;}
+	.graph1 span {display:block; padding:0 10px;  height:18px;
+	line-height:18px; text-align: right; border-radius:1px;
+	box-sizing:border-box; color:#fff; font-size:14px; letter-spacing: 0;}
+	.graph1 .txt {font-size:14px; line-height:0.8em; margin:-15px 0 0 10px}
+
+	.graph1.stack11 span { background:#d19b5c; animation:stack11 2s 1;}
+	.graph1.stack12 span { background:#c79152; animation:stack12 2s 1;}
+	.graph1.stack13 span { background:#bd8747; animation:stack13 2s 1;}
+	.graph1.stack14 span { background:#b27c3d; animation:stack14 2s 1;}
+	.graph1.stack15 span { background:#a77132; animation:stack15 2s 1;}
+	.graph1.stack16 span { background:#9d6729; animation:stack16 2s 1;}
+	.graph1.stack17 span { background:#935e20; animation:stack17 2s 1;}
+	.graph1.stack18 span { background:#895518; animation:stack18 2s 1;}
+
+
+	@keyframes stack11{		0% {width:0 ; color:rgba(255,255,255,0);} 	40% { color:rgba(255,255,255,1);}		100% {width:76.12%; }	}
+	@keyframes stack12{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:75.12%; }	}
+	@keyframes stack13{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:59%; }	}
+	@keyframes stack14{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:28.68%; }	}
+	@keyframes stack15{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:26.44%; }	}
+	@keyframes stack16{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:18.4%; }	}
+	@keyframes stack17{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:12.6%; }	}
+	@keyframes stack18{		0% {width:0 ; color:rgba(255,255,255,0);}		80% { color:rgba(255,255,255,1);}		100% {width:8.25%; }	}
+</style>
+<!-- 그래프1 #e-->
+
+<!-- 그래프2 #s-->
+<style>
+	.graph2 {height:5px; margin:0 0 45px;  border-radius:1px;}
+	.graph2 span {display:block; padding:7px 0 7px 0;  height:30px;
+	line-height:14px; text-align: right; border-radius:1px;
+	box-sizing:border-box; color:#fff; font-size:14px; letter-spacing: 0;}
+	.graph2 .txt {font-size:14px; line-height:14px; margin:-25px 0 0 10px}
+
+
+	.graph2.stack21 span { background:#9d6729; animation:stack21 4s 1;}
+	.graph2.stack22 span { background:#935e20; animation:stack22 4s 1;}
+	.graph2.stack23 span { background:#895518; animation:stack23 4s 1;}
+
+
+	@keyframes stack21{		0% {width:0 ; color:rgba(255,255,255,0);} 	40% { color:rgba(255,255,255,1);}		100% {width:87.57%; }	}
+	@keyframes stack22{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:12.96%; }	}
+	@keyframes stack23{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:2.47%; }	}
+</style>
+<!-- 그래프2 #e-->
+
+<!-- 그래프3 #s-->
+<style>
+	.graph3 {height:20px; margin:0 0 5px;  border-radius:1px;}
+	.graph3 span {display:block; padding:0 10px;  height:18px;
+	line-height:18px; text-align: right; border-radius:1px;
+	box-sizing:border-box; color:#fff; font-size:14px; letter-spacing: 0;}
+	.graph3 .txt {font-size:14px; line-height:0.8em; margin:-15px 0 0 10px}
+
+	.graph3.stack31 span { background:#d19b5c; animation:stack31 4s 1;}
+	.graph3.stack32 span { background:#c79152; animation:stack32 4s 1;}
+	.graph3.stack33 span { background:#bd8747; animation:stack33 4s 1;}
+	.graph3.stack34 span { background:#b27c3d; animation:stack34 4s 1;}
+	.graph3.stack35 span { background:#a77132; animation:stack35 4s 1;}
+	.graph3.stack36 span { background:#9d6729; animation:stack36 4s 1;}
+	.graph3.stack37 span { background:#935e20; animation:stack37 4s 1;}
+	.graph3.stack38 span { background:#935e20; animation:stack38 4s 1;}
+	.graph3.stack39 span { background:#895518; animation:stack39 4s 1;}
+
+	@keyframes stack31{		0% {width:0 ; color:rgba(255,255,255,0);} 	40% { color:rgba(255,255,255,1);}		100% {width:35.80%; }	}
+	@keyframes stack32{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:20.99%; }	}
+	@keyframes stack33{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:19.76%; }	}
+	@keyframes stack34{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:9.88%; }	}
+	@keyframes stack35{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:7.41%; }	}
+	@keyframes stack36{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:3.09%; }	}
+	@keyframes stack37{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:1.23%; }	}
+	@keyframes stack38{		0% {width:0 ; color:rgba(255,255,255,0);}		80% { color:rgba(255,255,255,1);}		100% {width:1.23%; }	}
+	@keyframes stack39{		0% {width:0 ; color:rgba(255,255,255,0);}		80% { color:rgba(255,255,255,1);}		100% {width:0.62%; }	}
+</style>
+<!-- 그래프3 #e-->
+
+<!-- 그래프4 #s-->
+<style>
+	.graph4 {height:40px; margin:0 0 20px;  border-radius:1px;}
+	.graph4 span {display:block; padding:0 ;  height:40px;
+	line-height:14px; text-align: right; border-radius:1px;
+	box-sizing:border-box; color:#fff; font-size:12px; letter-spacing: 0;}
+	.graph4 .txt {font-size:11px; line-height:14px; margin:-27px 0 0 10px}
+
+
+	.graph4.stack41 span { background:#d19b5c; animation:stack41 4s 1;}
+	.graph4.stack42 span { background:#bd8747; animation:stack42 4s 1;}
+	.graph4.stack43 span { background:#935e20; animation:stack43 4s 1;}
+	.graph4.stack44 span { background:#895518; animation:stack44 4s 1;}
+
+
+	@keyframes stack41{		0% {width:0 ; color:rgba(255,255,255,0);} 	40% { color:rgba(255,255,255,1);}		100% {width:35.80%; }	}
+	@keyframes stack42{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:20.99%; }	}
+	@keyframes stack43{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:19.76%; }	}
+	@keyframes stack44{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:9.88%; }	}
+</style>
+<!-- 그래프3 #4-->
+</head>
+
+<body style="border:0; padding:0; margin:0; background:url('../img/old.jpg')no-repeat top fixed; background-size: cover; margin:-10px 0; padding:50px 0" onload="OpenWin()">
+	<!--상단고정레이어 #s-->
+	<div id="menu_fixed">
+		<div class="ci"><a href="http://www.yangcheon.go.kr/" target="_blank"><img src="../img/common/ci.png" alt="양천구청"></a></div>
+
+		<div class="link">
+			<li><a href="../index.htm"><img src="../img/common/ic_home.png" alt="나비잠프로젝트 홈으로 이동"></a></li>
+			<li><a href="https://www.facebook.com/sharer/?u=%2Fnavinam%2F" target="_blank"><img src="../img/common/ic_fb.png" alt="페이스북으로 이동"></a></li>
+			<li><a href="http://twitter.com/share?url=[navinam1.godohosting.com]&text=[양천구청-나비남프로젝트나는혼자가아니다navinam1.godohosting.com]" target="_blank"><img src="../img/common/ic_tw.png" alt="트위터로 이동"></a></li>
+			<!--li><a href="#"><img src="img/common/ic_link.png" alt="링크 이동"></a></li-->
+		</div>
+	</div>
+	<!--상단고정레이어 #e-->
+
+	<div id="fullpage">
+
+		<div id="section1" class="book-container section" data-anchor="1st">
+			<div style="width:100%; height:150px;  background:url('../img/story/01_tlt_bg.jpg') no-repeat top; background-size: cover;">
+					<div class="m_blk">
+						<div class="m_tlt"><span>복지 사각지대의<br> 고독사</span></div>
+					</div>
+			</div>
+		</div>
+
+		<div id="section2" class="book-container section" data-anchor="2nd">
+			<div class="chapter01">
+				<!--div style="display:block; width:100%; background:url('../img/story/01_bg.png') no-repeat center  center"-->
+				<div class="sub_bk">
+					<div class="sub_c_tlt">
+						며칠째 인기척이 없는 집.<br> 열리지 않는 문.<br>
+						그리고 말로 표현할 수 없는 악취.<br>
+						<span class="ess">고독사를 의심할 수 있는 정황들.</span>
+					</div>
+					<p>
+						<span class="ess">"홀로 생을 살아가던 사람이 사망 후 3일이 지난 뒤 발견된 죽음"</span>으로 정의되는 고독사.<br>
+						'무연사'라는 이름으로 일본 사회에 충격을 준 고독사 현상이 어느덧 한국에서도 나타나기 시작했다.<br>
+						<span>고령화, 1인 가구의 급증, 전통적 가족문화의 단절과 가족 해체, 그리고 빈곤층이 급증했기 때문</span>이다.</p>
+							<div class="mv_img bdtb">
+									<div><a href="https://www2.nhk.or.jp/archives/tv60bin/detail/index.cgi?das_id=D0009010577_00000" target="_blank"><img src="../img/story/link_nhk.jpg"></a></div>
+									<div><span class="img_cmt">무연사회<br>[NHK]</span></div>
+							</div>
+							<div class="mv_img bdb">
+									<div><a href="http://vod.kbs.co.kr/index.html?source=episode&sname=vod&stype=vod&program_code=T2013-0132&program_id=PS-2013163460-01-000&section_code=05&broadcast_complete_yn=Y&local_station_code=00
+								" target="_blank"><img src="../img/story/link_kbs.jpg"></a></div>
+									<div><span class="img_cmt">실태보고 한국인의 고독사<br>[KBS]</span></div>
+							</div>
+					</div>
+					<!--/div-->
+				</div>
+			</div>
+
+			<div id="section3" class="book-container section" data-anchor="3rd">
+				<div class="grp_mgc">
+					<div class="sub_bk">
+				 		<div class="g_tlt_bg">무연고 사망자 현황 통계(건)<br><span class="g_tlt_sub"> [출처:김도읍 의원실 보도자료(2019)]</span></div>
+							<!-- 움직이는 그래프 #s-->
+							<div style="display:block;  width:320px; height:250px; background: url('../img/story/01_graph_bg.png') no-repeat; position:relative">
+								<div style="display:block; position:absolute; top:35px; left:50px; width:310px; height:249px;">
+									<div class="graph1 stack11"><span style="width:76.12%;">2,403명 (29.40%)</span></div>
+									<div class="graph1 stack12"><span style="width:59.12%;">1,878명 (22.98%)</span></div>
+									<div class="graph1 stack13"><span style="width:48%;">1,525명 (18.66%)</span></div>
+									<div class="graph1 stack14"><span style="width:28.68%;"></span><div class="txt"  style="margin-left:31%">717명 (8.77%)</div></div>
+									<div class="graph1 stack15"><span style="width:26.44%;"></span><div class="txt"  style="margin-left:28%">661명 (8.09%)</div></div>
+									<div class="graph1 stack16"><span style="width:18.4%;"></span><div class="txt"  style="margin-left:21%">460명 (5.63%)</div></div>
+									<div class="graph1 stack17"><span style="width:12.6%;"></span><div class="txt"  style="margin-left:15%">315명 (3.85%)</div></div>
+									<div class="graph1 stack18"><span style="width:8.25%;"></span><div class="txt"  style="margin-left:11%">214명 (2.62%)</div></div>
+								</div>
+							</div>
+							<!-- 움직이는 그래프 #e-->
+				 		</div>
+			 		</div>
+				</div>
+
+			<div id="section4" class="book-container section" data-anchor="4th">
+				<div class="sub_c_bk" style="height:auto; margin:0 auto; padding-top:10px;  background: url('../img/story/person2_bg.png') right top no-repeat;">
+					<p>
+						누가 홀로 죽는가?<br>흔히 우리는 고독사를 홀몸으로 삶을 지탱하고 있는 독거노인의 문제로 여기는 경우가 많다.
+						<div class="sub_c_tlt ess">그러나 고독사의 고위험군은 노인이 아니었다.</div>
+					</p>
+				</div>
+			</div>
+
+			<div id="section5" class="book-container section" data-anchor="5th">
+				<div class="grp_mgc">
+					<div class="sub_bk">
+						<div class="g_tlt_bg">고독사 남녀 비율 (%)<br><span class="g_tlt_sub"> [2013년 서울시 고독사 확실사례 성별현황]</span></div>
+							<!-- 움직이는 그래프 #s-->
+							<div style="display:block;  width:312px; height:220px; background: url('../img/story/02_graph_bg.png') no-repeat; position:relative">
+								<div style="display:block; position:absolute; top:35px; left:50px; width:312px; height:189px;">
+									<div class="graph2 stack21"><span style="width:87.57%">137건 (84.57%)</span></div>
+									<div class="graph2 stack22"><span style="width:12.96%"></span><div class="txt" style="margin-left:15%">21건 (12.96%)</div></div>
+									<div class="graph2 stack23"><span style="width:2.47%"></span><div class="txt"  style="margin-left:5%">4건 (2.47%)</div></div>
+								</div>
+							</div>
+							<!-- 움직이는 그래프 #e-->
+
+						<div class="g_tlt_bg">나이별 비율(%)<br><span class="g_tlt_sub"> [2013년 서울시 고독사 확실사례 연령 현황]</span></div>
+							<!-- 움직이는 그래프 #s-->
+							<div style="display:block;  width:312px; height:276px; background: url('../img/story/03_graph_bg.png') no-repeat; position:relative">
+								<div style="display:block; position:absolute; top:37px; left:49px; width:312px; height:266px;">
+									<div class="graph3 stack31"><span style="width:35.50%"></span><div class="txt" style="margin-left:38%">58건 (35.80%)</div></div>
+									<div class="graph3 stack32"><span style="width:20.99%"></span><div class="txt" style="margin-left:23%">34건 (20.99%)</div></div>
+									<div class="graph3 stack33"><span style="width:19.76%;"></span><div class="txt" style="margin-left:22%">32건 (19.76%)</div></div>
+									<div class="graph3 stack34"><span style="width:9.88%;"></span><div class="txt" style="margin-left:12%">16건 (9.88%)</div></div>
+									<div class="graph3 stack35"><span style="width:7.41%;"></span><div class="txt" style="margin-left:10%">12건 (7.41%)</div></div>
+									<div class="graph3 stack36"><span style="width:3.09%;"></span><div class="txt" style="margin-left:6%">5건 (3.09%)</div></div>
+									<div class="graph3 stack37"><span style="width:1.23%;"></span><div class="txt" style="margin-left:4%">2건 (1.23%)</div></div>
+									<div class="graph3 stack38"><span style="width:1.23%;"></span><div class="txt" style="margin-left:4%">2건 (1.23%)</div></div>
+									<div class="graph3 stack39"><span style="width:0.62%;"></span><div class="txt" style="margin-left:3%">1건 (0.62%)</div></div>
+								</div>
+							</div>
+							<!-- 움직이는 그래프 #e-->
+						</div>
+						<div class="mgc">[출처 : 서울시 복지재단,<br> 서울시 고독사 실태파악 및 지원방안 연구(2016)]</div>
+					</div>
+				</div>
+
+
+			<div id="section6" class="book-container section" data-anchor="6th">
+				<div class="sub_c_bk"  style="height:auto; margin:0 auto; padding:10px 0 40px 0;  background: url('../img/story/line.png') center bottom no-repeat;" >
+					<div class="sub_c_tlt ess">고립된 50대 남성</div>
+					<p>경제적 부양책임을 다하지 못하고 가족과의 연결과 유대가 끊긴 50대 남성들.<br>
+						그들은 <span class="ess">사회적 삶에서 고립된 채 건강이 악화되고 홀로 죽음</span>을 맞이했다.</p>
+				</div>
+				<div class="sub_c_bk"  style="height:auto; margin:0 auto; padding:0 0 40px 0" >
+					<div class="sub_c_tlt ess">배제된 50대 남성</div>
+						<p>50대 중장년층은 근로 연령층으로 여겨지면서<br> 복지서비스의 초점은 영유아와 노년층에 집중되었다.<br>
+						고독사를 예방하는 대책 역시 노인에게 맞춰졌을 뿐이다.<br><span class="ess">복지의 사각지대에 50대 층이 놓여 있었다.</span><p>
+
+						<div class="link_wrap">
+							<div class="link_img"><a href="popup/p01.htm"><img src="../img/story/s10_p_link.png"></a></div>
+							<div class="link_cmt"><a href="popup/p01.htm">[2013 양천구 고독사 대책 "고독사 예방 및 무료장례 시스템 구축" 자료]</a></div>
+						</div>
+				</div>
+			</div>
+
+			<div id="section7" class="book-container section" data-anchor="7th">
+				<div class="grp_mgc mgbs">
+					<div class="sub_bk">
+						<div class="g_tlt_bg" style="padding-top:20px !important">2013 양천구 고독사 확실사례</div>
+						<div class="c01_tlt">성별분포</div><img src="../img/story/s_graph02.png">
+						<div class="c01_tlt mgt50">연령분포<span style="font-size:18px; letter-spacing:0; font-weight:500"> [50대 이하 4명 57%]</span></div><img src="../img/story/age_graph02.png">
+					</div>
+					<div class="mgc">[출처:서울시 복지재단,<br> 서울시 고독사 실태파악 및 지원방안 연구 (2016)]</div>
+				</div>
+			</div>
+
+			<!--하단고정레이어 #s-->
+			<div id="footer_fixed">
+				<div style="width:165px; margin:5px auto">
+					<div class="sty_go"><a href="index_01.html"><img src="../img/story/sty_prev.png"></a></div>
+					<div class="sty_home"><a href="index.html">목록보기</a></div>
+					<div class="sty_go"><a href="index_02.html"><img src="../img/story/sty_next.png"><a></div>
+				</div>
+			</div>
+			<!--하단고정레이어 #e-->
+	</body>
+</html>

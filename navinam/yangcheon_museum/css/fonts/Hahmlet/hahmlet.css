@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "Hahmlet";
+  font-weight: 100;
+  src: local("☺"), url(Hahmlet-Thin.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Hahmlet";
+  font-weight: 200;
+  src: local("☺"), url(Hahmlet-ExtraLight.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Hahmlet";
+  font-weight: 300;
+  src: local("☺"), url(Hahmlet-Light.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Hahmlet";
+  font-weight: 400;
+  src: local("☺"), url(Hahmlet-Regular.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Hahmlet";
+  font-weight: 500;
+  src: local("☺"), url(Hahmlet-Medium.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Hahmlet";
+  font-weight: 700;
+  src: local("☺"), url(Hahmlet-Bold.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Hahmlet";
+  font-weight: 800;
+  src: local("☺"), url(Hahmlet-ExtraBold.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Hahmlet";
+  font-weight: 900;
+  src: local("☺"), url(Hahmlet-Black.woff2) format("woff2");
+}

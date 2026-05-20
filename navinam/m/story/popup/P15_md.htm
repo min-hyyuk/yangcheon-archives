@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>나비남프로젝트 - 목동종합사회복지관</title>
+  <link rel="stylesheet" href="css/style-flex-2.css">
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+
+  <script src="js/jquery-2.2.4.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
+
+  <script>
+    $(function() {
+			var trigger = $('#trigger');
+			var menu = $('nav ul');
+			$(trigger).on('click', function (e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+      $('.bxslider').bxSlider({
+        auto:true,
+        autoHover: true,
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <!-- 내비게이션 -->
+  <!--nav>
+    <ul>
+      <li><a href="none" style="font-family:맑은 고딕">목동종합사회복지관</a></li>
+    </ul>
+    <a href="#" id="trigger">MENU</a>
+  </nav-->
+
+  <nav style="background-color:#382e2c; width:100%; text-align:center; margin-top:20px">
+    <a style="width:90%; margin:0 auto; padding-top:30px; font-family:맑은 고딕; color:#fff; line-height:1.2em">목동종합사회복지관</a>
+  </nav>
+
+
+  <!-- 헤더 -->
+  <section>
+    <div class="wrapper">
+      <div class="banner">
+        <div class="bxslider"  style="margin:0 auto; width:1000px">
+          <div><img src="../../img/story/popup/p15_md_00.gif"></div>
+          <div><img src="../../img/story/popup/p15_md_01.gif"></div>
+          <div><img src="../../img/story/popup/p15_md_02.gif"></div>
+          <div><img src="../../img/story/popup/p15_md_03.gif"></div>
+          <div><img src="../../img/story/popup/p15_md_04.gif"></div>
+          <div><img src="../../img/story/popup/p15_md_05.gif"></div>
+          <div><img src="../../img/story/popup/p15_md_06.gif"></div>
+          <div><img src="../../img/story/popup/p15_md_07.gif"></div>
+          <div><img src="../../img/story/popup/p15_md_08.gif"></div>
+          <div><img src="../../img/story/popup/p15_md_09.gif"></div>
+          <div><img src="../../img/story/popup/p15_md_10.gif"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

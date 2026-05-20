@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+
+/* Swiper 전용 기본 */
+.cards-wrapper{
+  overflow:hidden;
+  padding: 4rem 0;
+}
+
+/* 1460px 이상에서는 Swiper 해제 + Flex 적용 */
+@media (min-width:1460px){
+    .cards-wrapper .swiper-wrapper{
+    display:flex;
+    flex-wrap: wrap;
+    gap:28px;
+    transform:none !important;
+    padding: 40px 0;
+  }
+  .cards-wrapper .swiper-slide{
+    width:262px;
+    flex-shrink:0;
+  }
+
+  /* 버튼/페이지네이션 숨김 */
+  #swiper-toggle,
+  .swiper-button-prev,
+  .swiper-button-next,
+  .swiper-pagination{
+    display:none !important;
+  }
+}
+@media (max-width:1460px){
+  #container {
+    padding: 3rem 1.6rem;
+}
+}
+@media (max-width:768px){
+  .main-title{
+    font-size: 3.2rem;
+    padding-top: 4rem;
+  }
+  h2{
+    font-size: 3.2rem;
+    margin: 0 0 4rem;
+  }
+  h3{
+    font-size: 2.4rem;
+  }
+  body{
+    font-size: 1.4rem;
+  }
+  .btn-back{
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width:640px){
+  .main-title{
+    padding-top: 0rem;
+  }
+    .flex{
+      flex-direction: column;
+    }
+}

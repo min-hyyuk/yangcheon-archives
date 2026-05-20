@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>나비남 프로젝트 - 나는 혼자가 아니다</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../css/basic.css" />
+	<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="../js/basic.js"></script>
+	<style>
+	        	.popup {position:absolute; left:50%;  top:9000px; transform:translate(-50%, -50%); width:1000px; height:800px; box-shadow: 2px 2px 10px rgba(0,0,0, 0.5 ); border-radius: 5px;text-align: right; padding:20px; box-sizing:border-box; background: #fff; opacity:0;
+	                 transition:all 0.5s; z-index:5; transition:all 0.5s}
+	        	.popup a{color:grey; text-decoration: none}
+        		.popup:target{opacity:1;}
+		.popup:target + .dim {opacity:1; z-index:2}
+	            .dim {position: absolute; left:0; top:0; z-index:5; width:100%; height:100vh; background: rgba(0,0,0,0.6); opacity:1; }
+	</style>
+</head>
+	<!--body style="border:0; padding:0; margin:0; width:1920px; height:6932px; background: url('0812_sian_01.png') 0 0 no-repeat !important;"-->
+	
+	<!-- 그래프 #s-->
+	<style>
+	.graph {height:35px; margin:0 0 23px;  border-radius:1px;}
+	.graph span {display:block; padding:0 10px;  height:35px; 
+	line-height:38px; text-align: right; border-radius:1px;
+	box-sizing:border-box; color:#fff ; }
+
+	
+	.graph.stack1 span { background:#4285f4; animation:stack1 2s 1;}
+	.graph.stack2 span { background:#316cf1; animation:stack2 2s 1;}
+	.graph.stack3 span { background:#2e64e0; animation:stack3 2s 1;}
+	.graph.stack4 span { background:#2a5dd0; animation:stack4 2s 1;}
+	.graph.stack5 span { background:#2857c1; animation:stack5 2s 1;}
+	.graph.stack6 span { background:#1d48ea; animation:stack5 2s 1;}
+	.graph.stack7 span { background:#1330e2; animation:stack5 2s 1;}
+	.graph.stack8 span { background:#0d20d7; animation:stack5 2s 1;}
+
+
+	@keyframes stack1{
+		0% {width:0 ; color:rgba(255,255,255,0);}
+		40% { color:rgba(66,133,244,1);}
+		100% {width:96.12%; }
+	}
+	@keyframes stack2{
+		0% {width:0 ; color:rgba(66,133,244,0);}
+		40% { color:rgba(66,133,244,1);}
+		100% {width:75.12%; }
+	}	
+
+	@keyframes stack3{
+		0% {width:0 ; color:rgba(66,133,244,0);}
+		40% { color:rgba(66,133,244,1);}
+		100% {width:64%; }
+	}	
+	@keyframes stack4{
+		0% {width:0 ; color:rgba(66,133,244,0);}
+		40% { color:rgba(66,133,244,1);}
+		100% {width:28.68%; }
+	}
+	@keyframes stack5{
+		0% {width:0 ; color:rgba(66,133,244,0);}
+		40% { color:rgba(66,133,244,1);}
+		100% {width:26.44%; }
+	}
+	@keyframes stack6{
+		0% {width:0 ; color:rgba(66,133,244,0);}
+		40% { color:rgba(66,133,244,1);}
+		100% {width:18.4%; }
+	}
+	@keyframes stack7{
+		0% {width:0 ; color:rgba(66,133,244,0);}
+		40% { color:rgba(66,133,244,1);}
+		100% {width:12.6%; }
+	}
+	@keyframes stack8{
+		0% {width:0 ; color:rgba(66,133,244,0);}
+		40% { color:rgba(66,133,244,1);}
+		100% {width:8.25%; }
+	}
+
+
+</style>
+
+	<!-- 그래프 #e-->
+
+	<body style="border:0; padding:0; margin:0; ">
+		<div style="position:absoulte; top:0; left:0">
+			<div><img src="../img/story/index.jpg"></div>
+			<div style="display:block; width:1920px; height:1268px; background:#140f0b url('../img/story/link_bg.jpg') no-repeat; position:relative">
+				<li style="float:left; position:absolute; top:530px; left:370px"><a href="https://www2.nhk.or.jp/archives/tv60bin/detail/index.cgi?das_id=D0009010577_00000
+" target="_blank"><img src="../img/story/link_nhk.jpg"></a> </li>
+				<li style="float:left; position:absolute; top:530px; right:370px"><a href="http://vod.kbs.co.kr/index.html?source=episode&sname=vod&stype=vod&program_code=T2013-0132&program_id=PS-2013163460-01-000&section_code=05&broadcast_complete_yn=Y&local_station_code=00
+" target="_blank"><img src="../img/story/link_kbs.jpg"></a></li>
+			</div>
+			<!-- 움직이는 그래프 #s-->
+			<div style="display:block; width:1920px; height:822px; background:#140f0b url('../img/story/graph_moving.jpg') no-repeat; position:relative">
+				<div style="display:block; position:absolute; top:310px; left:402px; width:1200px; height:428px;">
+					<div class="graph stack1"><span style="width:96.12%;">2,403명 (29.40%)</span></div>
+					<div class="graph stack2"><span style="width:75.12%;">1,878명 (22.98%)</span></div>
+					<div class="graph stack3"><span style="width:64%;">1,525명 (18.66%)</span></div>
+					<div class="graph stack4"><span style="width:28.68%;">717명 (8.77%)</span></div>
+					<div class="graph stack5"><span style="width:26.44%;">661명 (8.09%)</span></div>
+					<div class="graph stack6"><span style="width:18.4%;">460명 (5.63%)</span></div>
+					<div class="graph stack7"><span style="width:12.6%;">315명 (3.85%)</span></div>
+					<div class="graph stack8"><span style="width:8.25%;">214명 (2.62%)</span></div>
+				</div>
+			</div>
+			<!-- 움직이는 그래프 #e-->
+			<div><img src="../img/story/graph.jpg"></div>
+			<!-- 팝업띄우기 #s -->
+			<div style="display:block; width:1920px; height:1080px; background:#140f0b url('../img/story/06_contents.jpg') no-repeat; position:relative">	
+				<div style="float:left; position:absolute; top:175px; left:1306px"><a href="#pop1"><img src="../img/story/popup_link.png"></a> </div>
+			</div>
+			<!-- 팝업창 #s -->
+			<div class="popup" id="pop1">
+			        <a href="#a">닫기</a>
+		            </div>
+			<!-- 팝업창 #e -->
+			<!-- 팝업띄우기 #e -->
+			<div><img src="../img/story/07_08_contents.jpg"></div>
+			<div><img src="../img/story/09_11_contents.jpg"></div>
+			<div><img src="../img/story/12_14_contents.jpg"></div>
+			<div><img src="../img/story/15_16_contents.jpg"></div>
+			<div><img src="../img/story/17_contents.jpg"></div>
+			<div><img src="../img/story/18_ending.jpg"></div>
+		</div>
+
+	</body>
+</html>
+

@@ -1,0 +1,869 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>나비남 프로젝트 - 나는 혼자가 아니다</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" >
+	<link rel="stylesheet" type="text/css" href="../css/style.css" >
+	<link rel="stylesheet" type="text/css" href="../css/jquery.fullPage.css" >
+	<link rel="stylesheet" type="text/css" href="../css/basic.css" />
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+
+	<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.scrollTo.min.js"></script>
+	<script type="text/javascript" src="../js/basic.js"></script>
+	<script type="text/javascript"  src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.fullPage.js"></script>
+
+<!-- 팝업중앙 띄우기 -->
+<script language="javascript">
+<!--
+var win = null;
+function NewWindow(mypage,myname,w,h,scroll){
+LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+settings = 'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+win=window.open(mypage,myname,settings)
+}
+//-->
+</script>
+
+	<script>
+	$(document).ready(function() {
+		$("#fullpage").fullpage({
+			anchors:["top", "1st", "2nd", "3rd","4th","5th","6th","7th","8th","9th","10th","11st","12nd","13rd","14th","15th","16th","17th","18th","19th","20th","21st","22nd","23rd","24th","25th","26th","27th","28th","videoList"],
+			menu:"#topMenu"
+		});
+	});
+	</script>
+	<script>
+	$(function()){
+		$('nav a').click(function(e){
+			$.scrollTo(this.hash || 0, 1500);
+			e.preventDefault();
+		});
+	});
+	</script>
+	<!-- 그래프1 #s-->
+<style>
+	.graph1 {height:30px; margin:0 0 10px;  border-radius:1px;}
+	.graph1 span {display:block; padding:0 10px;  height:25px;
+	line-height:22px; text-align: right; border-radius:1px;
+	box-sizing:border-box; color:#fff; font-size:14px; letter-spacing: 0;}
+	.graph1 .txt {font-size:14px; line-height:14px; margin:-20px 0 0 10px}
+
+
+	.graph1.stack11 span { background:#d19b5c; animation:stack11 2s 1;}
+	.graph1.stack12 span { background:#c79152; animation:stack12 2s 1;}
+	.graph1.stack13 span { background:#bd8747; animation:stack13 2s 1;}
+	.graph1.stack14 span { background:#b27c3d; animation:stack14 2s 1;}
+	.graph1.stack15 span { background:#a77132; animation:stack15 2s 1;}
+	.graph1.stack16 span { background:#9d6729; animation:stack16 2s 1;}
+	.graph1.stack17 span { background:#935e20; animation:stack17 2s 1;}
+	.graph1.stack18 span { background:#895518; animation:stack18 2s 1;}
+
+
+	@keyframes stack11{		0% {width:0 ; color:rgba(255,255,255,0);} 	40% { color:rgba(255,255,255,1);}		100% {width:96.12%; }	}
+	@keyframes stack12{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:75.12%; }	}
+	@keyframes stack13{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:64%; }	}
+	@keyframes stack14{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:28.68%; }	}
+	@keyframes stack15{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:26.44%; }	}
+	@keyframes stack16{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:18.4%; }	}
+	@keyframes stack17{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:12.6%; }	}
+	@keyframes stack18{		0% {width:0 ; color:rgba(255,255,255,0);}		80% { color:rgba(255,255,255,1);}		100% {width:8.25%; }	}
+</style>
+<!-- 그래프1 #e-->
+
+<!-- 그래프2 #s-->
+<style>
+	.graph2 {height:5px; margin:0 0 65px;  border-radius:1px;}
+	.graph2 span {display:block; padding:15px 0 15px 0;  height:50px;
+	line-height:14px; text-align: right; border-radius:1px;
+	box-sizing:border-box; color:#fff; font-size:14px; letter-spacing: 0;}
+	.graph2 .txt {font-size:11px; line-height:14px; margin:-30px 0 0 10px}
+
+
+	.graph2.stack21 span { background:#9d6729; animation:stack21 4s 1;}
+	.graph2.stack22 span { background:#935e20; animation:stack22 4s 1;}
+	.graph2.stack23 span { background:#895518; animation:stack23 4s 1;}
+
+
+	@keyframes stack21{		0% {width:0 ; color:rgba(255,255,255,0);} 	40% { color:rgba(255,255,255,1);}		100% {width:87.57%; }	}
+	@keyframes stack22{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:12.96%; }	}
+	@keyframes stack23{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:2.47%; }	}
+</style>
+<!-- 그래프2 #e-->
+
+<!-- 그래프3 #s-->
+<style>
+	.graph3 {height:30px; margin:0 0 5px;  border-radius:1px;}
+	.graph3 span {display:block; padding:0 ;  height:20px;
+	line-height:14px; text-align: right; border-radius:1px;
+	box-sizing:border-box; color:#fff; font-size:12px; letter-spacing: 0;}
+	.graph3 .txt {font-size:11px; line-height:14px; margin:-17px 0 0 10px}
+
+	.graph3.stack31 span { background:#d19b5c; animation:stack31 4s 1;}
+	.graph3.stack32 span { background:#c79152; animation:stack32 4s 1;}
+	.graph3.stack33 span { background:#bd8747; animation:stack33 4s 1;}
+	.graph3.stack34 span { background:#b27c3d; animation:stack34 4s 1;}
+	.graph3.stack35 span { background:#a77132; animation:stack35 4s 1;}
+	.graph3.stack36 span { background:#9d6729; animation:stack36 4s 1;}
+	.graph3.stack37 span { background:#935e20; animation:stack37 4s 1;}
+	.graph3.stack38 span { background:#935e20; animation:stack38 4s 1;}
+	.graph3.stack39 span { background:#895518; animation:stack39 4s 1;}
+
+	@keyframes stack31{		0% {width:0 ; color:rgba(255,255,255,0);} 	40% { color:rgba(255,255,255,1);}		100% {width:35.80%; }	}
+	@keyframes stack32{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:20.99%; }	}
+	@keyframes stack33{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:19.76%; }	}
+	@keyframes stack34{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:9.88%; }	}
+	@keyframes stack35{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:7.41%; }	}
+	@keyframes stack36{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:3.09%; }	}
+	@keyframes stack37{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:1.23%; }	}
+	@keyframes stack38{		0% {width:0 ; color:rgba(255,255,255,0);}		80% { color:rgba(255,255,255,1);}		100% {width:1.23%; }	}
+	@keyframes stack39{		0% {width:0 ; color:rgba(255,255,255,0);}		80% { color:rgba(255,255,255,1);}		100% {width:0.62%; }	}
+</style>
+<!-- 그래프3 #e-->
+
+<!-- 그래프4 #s-->
+<style>
+	.graph4 {height:40px; margin:0 0 20px;  border-radius:1px;}
+	.graph4 span {display:block; padding:0 ;  height:40px;
+	line-height:14px; text-align: right; border-radius:1px;
+	box-sizing:border-box; color:#fff; font-size:12px; letter-spacing: 0;}
+	.graph4 .txt {font-size:11px; line-height:14px; margin:-27px 0 0 10px}
+
+
+	.graph4.stack41 span { background:#d19b5c; animation:stack41 4s 1;}
+	.graph4.stack42 span { background:#bd8747; animation:stack42 4s 1;}
+	.graph4.stack43 span { background:#935e20; animation:stack43 4s 1;}
+	.graph4.stack44 span { background:#895518; animation:stack44 4s 1;}
+
+
+	@keyframes stack41{		0% {width:0 ; color:rgba(255,255,255,0);} 	40% { color:rgba(255,255,255,1);}		100% {width:35.80%; }	}
+	@keyframes stack42{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:20.99%; }	}
+	@keyframes stack43{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:19.76%; }	}
+	@keyframes stack44{		0% {width:0 ; color:rgba(255,255,255,0);}		40% { color:rgba(255,255,255,1);}		100% {width:9.88%; }	}
+</style>
+<!-- 그래프3 #4-->
+</head>
+
+<body style="border:0; padding:0; margin:0; background:url('../img/old.jpg')no-repeat top fixed; background-size: cover; margin:-10px 0; padding:50px 0" onload="OpenWin()">
+	<!--상단고정레이어 #s-->
+	<div id="menu_fixed">
+		<div class="ci"><a href="http://www.yangcheon.go.kr/" target="_blank"><img src="../img/common/ci.png" alt="양천구청"></a></div>
+		<!--nav>
+
+			<div  class="p_link" -->
+			<div class="navbar-collapse collapse" style="padding:5px 0 0 calc(50% - 310px);">
+			<ul class="nav navbar-nav" id="topMenu" style="width:800px;">
+				<!--ul-->
+					<li data-menuanchor="top"><a href="#top">00</a></li>
+					<li data-menuanchor="1st"><a href="#1st">01</a></li>
+					<li data-menuanchor="2nd"><a href="#2nd">02</a></li>
+					<li data-menuanchor="3rd"><a href="#3rd">03</a></li>
+					<li data-menuanchor="4th"><a href="#4th">04</a></li>
+					<li data-menuanchor="5th"><a href="#5th">05</a></li>
+					<li data-menuanchor="6th"><a href="#6th">06</a></li>
+					<li data-menuanchor="7th"><a href="#7th">07</a></li>
+					<li data-menuanchor="8th"><a href="#8th">08</a></li>
+					<li data-menuanchor="9th"><a href="#9th">09</a></li>
+					<li data-menuanchor="10th"><a href="#10th">10</a></li>
+					<li data-menuanchor="11st"><a href="#11st">11</a></li>
+					<li data-menuanchor="12nd"><a href="#12nd">12</a></li>
+					<li data-menuanchor="13rd"><a href="#13rd">13</a></li>
+					<li data-menuanchor="14th"><a href="#14th">14</a></li>
+					<li data-menuanchor="15th"><a href="#15th">15</a></li>
+					<li data-menuanchor="16th"><a href="#16th">16</a></li>
+					<li data-menuanchor="17th"><a href="#17th">17</a></li>
+					<li data-menuanchor="18th"><a href="#18th">18</a></li>
+					<li data-menuanchor="19th"><a href="#19th">19</a></li>
+					<li data-menuanchor="20th"><a href="#20th">20</a></li>
+					<li data-menuanchor="21st"><a href="#21st">21</a></li>
+					<li data-menuanchor="22nd"><a href="#22nd">22</a></li>
+					<li data-menuanchor="23rd"><a href="#23rd">23</a></li>
+					<li data-menuanchor="24th"><a href="#24th">24</a></li>
+					<li data-menuanchor="25th"><a href="#25th">25</a></li>
+					<li data-menuanchor="26th"><a href="#26th">26</a></li>
+					<li data-menuanchor="27th"><a href="#27th">27</a></li>
+					<li data-menuanchor="28th"><a href="#28th">28</a></li>
+					<!--li data-menuanchor="videoList"><a href="#videoList"></a></li-->
+				</ul>
+
+		</div>
+		<!--/nav-->
+		<div class="link">
+			<li><a href="../index.htm"><img src="../img/common/ic_home.png" alt="나비잠프로젝트 홈으로 이동"></a></li>
+			<li><a href="https://www.facebook.com/sharer/?u=%2Fnavinam%2F" target="_blank"><img src="../img/common/ic_fb.png" alt="페이스북으로 이동"></a></li>
+			<li><a href="http://twitter.com/share?url=[navinam1.godohosting.com]&text=[양천구청-나비남프로젝트나는혼자가아니다navinam1.godohosting.com]" target="_blank"><img src="../img/common/ic_tw.png" alt="트위터로 이동"></a></li>
+			<!--li><a href="#"><img src="img/common/ic_link.png" alt="링크 이동"></a></li-->
+		</div>
+	</div>
+	<!--상단고정레이어 #e-->
+
+	<div id="fullpage">
+		<div id="top" class="book-container section" data-anchor="top" style="background:url('../img/story/index.jpg') no-repeat center fixed; background-size: cover !important;">
+			<div class="m_blk">
+				<p class="m_tlt"><img src="../img/story/greeting.png" alt="계세요?"></p>
+				<p class="m_tlt"><img src="../img/story/mouse.png" alt="아래로 스크롤"></p>
+			</div>
+		</div>
+		<div id="section1" class="book-container section" data-anchor="1st">
+			<div style="min-width:1280px; height:920px;  background:url('../img/story/01_tlt_bg.jpg') no-repeat top; background-size: cover;">
+					<div class="m_blk">
+						<!--p class="m_chapter"><span>Chapter 02. 진행과정</span></p-->
+						<p class="m_tlt"><span>복지 사각지대의 고독사</span></p>
+					</div>
+			</div>
+		</div>
+
+		<div id="section2" class="book-container section" data-anchor="2nd">
+				<div class="chapter01">
+					<div style="display:block; width:100%; background:url('../img/story/01_bg.png') no-repeat center  center">
+					<div class="sub_m_bk">
+							<div class="sub_m_tlt">
+								며칠째 인기척이 없는 집. 열리지 않는 문.<br>
+								그리고 말로 표현할 수 없는 악취.
+								<div class="ess">고독사를 의심할 수 있는 정황들.</div>
+								</div>
+							<p><span class="ess" >"홀로 생을 살아가던 사람이 사망 후 3일이 지난 뒤 발견된 죽음"</span>으로 정의되는 고독사.<br>
+								'무연사'라는 이름으로 일본 사회에 충격을 준 고독사 현상이 어느덧 한국에서도 나타나기 시작했다.<br>
+							<span>고령화, 1인 가구의 급증, 전통적 가족문화의 단절과 가족 해체, 그리고 빈곤층이 급증했기 때문</span>이다.</p>
+							<div class="mv_img" style="padding: 0 0 100px 250px">
+									<a href="https://www2.nhk.or.jp/archives/tv60bin/detail/index.cgi?das_id=D0009010577_00000" target="_blank"><img src="../img/story/link_nhk.jpg"></a>
+									<p class="img_cmt">무연사회[NHK]</p>
+							</div>
+							<div class="mv_img">
+									<a href="http://vod.kbs.co.kr/index.html?source=episode&sname=vod&stype=vod&program_code=T2013-0132&program_id=PS-2013163460-01-000&section_code=05&broadcast_complete_yn=Y&local_station_code=00
+								" target="_blank"><img src="../img/story/link_kbs.jpg"></a>
+									<p class="img_cmt">실태보고 한국인의 고독사[KBS]</p>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section3" class="book-container section" data-anchor="3rd">
+			<div class="sub_bk">
+			 <div class="g_tlt_bg sub_tlt">무연고 사망자 현황 통계(건)<span style="font-size:18px"> [출처:김도읍 의원실 보도자료(2019)]</span></div>
+				<!-- 움직이는 그래프 #s-->
+						 <div style="display:block;  width:1000px; height:377px; background: url('../img/story/01_graph_bg.png') no-repeat; position:relative">
+							 <div style="display:block; position:absolute; top:40px; left:70px; width:900px; height:377px;">
+								 <div class="graph1 stack11"><span style="width:96.12%;">2,403명 (29.40%)</span></div>
+								 <div class="graph1 stack12"><span style="width:75.12%;">1,878명 (22.98%)</span></div>
+								 <div class="graph1 stack13"><span style="width:64%;">1,525명 (18.66%)</span></div>
+								 <div class="graph1 stack14"><span style="width:28.68%;">717명 (8.77%)</span></div>
+								 <div class="graph1 stack15"><span style="width:26.44%;">661명 (8.09%)</span></div>
+								 <div class="graph1 stack16"><span style="width:18.4%;">460명 (5.63%)</span></div>
+								 <div class="graph1 stack17"><span style="width:12.6%;"></span><div class="txt"  style="margin-left:15%">315명 (3.85%)</div></div>
+								 <div class="graph1 stack18"><span style="width:8.25%;"></span><div class="txt"  style="margin-left:11%">214명 (2.62%)</div></div>
+							 </div>
+						 </div>
+						 <!-- 움직이는 그래프 #e-->
+			 </div>
+		</div>
+		<div id="section4" class="book-container section" data-anchor="4th">
+			<div class="c01_m_bk" style="height:500px; margin:0 auto; padding-top:100px;  background: url('../img/story/person2_bg.png') right top no-repeat;">
+					누가 홀로 죽는가?<br>흔히 우리는 고독사를 홀몸으로 삶을 지탱하고 있는 독거노인의 문제로 여기는 경우가 많다.
+					<div class="c01_m_tlt">그러나 고독사의 고위험군은 노인이 아니었다.</div>
+				</div>
+		</div>
+		<div id="section5" class="book-container section" data-anchor="5th">
+			<div class="sub_bk w1200" >
+				<div class="sub_2col_bk">
+					<div class="g_tlt2_bg sub_tlt">고독사 남녀 비율 (%)<p style="font-size:18px"> [2013년 서울시 고독사 확실사례 성별현황]</p></div>
+					<!-- 움직이는 그래프 #s-->
+						<div style="display:block;  width:500px; height:377px; background: url('../img/story/02_graph_bg.png') no-repeat; position:relative">
+							<div style="display:block; position:absolute; top:135px; left:70px; width:400px; height:377px;">
+								<div class="graph2 stack21"><span style="width:87.57%">137건 (84.57%)</span></div>
+								<div class="graph2 stack22"><span style="width:12.96%"></span><div class="txt" style="margin-left:15%">21건 (12.96%)</div></div>
+								<div class="graph2 stack23"><span style="width:2.47%"></span><div class="txt"  style="margin-left:5%">4건 (2.47%)</div></div>
+							</div>
+						</div>
+						<!-- 움직이는 그래프 #e-->
+
+				</div>
+				<div class="sub_2col_bk">
+					<div class="g_tlt2_bg sub_tlt">나이별 비율(%)<p style="font-size:18px"> [2013년 서울시 고독사 확실사례 연령 현황]</p></div>
+							<!-- 움직이는 그래프 #s-->
+								<div style="display:block;  width:500px; height:377px; background: url('../img/story/03_graph_bg.png') no-repeat; position:relative">
+									<div style="display:block; position:absolute; top:40px; left:70px; width:400px; height:377px;">
+										<div class="graph3 stack31"><span style="width:35.50%"></span><div class="txt" style="margin-left:38%">58건 (35.80%)</div></div>
+										<div class="graph3 stack32"><span style="width:20.99%"></span><div class="txt" style="margin-left:23%">34건 (20.99%)</div></div>
+										<div class="graph3 stack33"><span style="width:19.76%;"></span><div class="txt" style="margin-left:22%">32건 (19.76%)</div></div>
+										<div class="graph3 stack34"><span style="width:9.88%;"></span><div class="txt" style="margin-left:12%">16건 (9.88%)</div></div>
+										<div class="graph3 stack35"><span style="width:7.41%;"></span><div class="txt" style="margin-left:10%">12건 (7.41%)</div></div>
+										<div class="graph3 stack36"><span style="width:3.09%;"></span><div class="txt" style="margin-left:6%">5건 (3.09%)</div></div>
+										<div class="graph3 stack37"><span style="width:1.23%;"></span><div class="txt" style="margin-left:4%">2건 (1.23%)</div></div>
+										<div class="graph3 stack38"><span style="width:1.23%;"></span><div class="txt" style="margin-left:4%">2건 (1.23%)</div></div>
+										<div class="graph3 stack39"><span style="width:0.62%;"></span><div class="txt" style="margin-left:3%">1건 (0.62%)</div></div>
+									</div>
+								</div>
+								<!-- 움직이는 그래프 #e-->
+				</div>
+				<div class="mgc">[출처 : 서울시 복지재단, 서울시 고독사 실태파악 및 지원방안 연구(2016)]</div>
+			</div>
+		</div>
+		<!--div id="section6" class="book-container section" data-anchor="6th">
+			<div class="sub_bk">
+				<div class="g_tlt_bg sub_tlt">2014~2018 무연고 사망자 <span style="font-size:18px"> [출처:김도읍 의원실 보도자료(2019)]</span></div>
+				<div class="mgt30"><img src="../img/story/death_graph.png"></div>
+			</div>
+		</div-->
+		<div id="section6" class="book-container section" data-anchor="6th">
+
+			<div  style="margin:0 auto">
+			<div class="c02_m_bk" >
+				<div class="c02_m_tlt ess">고립된 50대 남성</div>
+				<p>경제적 부양책임을 다하지 못하고 가족과의 연결과 유대가 끊긴 50대 남성들.<br>
+					그들은 <span class="ess">사회적 삶에서 고립된 채 건강이 악화되고 홀로 죽음</span>을 맞이했다.</p>
+				<p><img src="../img/story/line.png">	</p>
+			</div>
+			<div class="c02_m_bk mgt0 mgbs">
+				<div class="c02_m_tlt ess">배제된 50대 남성</div>
+					<p style="padding-right:40px">50대 중장년층은 근로 연령층으로 여겨지면서<br> 복지서비스의 초점은 영유아와 노년층에 집중되었다.<br>
+					고독사를 예방하는 대책 역시 노인에게 맞춰졌을 뿐이다.<br><span class="ess">복지의 사각지대에 50대 층이 놓여 있었다.</span><p>
+
+				<div style="<div class="c02_m_bk mgt0 mgbs"><a href="#" onclick="NewWindow('popup/p01.htm','test','1000','800','no'); return false"><img src="../img/story/s_01.png"></a>
+						<p class="img_cmt w250">[2013 양천구 고독사 대책<br> "고독사 예방 및 무료장례 시스템 구축" 자료]</p>
+				</div>
+
+
+			</div>
+		</div>
+		</div>
+		<div id="section7" class="book-container section" data-anchor="7th">
+			<div class="sub_bk  w1200">
+			<div class="g_tlt_bg sub_tlt">2013 양천구 고독사 확실사례<span style="font-size:18px"> [출처:서울시 복지재단, 서울시 고독사 실태파악 및 지원방안 연구 (2016)]</span></div>
+				<div style="display:table; width:50%; float:left"><div class="c01_tlt">성별분포</div><img src="../img/story/s_graph02.png"></div>
+				<div style="display:table; width:45%; float:right;"><div class="c01_tlt">연령분포<span style="font-size:18px; letter-spacing:0; font-weight:500"> [50대 이하 4명 57%]</span></div><img src="../img/story/age_graph02.png"></div>
+			</div>
+		</div>
+		<div id="section8" class="book-container section" data-anchor="8th">
+			<div style="min-width:1280px; height:920px;  background:url('../img/story/02_tlt_bg.jpg') no-repeat top; background-size: cover;">
+					<div class="m_blk">
+						<!--p class="m_chapter"><span>Chapter 02. 진행과정</span></p-->
+						<p class="m_tlt"><span>나비남, 세상과 만나다</span></p>
+					</div>
+			</div>
+		</div>
+
+		<div id="section9" class="book-container section" data-anchor="9th">
+			<div class="sub_bk">
+				<div class="sub_tlt">50대 남성을 최초로 주목한 양천구</div>
+					<div style="display: table; width:72%; float:left;">
+						<p>"어려운 경제상황으로 실직, 이혼 등이 증가함에 따 <span class="ess">홀로 사는 중년남성들</span>이 계속 늘어나고 있으며, 이들은
+						홀몸어르신에 비해<span class="ess"> 오히려 자살, 고독사 등 더 큰 위험에 노출</span>되어 있는 것으로 조사되고 있습니다."</p>
+						<p>고독사의 고 위험층이 50대임을 인식하면서, 양천구는 <span class="ess">2017년 2월 1일부터 3월 10일까지 관내 50세 이상
+							만 64세 이하 남성 1인 가구에 대한 전수조사</span>를 실시했다. 총 6,481가구가 그 대상이었다.</p>
+						</div>
+					<div style="display: table; width:28%; float:left; margin-top:-40px">
+						<div style="display:table; width:20%; height:auto; float:left; padding:0 10px 0 40px">
+							<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p10.htm','test','1000','800','no'); return false"><img src="../img/story/s10_p_link.png"></a></div>
+									<p class="img_cmt" style="width:240px">구청장 당부사항</a><br>(제189호, 제190호)</p>
+						</div>
+					</div>
+					<!-- div class="g_tlt_bg sub_tlt">전수 조사 결과</div -->
+					<!-- 움직이는 그래프 #s-->
+					<div style="display:block; clear:both; width:800px; height:377px; background: url('../img/story/04_graph_bg.png') no-repeat; position:relative; margin-left:100px">
+						<div style="display:block; position:absolute; top:70px; left:70px; width:600px; height:377px;">
+							<div class="graph4 stack41"><span style="width:35.50%"></span><div class="txt" style="margin-left:38%">58건 (35.80%)</div></div>
+							<div class="graph4 stack42"><span style="width:20.99%"></span><div class="txt" style="margin-left:23%">34건 (20.99%)</div></div>
+							<div class="graph4 stack43"><span style="width:19.76%;"></span><div class="txt" style="margin-left:22%">32건 (19.76%)</div></div>
+							<div class="graph4 stack44"><span style="width:9.88%;"></span><div class="txt" style="margin-left:12%">16건 (9.88%)</div></div>
+							<div style="display:block; position:absolute; top:120px; left:520px; width:400px; height:377px;">
+								<p style=" font-size:14px; margin:0; padding:0">고위험 : 3가지 이상 복합 문제</p>
+								<p style=" font-size:14px; margin:0; padding:0">중위험 : 1~2가지 문제</p>
+								<p style=" font-size:14px; margin:0; padding:0">저위험 : 일시적 지원으로 해결가능</p>
+							</div>
+						</div>
+					</div>
+					<!-- 움직이는 그래프 #e-->
+			</div>
+		</div>
+		<div id="section10" class="book-container section" data-anchor="10th">
+			<div class="sub_bk"   style="margin-top:-40px">
+				<div class="sub_tlt">나비남 프로젝트 추진</div>
+				<div class="sub_2col_bk"  style="width:45%">
+					<img src="../img/story/s10_pt.jpg">
+				</div>
+				<div class="sub_2col_bk" style="width:55%">
+					<p>2017년 양천구는 <span class="ess">"'나비(非)', 나는 혼자가 아니다"</span>라는 모토로, 고독사 등 삶의 위기에 처해있는
+					50대 남성에 대한 종합지원체계를 전국 최초로 추진했다.<p> 종합지원체계는 <span class="ess_s1">동지역사회보장협의체</span>,
+					<span class="ess_s1">양천 50대독거남지원협의체</span>, <span class="ess_s1">나비남 멘토단</span>, <span class="ess_s1">50스타트센터</span> 총 4개 축으로 구성되었으며, 위기에
+					놓여있는 이들의 복합적인 문제를 해결하여 <span class="ess">'공동체로의 복귀'</span>를 지원하고, 나아가 도움을 받았던 <span class="ess">'멘티'에서
+					다른 사람들에게 도움을 주는 '멘토'로의 회복</span>을 목표로 삼았다</p>
+				</div>
+				<div class="p_3line">
+					<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p11_01.htm','test','1000','800','no'); return false"><img src="../img/story/s_11_01.jpg"></a></div>
+							<p class="img_cmts">2017년 03월 23일,서울시청,<br> 나비남 프로젝트 기자설명회<br> 브리핑 자료, 양천구청</p>
+				</div>
+				<div class="p_3line">
+					<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p11_02.htm','test','1000','800','no'); return false"><img src="../img/story/s_11_02.png"></a></div>
+							<p class="img_cmts">2017년 03월 23일,서울시청,<br> 나비남 프로젝트 기자설명회<br> 보도자료, 양천구청</p>
+				</div>
+				<div class="p_3line">
+					<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p11_03.htm','test','1000','800','no'); return false"><img src="../img/story/s_11_03.png"></a></div>
+							<p class="img_cmts">2017년 03월 23일,서울시청,<br> 나비남 프로젝트 기자설명회,<br> 양천구청</p>
+				</div>
+			</div>
+		</div>
+		<div id="section11" class="book-container section" data-anchor="11st">
+
+			<div style="min-width:1280px; height:920px;  background:url('../img/story/03_tlt_bg.jpg') no-repeat center; background-size: cover;">
+					<div class="m_blk">
+						<!--p class="m_chapter"><span>Chapter 02. 진행과정</span></p-->
+						<p class="m_tlt"><span>세상과 관계 맺기</span></p>
+					</div>
+			</div>
+
+
+		</div>
+		<!--div id="section12" class="book-container section" data-anchor="12nd">
+			<div class="sub_bk">
+				<div class="sub_tlt">관계의 힘으로 고립과 위기를 넘어</div>
+					<div class="sub_2col_bk" style="width:50%">
+						<p>빈곤 등 삶의 위기는 사회적 관계의 단절을 가져오고, 사회적 관계에서의 고립은 위기를 해결할
+							 수 있는 기회의 접근을 어렵게 만든다.악순환을 끊기 위해서 문제 해결과 더불어 고립의 극복,
+							 즉 관계 맺음이 필요했다.<p> 그 첫 걸음으로 <span class="ess"> 양천구는 위기 독거남성들의 멘토단을 모집하고 총 95명을
+							 선정</span>했다.이들은 위기 독거남성에게 <span class="ess_s1">월 1회 이상의 방문</span>, <span class="ess_s1">주 1회 이상 연락을 수행</span>하며,
+							 <span class="ess">친구이자 지지자, 조력자 역할</span>을 맡았다</p>
+					</div>
+					<div class="sub_2col_bk" style="width:50%; float:right">
+						<div style="display:table; float:right">
+							<img src="../img/story/s13_pt.jpg">
+						</div>
+					</div>
+					<p class="itw_blk">"제 멘티님이 몸이 안 좋아서 병원에 다닐 때 보호자 역할을 해서 많이 같이 다니고,
+						 다른 지원들도 받게 해드렸는데, 그런 지원을 다 받고 난 다음에 '내가 몸이 좋아지면
+						 저도 나중에 길에 있는 쓰레기라도 주워서 사회에 환원하고 싶어요'라고 말씀하셨어요"<br>
+						 <span class="itw_blk_cmt">(멘토로 참여한 주민) 출처:양천구, 뉴솔루션(2018),나비남프로젝트 평가연구보고서</span>
+					</p>
+					<div style="display:table; width:32%; height:auto; float:left; padding:10px 20px 10px 50px;">
+						<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p13_01.htm','test','1000','800','no'); return false"><img src="../img/story/s_13_01.png"></a></div>
+								<p class="img_cmt">2017년 04년 17일<br>나비남 멘토단 구성 운영 계획, 양천구</p>
+					</div>
+					<div style="display:table; width:32%; height:auto; float:left; padding:10px 20px;">
+						<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p13_05.htm','test','1000','800','no'); return false"><img src="../img/story/s_13_05.png"></a></div>
+								<p class="img_cmt">2017년 06월 28일,<br>나비남 멘토단 위촉식, 양천구</p>
+					</div>
+					<div style="display:table; width:32%; height:auto; float:left; padding:10px 20px;">
+						<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p13_03.htm','test','1000','800','no'); return false"><img src="../img/story/s_13_02.png"></a></div>
+								<p class="img_cmt">2019년 05월 30일,<br>2기 나비남 멘토단 운영 계획, 양천구</p>
+					</div>
+			</div>
+		</div -->
+		<div id="section12" class="book-container section" data-anchor="12nd">
+			<div class="sub_bk">
+				<div class="sub_tlt">관계의 힘으로 고립과 위기를 넘어</div>
+
+						<p>빈곤 등 삶의 위기는 사회적 관계의 단절을 가져오고, 사회적 관계에서의 고립은 위기를 해결할
+							 수 있는 기회의 접근을 어렵게 만든다.악순환을 끊기 위해서 문제 해결과 더불어 고립의 극복,
+							 즉 관계 맺음이 필요했다.<p> 그 첫 걸음으로 <span class="ess"> 양천구는 위기 독거남성들의 멘토단을 모집하고 총 95명을
+							 선정</span>했다.이들은 위기 독거남성에게 <span class="ess_s1">월 1회 이상의 방문</span>, <span class="ess_s1">주 1회 이상 연락을 수행</span>하며,
+							 <span class="ess">친구이자 지지자, 조력자 역할</span>을 맡았다</p>
+
+					<p class="itw_blk">"제 멘티님이 몸이 안 좋아서 병원에 다닐 때 보호자 역할을 해서 많이 같이 다니고,
+						 다른 지원들도 받게 해드렸는데, 그런 지원을 다 받고 난 다음에 '내가 몸이 좋아지면
+						 저도 나중에 길에 있는 쓰레기라도 주워서 사회에 환원하고 싶어요'라고 말씀하셨어요"
+						 <span class="itw_blk_cmt">(멘토로 참여한 주민) 출처:양천구, 뉴솔루션(2018),나비남프로젝트 평가연구보고서</span>
+					</p>
+					<div style="display:table; width:32%; height:auto; float:left; padding:10px 20px 10px 50px;">
+						<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p13_01.htm','test','1000','800','no'); return false"><img src="../img/story/s_13_01.png"></a></div>
+								<p class="img_cmt" style="width:250px">2017년 04년 17일<br>나비남 멘토단 구성 운영 계획, 양천구</p>
+					</div>
+					<div style="display:table; width:32%; height:auto; float:left; padding:10px 20px;">
+						<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p13_05.htm','test','1000','800','no'); return false"><img src="../img/story/s_13_05.png"></a></div>
+								<p class="img_cmt">나비남 멘토단 활동 사진</p>
+					</div>
+					<div style="display:table; width:32%; height:auto; float:left; padding:10px 20px;">
+						<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p13_03.htm','test','1000','800','no'); return false"><img src="../img/story/s_13_02.png"></a></div>
+								<p class="img_cmt"  style="width:250px">2019년 05월 30일,<br>2기 나비남 멘토단 운영 계획, 양천구</p>
+					</div>
+			</div>
+		</div>
+		<div id="section13" class="book-container section" data-anchor="13rd">
+			<div style="min-width:1280px; height:920px;  background:url('../img/story/04_tlt_bg.jpg') no-repeat top; background-size: cover;">
+				<div class="m_blk">
+					<!--p class="m_chapter"><span>Chapter 02. 진행과정</span></p-->
+					<p class="m_tlt"><span>민&middot;관의 문제해결</span></p>
+				</div>
+			</div>
+		</div>
+		<div id="section14" class="book-container section" data-anchor="14th">
+			<div class="sub_bk" style="margin-top:-30px">
+						<div class="sub_tlt">'지역공동체'가 함께 사회로의 '복귀'를</div>
+							<p><span class="ess" style="letter-spacing: 0;">삶의 위기와 관계의 고립이라는 이중고에 처해있는 위기 독거남설들을 어떻게 사회로 복귀시킬 수 있을까?</span><br>
+							그들이 처해있는 복합적인 문제를 해결하고, 사회로 다시 복귀시키기 위해서는 구청 뿐 아니라 민간과 지역공동체의 노력이 함께 필요했다.
+							위기의 50대 남성을 위해 지역의 다양한 기관과 단체가 힘을 모아 <span class="ess">50대 독거남지원협의체를 구성</span>하였다.
+							50대 독거남지원협의체는 <span class="ess">도시락과 반찬 나눔 등 먹거리</span>에서부터 집단프로그램을 통한 <span class="ess">관계형성지원,
+							그리고 전문상담과 무료검진 등 전문분야까지</span> 폭넓은 지원사업의 추진과 함께 위기사례별 맞춤형 지원을 실시하였다.</p>
+
+							<div class="list_bk">
+								<p>- <span class="ess">2017.03.10.</span> 고독사 예방을 위한 유관기관 업무협약 체결 : 양천구, 양천소방서, 서울남부준법지원센터, 한국법무보호복지공단 서울지부)</p>
+								<p>- <span class="ess">2017.03.15.</span> <span style="letter-spacing:-0.5px">양천 50대 독거남지원협의체 구성 : 병원, 종교기관, 경찰서, 소방서, 복지관, 대형마트 등 35개 기관의 민관협력을 통한 지원체계 마련</span>
+								<span style="padding-left:128px"></span>대상자(10만원)와 후원기관(15만원)이 매월 25만원 저축해 연 300만원의 생활준비금 마련.
+								<p>- 동지역사회보장협의체 및 복지관 등 민관 지원사업 실시(2017년 총 52개, 2억 5천여만원) </p>
+							</div>
+							<div style="display:table; width:45%; height:auto; float:left; padding-left:100px">
+								<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p15_01.htm','test','1000','800','no'); return false"><img src="../img/story/s_15_01.png"></a></div>
+										<p class="img_cmt" style="width:250px;">2017년 03월 10일 고독사 예방을<br> 위한 유관기관 업무협약 협약서, 양천구</p>
+							</div>
+							<div style="display:table; width:45%; height:auto; float:left">
+								<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p15_02.htm','test','1000','800','no'); return false"><img src="../img/story/s_15_02.png"></a></div>
+										<p class="img_cmt">2017년 03월 15일, 양천구 50대<br> 독거남지원협의체 협약식, 양천구</p>
+							</div>
+
+
+			</div>
+			<div class="inst_go">
+				<a href="#" onclick="NewWindow('popup/p15_md.htm','test','1000','800','no'); return false"><img src="../img/story/inst_01.png"></a>
+				<a href="#" onclick="NewWindow('popup/p15_sm.htm','test','1000','800','no'); return false"><img src="../img/story/inst_02.png"></a>
+				<a href="#" onclick="NewWindow('popup/p15_sw.htm','test','1000','800','no'); return false"><img src="../img/story/inst_03.png"></a>
+				<a href="#" onclick="NewWindow('popup/p15_sj.htm','test','1000','800','no'); return false"><img src="../img/story/inst_04.png"></a>
+				<!--<a href="#" onclick="NewWindow('popup/p15_hb.htm','test','1000','800','no'); return false"><img src="../img/story/inst_05.png"></a>-->
+			</div>
+		</div>
+		<div id="section15" class="book-container section" data-anchor="15th">
+			<div class="sub_m_bk">
+						<div class="sub_m_tlt">경제적 지원을 넘어 정서적 지원을</div>
+							<img src="../img/story/s16_pt.jpg">
+							<p class="mgt30">공동체로의 복귀와 관계의 회복은 경제적 지원으로만 가능하지 않다. <br>
+							오랜 고립으로 <span class="ess">정서적으로 피폐해진 심리적 상태를 회복해야 <br>건강한 관계맺음이 다시금 시작되고 또 지속</span>될 수 있었다.<br>
+							<span class="ess_s1">정서지원을 위하여 독거남지원협의체와 사회적기업들의 참여와 지원</span>이 이루어졌다. <br><span style="letter-spacing:0">그리고 지속된 관계맺음은
+							자조모임으로 이어져 활발한 활동을 통해 사람들에게 희망을 나누어주고 있다.</span></p>
+							<div style="display:table; width:33%; height:auto; float:left" class="mgt-30">
+								<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p16_01.htm','test','1000','800','no'); return false"><img src="../img/story/s_16_02.png"></a></div>
+										<p class="img_cmt w250" >50스타트센터 힐링커피 아카데미</p>
+							</div>
+							<div style="display:table; width:33%; height:auto; float:left; " class="mgt-30">
+							<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p16_02.htm','test','1000','800','no'); return false"><img src="../img/story/s_16_01.png"></a></div>
+									<p class="img_cmt w250" >2017년 별별청춘 오춘기 다시 날다</p>
+							</div>
+							<div style="display:table; width:33%; height:auto; float:left" class="mgt-30">
+								<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p16_03.htm','test','1000','800','no'); return false"><img src="../img/story/s_16_03.png"></a></div>
+									<p class="img_cmt w250">동주민센터 <br>및 동지역사회보장협의체 활동 사진</p>
+							</div>
+
+				</div>
+		</div>
+		<div id="section16" class="book-container section" data-anchor="16th">
+			<div class="sub_bk">
+						<div class="sub_tlt">자기 삶을 책임지는 자립을 위해</div>
+							<p>50대 독거남성 대다수는 <span class="ess">갑작스런 실업, 사업 부도 등 경제적 위기</span>를 겪으며 고립된 삶에 처하는
+							경우가 많았다.<br> 양천구는 그들이 다시금 빈곤에서 벗어나 <span class="ess">스스로 자기 삶을 책임질 수 있는 자립 지원 프로그램을 진행</span>했다.
+							취업 교육, 일자리 정보 제공 등의 일자리 연계 프로그램과 자립기반을 위한 매칭펀드가 그 대표적인 사업이었다.</p>
+							<div class="list_bk">
+								<p><span class="ess">- 2017년 12월 28일.</span> 신월6동 동주민협의회, (주)양천환경과 연계하여 나비남에게 취업면접과 일자리 추진.</p>
+								<p>- <span class="ess">2019.02~2020.02.</span> 한사랑교회, 뉴코리아전자통신, 등촌교회의 후원으로 나비남 매칭펀드 사업실시.<br>
+								<span style="padding-left:185px"></span>대상자(10만원)와 후원기관(15만원)이 매월 25만원 저축해 연 300만원의 생활준비금 마련.</p>
+								<p>- 나비남 일자리지원 프로젝트(양천지역자활센터) : 일반경비원 신입교육, 시간제 자활근로(세탁사업단, 공공자전거 사업단) 연계</p>
+								<p>- 자존감 회복을 위한 일자리 지원(고용노동부 남부지청) : 건강관리 및 노후준비, 힐링프로그램 등 각종 취업특강을 통해 자존감 회복</p>
+							</div>
+							<div style="display:table; width:25%; height:auto; float:left; padding:0 10px 0 0">
+								<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p17_01.htm','test','1000','800','no'); return false"><img src="../img/story/s_17_01.png"></a></div>
+										<p class="img_cmt">2017년 12월 28일 나비남<br> 취업연계 보도자료, 양천구</p>
+							</div>
+							<div style="display:table; width:25%; height:auto; float:left; padding-right:10px">
+								<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p17_02.htm','test','1000','800','no'); return false"><img src="../img/story/s_17_02.png"></a></div>
+										<p class="img_cmt" style="width:250px">2018년 11월 15일 나비남 매칭펀드<br> 후원금 전달식, 양천구</p>
+							</div>
+							<div style="display:table; width:25%; height:auto; float:left; padding-bottom:50px;">
+								<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p17_03.htm','test','1000','800','no'); return false"><img src="../img/story/s_17_03.png"></a></div>
+										<p class="img_cmt" style="width:250px;">2019년 04월 05일 희망일자리<br> 제공 업무협약식 보도자료, 양천구</p>
+							</div>
+							<div style="display:table; width:25%; height:auto; float:left; padding-bottom:50px;">
+								<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p17_04.htm','test','1000','800','no'); return false"><img src="../img/story/s_17_04.png"></a></div>
+										<p class="img_cmt" style="width:250px;">2019년 나비남<br> 매칭펀드 약정서, 양천구</p>
+							</div>
+			</div>
+		</div>
+		<div id="section17" class="book-container section" data-anchor="17th">
+			<div style="min-width:1280px; height:920px;  background:url('../img/story/05_tlt_bg.jpg') no-repeat top; background-size: cover;">
+					<div class="m_blk">
+						<!--p class="m_chapter"><span>Chapter 02. 진행과정</span></p-->
+						<p class="m_tlt"><span>커뮤니티 공간마련</span></p>
+					</div>
+			</div>
+		</div>
+		<div id="section18" class="book-container section" data-anchor="18th">
+			<div class="sub_bk" style="margin-top:-30px">
+						<div class="sub_tlt">지원과 연결의 거점으로</div>
+						<div class="sub_bk" >
+								<p>위기의 50대 독거남성을 위하여 50대 독거남성을 위하여 다양한 기관과 단체가 동참하면서 각 사업을 안정적으로 지원하고,
+								 다양한 관계망을 형성할 수 있는 거점이 필요했다. <br><span class="ess">양천구는 /inst_05.png사회복지관과 함께 50스타트 센터를 개소하고 공동운영을 시작</span>했다.
+								센터는 민&middot;협력의 거점 역할을 수행하면서 참여기관의 자원을 공유하고 지원방안을 모색했다.
+								<br> 나비카페 운영을 통해 <span class="ess">50대 독거남성과
+								지역주민들이 함께 어우러지는 쉼터를 제공</span>하고 <span class="ess">독거남지원협의체와 함께 맞춤형 전문상담을 진행</span>했다. 그리고 <span class="ess">힐링커피 아카데미와
+								50+ 열린 영화제 등 다양한 정서지원과 기술교육을 실시</span>했다. 또한 이들이 함께 고립을 극복할 수 힘을 얻도록 자조모임을 지원했다.</p>
+								<p class="itw_blk">"믹스커피만 마셔봤고 다른 커피에 대해서는 전혀 몰랐다. 처음으로 아메리카노를 알게 되고 만드는 방법을
+									배우게 되어서 설레고 기분이 좋았다.내가 직접 내린 커피를 맛보고 다른 사람들과 나눠 마신다는 게 의미가 있었다.
+									수업이 끝나도 우리끼리 만나서 자주 시간을 보내면 좋겠다. <span class="itw_blk_cmt">(50스타트센터 프로그램 참여자 소감)</span></p>
+									<div class="list_bk">
+										<p>- <span class="ess">2017.07.03.</span> 50스타트 센터 개소</p>
+										<p>- <span class="ess">2018년 이용현황</span> : 전화 827, 내방 712, 방문 1,153, 카페이용 886, 기타 793.</p>
+									</div>
+									<div style="display:table; width:50%; height:auto; float:left; padding:0 15px 0 80px; margin-top:-20px">
+										<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p19_01.htm','test','1000','800','no'); return false"><img src="../img/story/s_19_01.png"></a></div>
+										<p class="img_cmt">50스타트센터 브로셔</p>
+									</div>
+									<div style="display:table; width:50%; height:auto; float:left; padding:0 15px; margin-top:-20px">
+										<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p19_02.htm','test','1000','800','no'); return false"><img src="../img/story/s_19_02.png"></a></div>
+										<p class="img_cmt">50스타트센터 이용 사진</p>
+									</div>
+									<!--<div style="display:table; width:33%; height:auto; float:left; padding:0 15px; margin-top:-20px">
+										<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p19_03.htm','test','1000','800','no'); return false"><img src="../img/story/s_19_03.png"></a></div>
+										<p class="img_cmt">50스타트센터 프로그램 홍보지</p>
+									</div>-->
+						</div>
+			</div>
+		</div>
+		<div id="section19" class="book-container section" data-anchor="19th">
+			<div style="min-width:1280px; height:920px;  background:url('../img/story/06_tlt_bg.jpg') no-repeat top;  background-size: cover;">
+					<div class="m_blk">
+						<!--p class="m_chapter"><span>Chapter 02. 진행과정</span></p-->
+						<p class="m_tlt"><span>희망을 찾아</span></p>
+					</div>
+				</div>
+		</div>
+		<div id="section20" class="book-container section" data-anchor="20th" style="margin-top:-50px">
+			<div class="sub_bk">
+						<div class="sub_tlt">고독에 벗어나 세상에 나를 알리다</div>
+							<p>독거남성의 사회복귀를 위해 자존감을 회복하고, 자신의 목소리를 사회에 드러내는 정서적 지원프로그램의 일환으로
+							<span class="ess">'예술교육'</span>이 진행됐다. 2017년 별별청춘 사업의 일환으로, <span class="ess">독거남들이 직접 자신들의 이야기를 담아 영화를 제작해 상영</span>했던
+							나비남 영화제는 양천구의 지속적인 후원으로 2019년 9월, 제3회 나비남 영화제로 계속 이어졌다.<br> 2018년에는 서서울예술교육센터에서
+							<span class="ess">미술교육이 진행</span>되는 한편, 신정2동 등 개별 동 지역에서도 <span class="ess">스마트폰을 이용한 사진교육을 진행하여 사진전</span>이 열리기도 했다.
+							</p>
+							<p class="itw_blk">"돈으로만 지원해줬다면 그것으로 끝났을 거예요. 영화제를 준비하면서 재미있게, 즐겁게 할 수 있다는 걸 배웠어요. 저도
+								누군가에게 돌려줄 수 있는 힘을 배웠고, 얻었어요. &middot;&middot;&middot; 내가 이 프로그램을 선택했으니,
+								오늘 주인공 자리에 설 수 있었던 겁니다. 선택한 자만이 느낄 수 있는 마음입니다. 영화제가 제 삶의 또 다른 시작이라고
+								생각합니다. 나비남 영화제 덕분에 행복했고, 지금도 행복합니다."<span class="itw_blk_cmt"> (강oo 감독)</span></p>
+			</div>
+		</div>
+		<div id="section21" class="book-container section" data-anchor="21st" style="margin-top:-50px">
+			<div class="sub_bk">
+				<div class="sub_tlt">고독에 벗어나 세상에 나를 알리다</div>
+								<div class="list_bk">
+									<p>- <span class="ess">2017.11.17.</span> [2017 나비남 영화제] 개최. </p>
+									<p>- <span class="ess">2018.11.29.</span> [2018 나비남 영화제] 개최.</p>
+								  <p>- <span class="ess">2018.06.~09.</span> 신월3동, 서서울예술교육센터 [다같이 놀자, 예술 한바퀴!] 프로그램 운영</p>
+								  <p>- <span class="ess">2018.06.~12.</span> 신정2동, [마음으로 찍고 사진으로 소통하는 힐링포토, "나도 사진작가"] 프로그램 진행 및 사진전 개최.</p>
+								  <p>- <span class="ess">2019.09.06.</span> [2019 나비남 영화제] 개최</p>
+							 </div>
+
+
+							<div style="display:table; width:33%; height:auto; float:left; padding:0 10px 0 80px">
+								<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p21_01.htm','test','1000','800','no'); return false"><img src="../img/story/s_21_01.png"></a></div>
+										<p class="img_cmt">2018년 서서울예술교육센터<br> 다같이 놀자 예술 한바퀴, 양천구</p>
+							</div>
+							<div style="display:table; width:33%; height:auto; float:left; padding-right:10px">
+								<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p21_02.htm','test','1000','800','no'); return false"><img src="../img/story/s_21_02.png"></a></div>
+										<p class="img_cmt" style="width:230px">2018년 신정2동<br> 나도 사진작가 사진전, 양천구</p>
+							</div>
+							<div style="display:table; width:33%; height:auto; float:left; padding-right:10px">
+								<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p21_03.htm','test','1000','800','no'); return false"><img src="../img/story/s_21_03.png"></a></div>
+										<p class="img_cmt" style="width:230px">나비남 영화제 사진<br>(2017, 2018, 2019)</p>
+							</div>
+
+			</div>
+		</div>
+		<div id="section22" class="book-container section" data-anchor="22nd">
+			<div class="sub_m_bk">
+						<div class="sub_m_tlt">멘티에서 멘토로</div>
+							<p><span class="ess">나비남으로써 지원을 받던 50대 독거남성들은 지역사회에서 다양한 활동을 하고 있다.</span> <br>
+							스마트폰을 이용해 사진전을 열고, 영화제를 개최했다. <br>자조모임을 통해 함께 연습하고 지역행사에서 공연을 했다.<br>
+							더 어려운 주민을 위해 봉사하고, 텃밭에서 키운 농작물을 이웃과 나누었다.
+							<br>다양한 이들의 도움을 통해 멘티에서 멘토로 거듭난 이들은 이제 다른 사람들에게 도움이 나누고 있다.</p>
+							<div style="display:table; width:30%; height:auto; float:left; padding:0 10px 0 80px">
+								<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p22_01.htm','test','1000','800','no'); return false"><img src="../img/story/s_22_01.png"></a></div>
+										<p class="img_cmt">동주민센터 및<br> 동지역사회협의체 봉사활동</p>
+							</div>
+							<div style="display:table; width:30%; height:auto; float:left; padding-right:10px">
+								<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p22_02.htm','test','1000','800','no'); return false"><img src="../img/story/s_22_02.png"></a></div>
+										<p class="img_cmt" style="width:220px;">동주민센터 및 동지역사회협의체<br> 텃밭-김장 나누기 활동</p>
+							</div>
+							<div style="display:table; width:30%; height:auto; float:left; padding-bottom:50px;">
+								<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p22_03.htm','test','1000','800','no'); return false"><img src="../img/story/s_22_03.png"></a></div>
+										<p class="img_cmt">자조모임 별난두드림 활동</p>
+							</div>
+			</div>
+		</div>
+		<div id="section23" class="book-container section" data-anchor="23rd">
+			<div style="min-width:1280px; height:920px;  background:url('../img/story/07_tlt_bg.jpg') no-repeat top; background-size: cover;">
+					<div class="m_blk">
+						<!--p class="m_chapter"><span>Chapter 02. 진행과정</span></p-->
+						<p class="m_tlt"><span>나는 혼자가 아니다</span></p>
+					</div>
+			</div>
+		</div>
+		<div id="section24" class="book-container section" data-anchor="24th">
+			<div class="sub_bk">
+						<div class="sub_tlt">확산되는 고독사 예방 프로그램</div>
+
+
+							<p>고독사 고위험군인 50대 독거남성에 대한 <span class="ess">고독사 예방프로그램 나비남 프로젝트</span>를 최초로 실시한
+							양천구의 시도는 호평 속에 <span class="ess">타지역으로 점차 확산</span>되기 시작했다.</p>
+							<div class="list_bk" style="width:100%; ">
+								<p>- <span class="ess">29개 자치단체 벤치마킹.</span> &nbsp;(노원, 성동, 용산, 성북 등 8개 자치구, 여수 등 21개 자치단체)</p>
+							<p>- <span class="ess">2018.04.</span> 서울시 고독사 예방 종합대책 발표</p>
+							<p>- <span class="ess">2018.08.</span> 보건복지부 주관 [2017년 지역사회보장계획 시행결과 &nbsp;평가] 서울시 자치구 1위, 전국 4위로 우수상 수상</p>
+							</div>
+
+
+							<div style="display:table; width:45%; height:auto; float:left; padding-right:10px">
+								<div style="width:150px; margin:0 auto"><a href="https://opengov.seoul.go.kr/sanction/15006647" target="_blank"><img src="../img/story/s_24_01.png"></a></div>
+										<p class="img_cmt  w250" style="width:220px;">2018년 04월 06일<br> 서울시 고독사 예방 종합대책, 서울특별시</p>
+							</div>
+							<div style="display:table; width:45%; height:auto; float:left; padding-bottom:50px;">
+								<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p24_02.htm','test','1000','800','no'); return false"><img src="../img/story/s_24_02.png"></a></div>
+										<p class="img_cmt w250">2018년 10월 11일 2018 보건복지부<br> 지역복지사업평가 우수상 수상, 양천구청</p>
+							</div>
+
+
+			</div>
+		</div>
+		<div id="section25" class="book-container section" data-anchor="25th">
+			<div class="sub_bk">
+						<div class="sub_tlt">지속되는 나비남 프로젝트</div>
+							<p><span class="ess">2017년 시작된 고독사 예방프로그램 나비남 프로젝트는 현재 진행형</span>이다.
+								 공동체로의 복귀는 단기간에 해결될 수 있는 문제가 아니기 때문이다.<br>
+							<span class="ess">양천구는 나비남지원사업을 2021년까지 주민자치회로 확대</span>하여 복지사각지대를
+							해소하는 방안을 추진하고 있다. <P>그리고 동지역사회보장협의체, 양천 50대독거남지원협의체, 나비남 멘토단, 50스타트센터
+							또한 위기의 독거남성들이 다시 사회로 복귀할 수 있도록 지금도 노력하고 있다.</p>
+
+							<!--div class="g_tlt_bg sub_tlt">2019년 2기 나비남 멘토단<span style="font-size:18px"> [구성현황 : 멘티 70명 / 1:1 또는 2:1 결연]</span></div>
+							 <img src="../img/story/06_graph_bg.png" -->
+
+							<div style="display:table; width:33%; height:auto; float:left; padding:0 10px 50px 40px">
+								<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p25_01.htm','test','1000','800','no'); return false"><img src="../img/story/s_25_01.png"></a></div>
+										<p class="img_cmt w280">2018년 나비남 프로젝트 사업추진 성과,<br> 양천구</p>
+							</div>
+							<div style="display:table; width:33%; height:auto; float:left; padding-right:10px">
+								<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p25_02.htm','test','1000','800','no'); return false"><img src="../img/story/s_25_02.png"></a></div>
+										<p class="img_cmt  w280">2019년 나비남 프로젝트 사업요약, 양천구</p>
+							</div>
+							<div style="display:table; width:33%; height:auto; float:left; padding-right:10px">
+								<div style="width:150px; margin:0 auto"><a href="#" onclick="NewWindow('popup/p25_03.htm','test','1000','800','no'); return false"><img src="../img/story/s_25_03.png"></a></div>
+										<p class="img_cmt">나비남 주민자치를 만나다, 양천구</p>
+							</div>
+
+			</div>
+		</div>
+		<div id="section26" class="book-container section" data-anchor="26th">
+			<div style="min-width:1280px; height:920px;  background:url('../img/story/08_tlt_bg.jpg') no-repeat top; background-size: cover;">
+					<div class="m_blk">
+						<!--p class="m_chapter"><span>Chapter 03. 진행과정</span></p-->
+						<p class="m_tlt"><span>나비남, 참여자들의 이야기</span></p>
+					</div>
+			</div>
+		</div>
+		<div id="section27" class="book-container section" data-anchor="27th">
+			<div class="sub_m_bk" style="width:1280px" >
+						<div class="sub_m_tlt">나비남, 참여자들의 이야기</div>
+							<p><span class="ess">2017년부터 진행되고 있는 나비남 프로젝트에는 다양한 이들이 참여했다.</span> <br>나비남 프로젝트는 사람들에게
+							 어떤 영향을 미쳤고, 사람들은 그 프로젝트를 어떻게 기억하고 있을까? <br>프로젝트에 참여했던 이들의 이야기로 직접 확인해보자.</p>
+
+							 <div style="display:table; width:16%; height:auto; float:left; margin-left:30px">
+								<div style="width:100%; margin:0 auto">
+									<p class="intv_cmt">강명식 감독</p>
+									<a href="#" onclick="NewWindow('popup/p27_01.htm','test','1000','800','no'); return false"><img src="../img/story/interview_01.jpg" style="margin:-10px 30px 0 -10px; border:3px solid #fff" ></a>
+								</div>
+							 </div>
+							 <div style="display:table; width:16%; height:auto; float:left;">
+								<div style="width:100%; margin:0 auto">
+									<p class="intv_cmt">김화진 주무관</p>
+									<a href="#" onclick="NewWindow('popup/p27_02.htm','test','1000','800','no'); return false"><img src="../img/story/interview_02.jpg" style="margin:-10px 30px 0 -10px; border:3px solid #fff"></a>
+								</div>
+							 </div>
+							 <div style="display:table; width:16%; height:auto; float:left;">
+								<div style="width:100%; margin:0 auto">
+									<p class="intv_cmt">신정종합사회복지관</p>
+									<a href="#" onclick="NewWindow('popup/p27_03.htm','test','1000','800','no'); return false"><img src="../img/story/interview_03.jpg" style="margin:-10px 30px 0 -10px; border:3px solid #fff"></a>
+								</div>
+							 </div>
+							 <div style="display:table; width:16%; height:auto; float:left;">
+								<div style="width:100%; margin:0 auto">
+									<p class="intv_cmt">신준식 목사</p>
+									<a href="#" onclick="NewWindow('popup/p27_04.htm','test','1000','800','no'); return false"><img src="../img/story/interview_04.jpg" style="margin:-10px 30px 0 -10px; border:3px solid #fff"></a>
+								</div>
+							 </div>
+							 <div style="display:table; width:16%; height:auto; float:left ">
+								<div style="width:100%; margin:0 auto">
+									<p class="intv_cmt">재미누리협동조합</p>
+									<a href="#" onclick="NewWindow('popup/p27_05.htm','test','1000','800','no'); return false"><img src="../img/story/interview_05.jpg" style="margin:-10px 30px 0 -10px; border:3px solid #fff"></a>
+								</div>
+							 </div>
+							 <div style="display:table; width:16%; height:auto; float:left">
+								<div style="width:100%; margin:0 auto">
+									<p class="intv_cmt">조용식 감독</p>
+									<a href="#" onclick="NewWindow('popup/p27_06.htm','test','1000','800','no'); return false"><img src="../img/story/interview_06.jpg" style="margin:-10px 30px 0 -10px; border:3px solid #fff"></a>
+								</div>
+							 </div>
+						 </div>
+		</div>
+		<div id="section28" class="book-container section" data-anchor="28th">
+			<div style="min-width:1024px; min-height:1000px; background:url('../img/story/ending.jpg') no-repeat center fixed; background-size: cover; padding-top:120px">
+				<table class="end_tbl">
+					<colgroup>
+						<col style="width:50%">
+						<col>
+					</colgroup>
+					<tr>
+						<th>제작</th>
+						<td>알엠소프트</td>
+					</tr>
+					<tr>
+						<td colspan="2" style="height:20px"></td>
+					</tr>
+					<tr>
+						<th rowspan="12" style="vertical-align:top">기록제공</th>
+						<td>양천구청</td>
+					</tr>
+					<tr>
+						<td>한빛종합사회복지관</td>
+					</tr>
+					<tr>
+						<td>신정종합사회복지관</td>
+					</tr>
+					<tr>
+						<td>목동종합사회복지관</td>
+					</tr>
+					<tr>
+						<td>신월종합사회복지관</td>
+					</tr>
+					<tr>
+						<td>신목종합사회복지관</td>
+					</tr>
+					<tr>
+						<td>글자와기록사이</td>
+					</tr>
+					<tr>
+						<td>재미누리협동조합</td>
+					</tr>
+					<tr>
+						<td>트루팍프로덕션</td>
+					</tr>
+					<tr>
+						<td>신준식 목사</td>
+					</tr>
+					<tr>
+						<td>강명진 감독</td>
+					</tr>
+					<tr>
+						<td>조용식 감독</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="udt_date">Last Updated 2019.10.22</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!--div id="section29" class="book-container section" data-anchor="29th">
+		</div-->
+
+	</div>
+
+	</body>
+</html>

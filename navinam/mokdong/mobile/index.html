@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage - 양천구 개청과 목동아파트 개발</title>
+  <link rel="icon" href="/ycpark/wp-content/uploads/2020/10/favicon.png" sizes="32x32">
+  <link rel="icon" href="/ycpark/wp-content/uploads/2020/10/favicon.png" sizes="192x192">
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
+  <link rel="stylesheet" type="text/css" href="css/style.css" >
+  <!--<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" >-->
+  <link rel="stylesheet" type="text/css" href="css/basic.css" />
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/vegas.min.css" >
+  <link rel="stylesheet" href="css/gallery1.css" >
+  <!--<link rel="stylesheet" href="css/scrolltable.css" >-->
+
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+  <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+  <script type="text/javascript" src="js/basic.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/r_slide.js"></script>
+  <!--<script type="text/javascript" src="js/jquery.fullPage.js"></script>-->
+  <script type="text/javascript" src="js/vegas.min.js"></script>
+  <script type="text/javascript" src="js/gallery1.js"></script>
+  <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+  <script type="text/javascript" src="js/bxslider.js"></script>
+
+  <script>
+  $(function()){
+    $('nav a').click(function(e){
+      $.scrollTo(this.hash || 0, 1500);
+      e.preventDefault();
+    });
+  });
+  </script>
+
+  <!-- mainPage 롤링 -->
+  <script>
+  $(function(){
+    $('.main').vegas({
+      slides:[
+        {src:'img/bg/secBg_01.jpg'},
+        {src:'img/bg/secBg_02.jpg'},
+      ],
+      delay:3500
+    });
+  });
+  </script>
+
+  <!-- 10Pages 미분양 해결 롤링 -->
+  <script>
+  $(function(){
+    $('.school').vegas({
+      slides:[
+        {src:'img/bg/13-1.jpg'},
+        {src:'img/bg/13-2.jpg'},
+      ],
+      delay:3500
+    });
+  });
+  </script>
+
+  <script>
+  $(function() {
+    var trigger = $('#trigger');
+    var menu = $('nav ul');
+    $(trigger).on('click', function (e) {
+      e.preventDefault();
+      menu.slideToggle();
+    });
+
+    $('.bxslider').bxSlider({
+      auto:true,
+      autoHover: true,
+    });
+  });
+  </script>
+
+
+</head>
+
+<body>
+  <!--상단고정레이어 #s-->
+  <header>
+    <h1><a href="http://www.yangcheon.go.kr/" target="_blank"><img src="img/common/ci.png" alt="양천구청"></a></h1>
+    <div class="util">
+      <ul>
+        <li><a href="#top"><img src="img/common/bl_home.png" alt="Top으로 이동"></a></li>
+        <li><a href="https://www.facebook.com/sharer/?u=http%3A%2F%2Fnavinam1.godohosting.com/mokdong%2F" target="_blank"><img src="img/common/bl_fb.png" alt="페이스북으로 이동"></a></li>
+  			<li><a href="http://twitter.com/share?url=[navinam1.godohosting.com/mokdong/]&text=[양천구청-양천구 개청과 목동아파트 개발navinam1.godohosting.com/mokdong]" target="_blank"><img src="img/common/bl_twitter.png" alt="트위터로 이동"></a></li>
+        <!--<li><a href="#"><img src="img/common/bl_fb.png" alt="페이스북으로 이동"></a></li>-->
+        <!--<li><a href="#" target="_blank"><img src="img/common/bl_twitter.png" alt="트위터로 이동"></a></li>-->
+        <!--<li><a href="#" target="_blank"><img src="img/common/bl_menu.png" alt="전체 메뉴 이동"></a></li>-->
+        <!--<li class="menu2">
+        <a href="#" class="on"></a>
+        <a href="#" class="off"></a>
+      </li>-->
+    </ul>
+  </div>
+</header>
+
+<!--상단고정레이어 #e-->
+<!--
+<div class="nav">
+<div class="nav_list">
+<ul>
+<li><a href="#top">Top - 양천구 개청과 목동아파트 개발</a></li>
+<li><a href="#1st">01 -  강서구로부터 분구</a></li>
+<li><a href="#3rd">02 -  양천구 신청사 준공</a></li>
+<li><a href="#5th">03 -  '목동 신시가지 개발 사업' 이전의 목동</a></li>
+<li><a href="#6th">04 -  '목동 신시가지 개발 사업' 추진</a></li>
+<li><a href="#7th">05 -  '목동 신시가지 개발 사업' 설계</a></li>
+<li><a href="#9th">06 -  목동아파트 분양</a></li>
+<li><a href="#10th">07 -  미분양 해결을 위한 방법: 교육의 중심지 목동</a></li>
+<li><a href="#14th">08 -  중심공원 조성</a></li>
+<li><a href="#15th">09 -  양천구의 자부심, 새로운 변화의 시작</a></li>
+</ul>
+</div>
+</div>-->
+
+<!-- 첫페지이 시작 -->
+
+
+<!-- 메인 시작 -->
+<div id="top">
+  <div class="main">
+    <span>양천구 개청과</span><br><span>목동아파트 개발</span>
+  </div>
+  <div class="footer">
+    <img src="img/common/open.png">
+  </div>
+</div>
+
+<!-- 1pages #-->
+<div id="section1">
+  <!--<div class="pageN">1 pages</div>-->
+  <div class="text up-text">
+    <p class="line1"><span>양천구</span>는 1988년 목동아파트 개발에 따른 </p>
+    <p class="line2">목동의 인구 변화로 강서구에서 </p>
+    <p class="line3"><span>강서구와 양천구</span>로 나뉘게 되었다. </p>
+    <p class="line4">당시, 기존 강서구 760,262명의 인구 중 </p>
+    <p class="line5">절반 이상인 <span>391,759명</span>이 </p>
+    <p class="line6"><span>양천구 소속으로 편입</span>되었다. </p>
+    <p class="line7">처음 양천구청의 청사는 </p>
+    <p class="line8"><span>컨테이너 박스로 임시청사</span>를 두어 개청하였다. </p>
+  </div>
+  <section>
+    <div class="wrapper">
+      <div class="banner">
+        <nav>
+          <a>사진 <span>더 보기</span> <span class="sub">- 양천구청 임시청사 개청사진</span> </a>
+        </nav>
+        <div class="bxslider">
+          <div><img src="img/gs_md_01.png"><p>임시청사 개청현판식</p></div>
+          <div><img src="img/gs_md_02.png"><p>임시청사 개청 테이프 컷팅식</p></div>
+          <div><img src="img/gs_md_03.png"><p>임시청사 전경</p></div>
+          <div><img src="img/gs_md_04.png"><p>임시청사</p></div>
+          <div><img src="img/gs_md_05.png"><p>임시청사 민원실</p></div>
+          <div><img src="img/gs_md_06.png"><p>임시청사 민원실</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- 2pages #-->
+<div id="section2">
+<!--  <div class="pageN">2 pages</div>-->
+  <div class="table_cover">
+    <h2><span>관련기록물</span> 더 보기</h2>
+    <table class="list_table">
+      <tbody>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_01.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 분구에 따른 업무처리 지침</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_02.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 분구 관련 구별 행정여건 파악</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_03.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 분구에 따른 관련계획 및 지침시달</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_04.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 분구 관련 관계관회의 개최</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_05.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 분구에 따른 신설구 개청계획</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_06.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 분구에 따른 개청준비 추진계획</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_07.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 신설구 개청 관련 문제점 및 대책</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_08.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 분구에 따른 소요예산 요구자료 제출</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_09.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 양천구 개청준비 소요예산<p style="margin: 0 0 5px 30px">(양천구청, 양천구보건소)</p></a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_10.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 신설구 개청에 따른 예산배정 요구</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_11.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 양천구청 임시청사 건립에 따른 협의(1)</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_12.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 양천구청 임시청사 건립에 따른 협의(2)</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_13.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 신설구청사 확보지침</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_14.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 신설구청 주요 행정장비 확보지침</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_15.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 양천구청사 확보계획</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_16.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 신설구청사 확보계획(중랑,노원,양천,서초,송파)</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_17.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 구청 청사부지 추가확보 검토지시</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_18.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 구청 신청사부지 추가확보 조치통보</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_19.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 신설구청 임시청사 위치통보</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/gs_md_20.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 신설구 전화번호 통보</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- 3pages #-->
+<div id="section3">
+<!--  <div class="pageN">3 pages</div>-->
+  <div class="wrap">
+    <!-- Big  images -->
+    <div class="text">
+      <p><span>임시청사에서 4년</span>을 보내고,
+      <span>1991년 양천구의회가 개원</span>한 다음 해
+      지하 1층부터 지상 7층, 연면적 3,411.58평에 이르는
+      <span>양천구 신청사가 준공</span>되었다.</p>
+
+      <p>준공 당시의 <span>양천구 신청사</span>는
+       체력단련장, 전산교육장 등
+      각종 시설을 갖추고 있는 <span>최신식 건물</span>이었다.</p>
+    </div>
+
+
+    <section>
+      <div class="wrapper">
+        <div class="banner">
+          <nav>
+            <a>사진 <span>더 보기</span> <span class="sub">- 양천구청 신축청사 개청사진</span> </a>
+          </nav>
+          <div class="bxslider">
+            <div><img  src="img/build_01.jpg"><p>양천구 신축청사 기공식</p></div>
+            <div><img  src="img/build_02.jpg"><p>양천구 신축청사 기공식 첫삽</p></div>
+            <div><img  src="img/build_03.jpg"><p>양천구 신축청사 기공식 케이크 커팅식</p></div>
+            <div><img  src="img/build_04.jpg"><p>양천구 신축청사 조감도</p></div>
+            <div><img  src="img/build_05.jpg"><p>양천구 신축청사 준공식</p></div>
+            <div><img  src="img/build_06.jpg"><p>양천구 신축청사 현판식</p></div>
+            <div><img  src="img/build_07.jpg"><p>양천구 신축청사 현판식</p></div>
+            <div><img  src="img/build_08.jpg"><p>양천구 신축청사 테이프커팅식</p></div>
+            <div><img  src="img/build_09.jpg"><p>양천구 신축청사 준공기념 단체사진</p></div>
+            <div><img  src="img/build_10.jpg"><p>양천구 신축청사 준공식 방명록</p></div>
+            <div><img  src="img/build_11.jpg"><p>양천구 신축청사 전경</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- 4pages #-->
+<div id="section4">
+<!--  <div class="pageN">4 pages</div>-->
+  <div class="table_cover">
+    <h2><span>관련기록물</span> 더 보기</h2>
+    <table class="list_table">
+      <tbody>
+        <tr>
+          <td class="subj"><a href="../pdf/office_01.pdf" target="_blank"><img src="img/btn_pdf_down.png">1988년 신설구청사 건립 계획시달</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/office_02.pdf" target="_blank"><img src="img/btn_pdf_down.png">1989년 양천구청 청사부지 획지계획보고</a></td>
+        </tr>
+        <tr>
+          <td class="subj"><a href="../pdf/office_03.pdf" target="_blank"><img src="img/btn_pdf_down.png">1990년 신축청사 기본설계안 확정</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- 5pages #-->
+<div id="section5">
+<!--  <div class="pageN">5 pages</div>-->
+  <div class="text">
+    <p>이와 같이 양천구가 개청을 할 수 있었던 계기는
+     <span>1980년대 최초의 공영개발</span>
+    ‘목동 신시가지 개발 사업’</span>이 있었다. </p>
+    <p>1980년대 당시 목동아파트 일대는
+    대부분 작은 마을 단위의 농경지로 이루어졌다.</p>
+    <p>	주택도 단층 한옥으로, 주변에 많은 공터가 있는 모습과
+    신정동 일대에 철거촌의 모습을 볼 수 있었다.</p>
+  </div>
+
+  <section>
+    <div class="wrapper">
+      <div class="banner">
+        <nav>
+          <p>사진 <span>더 보기</span></p><p class="sub">'목동 신시가지 개발 사업' 이전의 목동</>
+        </nav>
+        <div class="bxslider">
+          <div><img  src="img/before_01.jpg"><p>목동 개발 전 농경지 모습</p></div>
+          <div><img  src="img/before_02.jpg"><p>목동 개발 전 주택의 모습</p></div>
+          <div><img  src="img/before_03.jpg"><p>목동 개발 전 신정교 주변 철거촌</p></div>
+          <div><img  src="img/before_04.jpg"><p>목동 개발에 쓰일 공사자재가 쌓여있는 모습</p></div>
+          <div><img  src="img/before_05.jpg"><p>목동 개발을 위한 기존 주택지 철거_1</p></div>
+          <div><img  src="img/before_06.jpg"><p>목동 개발을 위한 기존 주택지 철거_2</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- 6pages #-->
+<div id="section6">
+  <!--<div class="pageN">6 pages</div>-->
+  <div class="wrap">
+    <div class="text">
+      <p>1980년대 서울시는 주택부족과        부동산 투기 과열로 인한        사회적 문제들이 대두되던 시기였다.        이러한 문제를 해결하기 위해 서울시는
+        1981년 6월 서울지역의 균형발전을 위한        도시구조의 다핵화를 골자로 한        <span>‘2000년대 서울시 도시기본계획 마스터플랜’</span>을        발표하였다.</p>
+        <p>
+        또한 1983년 4월 주택물량의 대량 공급과        투기 열기 진정을 위해        목동 신시가지 개발 계획을 발표하고,        목동 개발을 추진하였다.        서울의 낙후지역이었던
+        목동에 대규모 개발계획이        잇따르자 전국민의 관심이 쏟아졌다.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7pages #-->
+  <div id="section7">
+    <!--<div class="pageN">7 pages</div>-->
+    <div class="wrap">
+      <div class="text">
+        <p>목동 개발은 자족적인 <span>‘도시 안의 신도시’</span>를
+        목표로 하였다.</p>
+        <p>다양한 위계를 지닌
+        <span>상업 업무 시설을 중심지구</span>로 넓게 할애하여     서울 서부지역의 중심을 이루게 하고
+        이곳에 종사하는 많은 사람들이 인근 신주거단지에
+         살 수 있도록 하는 것이 구상되었다.</p>
+        <p>서울에서 채택한 기본계획은 <span>남북으로</span>
+         완만하게 S자로 구부러진 구조</span>였다.
+        목동중심축의 도로는 일방통행으로 설계되었다.</p>
+        <p>목동지구 북단에는 <span>열병합발전소를 건설</span>하여,
+        목동지구 내의 모든 가구에 <span>지역 난방을 공급</span>하였다</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8pages #-->
+  <div id="section8">
+  <!--  <div class="pageN">8 pages</div>-->
+    <div class="table_cover">
+      <h2><span>관련기록물</span> 더 보기</h2>
+      <table class="list_table">
+        <tbody>
+          <tr>
+            <td class="subj"><a href="../pdf/plan_01.pdf" target="_blank"><img src="img/btn_pdf_down.png">1983년 서울목동지구 택지개발 계획승인</a></td>
+          </tr>
+          <tr>
+            <td class="subj"><a href="../pdf/plan_02.pdf" target="_blank"><img src="img/btn_pdf_down.png">1983년 목동지구 신시가지개발 기본설계(안)<p style="margin:0 0 5px 30px">현상공모 당선작발표</p></a></td>
+          </tr>
+          <tr>
+            <td class="subj"><a href="../pdf/plan_03.pdf" target="_blank"><img src="img/btn_pdf_down.png">목동신시가지 개발 기본계획 확정(시장방침도면)</a></td>
+          </tr>
+          <tr>
+            <td class="subj"><a href="../pdf/plan_04.pdf" target="_blank"><img src="img/btn_pdf_down.png">목동지구개발사업 계획 지도</a></td>
+          </tr>
+          <tr>
+            <td class="subj"><a href="../pdf/plan_05.pdf" target="_blank"><img src="img/btn_pdf_down.png">1984년 서울목동지구택지개발사업 실시계획 승인</a></td>
+          </tr>
+          <tr>
+            <td class="subj"><a href="../pdf/plan_06.pdf" target="_blank"><img src="img/btn_pdf_down.png">1984년 목동개발지구내 중심축가로확정(중심축블럭확정)</a></td>
+          </tr>
+          <tr>
+            <td class="subj"><a href="../pdf/plan_07.pdf" target="_blank"><img src="img/btn_pdf_down.png">1984년 목동지구 도시설계(안) 보고</a></td>
+          </tr>
+          <tr>
+            <td class="subj"><a href="../pdf/plan_08.pdf" target="_blank"><img src="img/btn_pdf_down.png">1985년 목동 기존 주택지정비 계획</a></td>
+          </tr>
+          <tr>
+            <td class="subj"><a href="../pdf/plan_09.pdf" target="_blank"><img src="img/btn_pdf_down.png">1984년 강서구 도시 기본계획 책자</a></td>
+          </tr>
+          <tr>
+            <td class="subj"><a href="../pdf/plan_10.pdf" target="_blank"><img src="img/btn_pdf_down.png">목동지구 도시설계 종합계획도</a></td>
+          </tr>
+          <tr>
+            <td class="subj"><a href="../pdf/plan_11.pdf" target="_blank"><img src="img/btn_pdf_down.png">목동지구 도시설계 중심지구 기능 배분도</a></td>
+          </tr>
+          <tr>
+            <td class="subj"><a href="../pdf/plan_12.pdf" target="_blank"><img src="img/btn_pdf_down.png">목동지구 도시설계 중심축 교통 체계도</a></td>
+          </tr>
+          <tr>
+            <td class="subj"><a href="../pdf/plan_13.pdf" target="_blank"><img src="img/btn_pdf_down.png">목동지구신시가지 중심지구도시설계개요</a></td>
+          </tr>
+          <tr>
+            <td class="subj"><a href="../pdf/plan_14.pdf" target="_blank"><img src="img/btn_pdf_down.png">중심지구 기능 배분도 팸플릿</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 9pages #-->
+  <div id="section9">
+  <!--  <div class="pageN">9 pages</div>-->
+    <div>
+      <div class="text">
+        <p>목동 개발계획으로 지어진 목동아파트는
+        <span>1984년부터 1차 분양을 시작</span>으로
+        <span>1987년 아파트를 준공</span>하였으나
+        <span>3차 분양까지  미분양</span>의 저조한 성적을 보여
+        여러 대책이 강구되었다. </p>
+
+        <p>철거 대상 가옥주에게 시영아파트 입주권과
+        약간의 이주보상금만이 지급되었을 뿐
+        <span>세입자에 대한 철거 대책은 없는 상황으로</span>
+        철거민의 빈번한 집단 시위를 미분양 원인 중 하나로 분석하였다.
+        이에 <span>실질적인 보상과 입주권 제시 등</span>을 통해
+        <span>철거민들과의 마찰을 해결</span>하였다.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10pages #-->
+  <div id="section10">
+  <!--  <div class="pageN">10 pages</div>-->
+    <div class="school">
+      <div class="text">
+        <p>수요자들의 기피 요인이 됐던 학군 문제도
+        <span>명문학교인 진명여자고등학교와 양정중 · 고등학교</span>를
+        <span>목동으로 이전</span>하면서
+        미분양의 문제가 나아지고
+        <span>목동이 교육의 중심지로 발판을 다지는 계기</span>가 되었다.</p>
+        <p class="mgt30 line6">이후 목동아파트는
+        <span>1988년 10월 392개의 동 26,627세대가 입주</span>하였다.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11pages #-->
+  <div id="section11">
+    <!--<div class="pageN">11 pages</div>-->
+    <section>
+      <div class="wrapper">
+        <div class="banner">
+          <nav>
+            <a>사진 <span>더 보기 </span><span class="sub">- 목동 개발 과정</span> </a>
+          </nav>
+          <div class="bxslider">
+            <div><img  src="img/dev_01.jpg"><p>목동 아파트 7공구 711동 1층 바닥 공사</p></div>
+            <div><img  src="img/dev_02.jpg"><p>목동 아파트 15공구 건설현장</p></div>
+            <div><img  src="img/dev_03.jpg"><p>목동 아파트 건설현장 전경</p></div>
+            <div><img  src="img/dev_04.jpg"><p>철거민 시위 모습</p></div>
+            <div><img  src="img/dev_05.jpg"><p>목동야구장 건설</p></div>
+            <div><img  src="img/dev_06.jpg"><p>안양천 부근 교각 공사</p></div>
+            <div><img  src="img/dev_07.jpg"><p>신도림고가차도 공사</p></div>
+            <div><img  src="img/dev_08.jpg"><p>목동 아파트 1단지 준공 후 전경</p></div>
+            <div><img  src="img/dev_09.jpg"><p>목동 아파트 2단지 준공 후 전경</p></div>
+            <div><img  src="img/dev_10.jpg"><p>목동 아파트 준공 후 전경</p></div>
+            <div><img  src="img/dev_11.jpg"><p>도림천고가도로 준공 후 전경</p></div>
+            <div><img  src="img/dev_12.jpg"><p>목동종합운동장 준공 후 전경</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 12pages #-->
+  <div id="section12">
+  <!--  <div class="pageN">12 pages</div>-->
+    <section>
+      <div class="wrapper">
+        <div class="banner">
+          <nav>
+            <a>보도자료 <span>더 보기 </span><span class="sub">- 목동 개발 과정</span> </a>
+          </nav>
+          <div class="bxslider">
+            <div><img  src="img/press_01.jpg"><p>1983년 4월 12일자 조선일보 스크랩</p></div>
+            <div><img  src="img/press_02.jpg"><p>1983년 4월 12일, 13일자 만평 스크랩<br>(조선일보, 한국경제신문, 중앙일보, 매일경제신문)</p></div>
+            <div><img  src="img/press_03.jpg"><p>1983년 4월 15일자 조선일보 스크랩</p></div>
+            <div><img  src="img/press_04.jpg"><p>1983년 4월 16일 경향신문 스크랩</p></div>
+
+            <div><img  src="img/press_05.jpg"><p>1983년 4월 17일자 서울신문 스크랩</p></div>
+            <div><img  src="img/press_06.jpg"><p>1983년 5월 13일자 경향신문 스크랩</p></div>
+            <div><img  src="img/press_07.jpg"><p>1983년 5월 30일자 중앙일보 스크랩</p></div>
+            <div><img  src="img/press_08.jpg"><p>1986년 6월 17일자 경향신문 스크랩</p></div>
+
+            <div><img  src="img/press_09.jpg"><p>1986년 7월 17일, 22일, 23일자 스크랩<br>(한국일보, 매일경제신문, 조선일보)</p></div>
+            <div><img  src="img/press_10.jpg"><p>1986년 10월 7일, 14일자 스크랩<br>(동아일보, 경향신문, 매일경제신문)</p></div>
+            <div><img  src="img/press_11.jpg"><p>1987년 1월 9일, 12일자 스크랩<br>(매일경제신문, 동아일보)</p></div>
+            <div><img  src="img/press_12.jpg"><p>1987년 4월 3일, 24일, 25일자 스크랩<br>(경향신문, 매일경제신문, 한국일보, 조선일보)</p></div>
+
+            <div><img  src="img/press_13.jpg"><p>1987년 6월 4일, 5일자 스크랩<br>(경향신문, 조선일보, 동아일보)</p></div>
+            <div><img  src="img/press_14.jpg"><p>1987년 7월 9일자 한국경제신문 스크랩</p></div>
+            <div><img  src="img/press_15.jpg"><p>1987년 9월 2일, 4일자 스크랩<br>(매일경제신문, 중앙일보)</p></div>
+            <div><img  src="img/press_16.jpg"><p>1987년 9월 9일, 10일자 스크랩<br>(중앙일보, 조선일보, 매일경제신문)</p></div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 13pages #-->
+  <div id="section13">
+    <!--<div class="pageN">13 pages</div>-->
+    <div class="table_cover">
+      <h2><span>관련기록물</span> 더 보기</h2>
+      <table class="list_table">
+        <tbody>
+          <tr>
+            <td class="subj"><a href="../pdf/mokdong_unsold_01.pdf" target="_blank"><img src="img/btn_pdf_down.png">목동 신시가지 건설</a></td>
+          </tr>
+          <tr>
+            <td class="subj"><a href="../pdf/mokdong_unsold_02.pdf" target="_blank"><img src="img/btn_pdf_down.png">목동지구아파트 건설공사 준공사진</a></td>
+          </tr>
+          <tr>
+            <td class="subj"><a href="../pdf/mokdong_unsold_03.pdf" target="_blank"><img src="img/btn_pdf_down.png">1986년 목동아파트 미분양 사유</a></td>
+          </tr>
+          <tr>
+            <td class="subj"><a href="../pdf/mokdong_unsold_04.pdf" target="_blank"><img src="img/btn_pdf_down.png">목동 신시가지 아파트 1공구 입주 안내문</a></td>
+          </tr>
+          <tr>
+            <td class="subj"><a href="../pdf/mokdong_unsold_05.pdf" target="_blank"><img src="img/btn_pdf_down.png">1986년 입주증 및 입주통지서</a></td>
+          </tr>
+          <tr>
+            <td class="subj"><a href="../pdf/mokdong_unsold_06.pdf" target="_blank"><img src="img/btn_pdf_down.png">입주자 생활안내</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 14pages #-->
+  <div id="section14">
+    <!--<div class="pageN">14 pages</div>-->
+    <div class="wrap">
+      <div class="text">
+        <p>목동지구개발사업소에서는 주요 목동지구
+        도시계획 중 하나인 녹지체계구상의 일환으로
+        목동 신시가지 중심공원 조성계획을 제안하였다.</p>
+        <p>미국과 일본 등 외국 사례를 참고하였고,
+        공지배분 및 동선 계획 등
+        구체적인 공원조성 계획을 세웠다.</p>
+      </div>
+      <div class="table_cover">
+        <h2><span>관련기록물</span> 더 보기</h2>
+        <table class="list_table">
+          <tbody>
+            <tr>
+              <td class="subj"><a href="../pdf/park_01.pdf" target="_blank"><img src="img/btn_pdf_down.png">목동 신시가지 중심공원 조성계획</a></td>
+            </tr>
+            <tr>
+              <td class="subj"><a href="../pdf/park_02.pdf" target="_blank"><img src="img/btn_pdf_down.png">주제공원의 계획개념과 자료</a></td>
+            </tr>
+            <tr>
+              <td class="subj"><a href="../pdf/park_03.pdf" target="_blank"><img src="img/btn_pdf_down.png">공원녹지계획 팸플릿</a></td>
+            </tr>
+            <tr>
+              <td class="subj"><a href="../pdf/park_04.pdf" target="_blank"><img src="img/btn_pdf_down.png">1987년 파리공원조성공사</a></td>
+            </tr>
+            <tr>
+              <td class="subj"><a href="../pdf/park_05.pdf" target="_blank"><img src="img/btn_pdf_down.png">1987년 파리공원개원</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!--<section>
+        <div class="wrapper">
+          <div class="banner">
+            <nav>
+              <a>사진 <span>더 보기</span> <span class="sub">- 양천구청 신축청사</span> </a>
+            </nav>
+            <div class="bxslider">
+              <div><img  src="img/build_01.jpg"><p>양천구 신축청사 기공식</p></div>
+              <div><img  src="img/build_02.jpg"><p>양천구 신축청사 기공식 첫삽</p></div>
+              <div><img  src="img/build_03.jpg"><p>양천구 신축청사 기공식 케이크 커팅식</p></div>
+              <div><img  src="img/build_04.jpg"><p>양천구 신축청사 조감도</p></div>
+              <div><img  src="img/build_05.jpg"><p>양천구 신축청사 준공식</p></div>
+              <div><img  src="img/build_06.jpg"><p>양천구 신축청사 현판식</p></div>
+              <div><img  src="img/build_07.jpg"><p>양천구 신축청사 현판식</p></div>
+              <div><img  src="img/build_08.jpg"><p>양천구 신축청사 테이프커팅식</p></div>
+              <div><img  src="img/build_09.jpg"><p>양천구 신축청사 준공기념 단체사진</p></div>
+              <div><img  src="img/build_10.jpg"><p>양천구 신축청사 준공식 방명록</p></div>
+              <div><img  src="img/build_11.jpg"><p>양천구 신축청사 전경</p></div>
+            </div>
+          </div>
+        </div>
+      </section>-->
+    </div>
+  </div>
+
+  <!-- 15pages #-->
+  <div id="section15">
+    <!--<div class="pageN">15 pages</div>-->
+
+      <!-- Big  images -->
+      <div class="text">
+        <p>양천구 목동아파트가 풍부한 녹지와 공원들로 인해
+        쾌적한 주거 공간이 조성될 수 있었던 것은
+        30년 전 미리 계획하고 조성한 산물이 아닐까 싶다.</p>
+        <p>목동아파트는 대한민국의 대표 아파트 단지이자
+        <span>양천구의 자부심, 서울의 교육과 </span>
+        <span>서부지역의 중심지</span>로 자리잡았으며,
+        현재 새로운 변화를 눈앞에 두고 있다. </p>
+      </div>
+
+      <section>
+        <div class="wrapper">
+          <div class="banner">
+            <nav>
+              <p>사진 <span>더 보기</span></p><p class="sub">양천구의 자부심 새로운 변화의 시작</p>
+            </nav>
+            <div class="bxslider">
+              <div><img  src="img/start_01.png"><p>목동아파트 전경(1)</p></div>
+              <div><img  src="img/start_02.png"><p>목동아파트 전경(2)</p></div>
+              <div><img  src="img/start_03.png"><p>목동아파트 전경(3)</p></div>
+              <div><img  src="img/start_04.png"><p>목동아파트 전경(4)</p></div>
+              <div><img  src="img/start_05.png"><p>목동아파트 전경(5)</p></div>
+              <div><img  src="img/start_06.png"><p>목동아파트 전경(6)</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+</body>
