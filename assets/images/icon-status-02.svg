@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_7811" data-name="사각형 7811" width="80" height="80" transform="translate(772 1801)" fill="none" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="icon-status-02" transform="translate(-772 -1801)" clip-path="url(#clip-path)">
+    <g id="그룹_10172" data-name="그룹 10172" transform="translate(770.379 1799.985)">
+      <g id="Layer_2" data-name="Layer 2" transform="translate(10.289 7.662)">
+        <path id="패스_25792" data-name="패스 25792" d="M61.149,71.28H13.878a2.626,2.626,0,0,1-2.626-2.626V37.14a2.626,2.626,0,1,1,5.252,0V66.028H58.523V10.878A2.626,2.626,0,0,0,55.9,8.252H8.626A2.626,2.626,0,0,1,8.626,3H55.9a7.878,7.878,0,0,1,7.879,7.878V68.654A2.626,2.626,0,0,1,61.149,71.28Z" transform="translate(-0.748 -3)" fill="#bec5d1"/>
+        <path id="패스_25793" data-name="패스 25793" d="M17.131,39.766H6.626A2.626,2.626,0,0,1,4,37.14V10.878a7.878,7.878,0,1,1,15.757,0V37.14A2.626,2.626,0,0,1,17.131,39.766ZM9.252,34.514H14.5V10.878a2.626,2.626,0,0,0-5.252,0Z" transform="translate(-4 -3)" fill="#bec5d1"/>
+        <path id="패스_25794" data-name="패스 25794" d="M30.383,22.252H14.626a2.626,2.626,0,1,1,0-5.252H30.383a2.626,2.626,0,1,1,0,5.252Z" transform="translate(9.009 19.766)" fill="#bec5d1"/>
+        <path id="패스_25795" data-name="패스 25795" d="M40.888,26.252H14.626a2.626,2.626,0,1,1,0-5.252H40.888a2.626,2.626,0,1,1,0,5.252Z" transform="translate(9.009 26.271)" fill="#bec5d1"/>
+        <path id="패스_25796" data-name="패스 25796" d="M35.635,18.252H14.626a2.626,2.626,0,1,1,0-5.252H35.635a2.626,2.626,0,1,1,0,5.252Z" transform="translate(9.009 13.262)" fill="#bec5d1"/>
+        <path id="패스_25797" data-name="패스 25797" d="M40.888,16.131H14.626A2.626,2.626,0,0,1,12,13.5V5.626A2.626,2.626,0,0,1,14.626,3H40.888a2.626,2.626,0,0,1,2.626,2.626V13.5A2.626,2.626,0,0,1,40.888,16.131ZM17.252,10.878H38.262V8.252H17.252Z" transform="translate(9.009 -3)" fill="#bec5d1"/>
+      </g>
+      <g id="frame" transform="translate(0 0)">
+        <rect id="사각형_4431" data-name="사각형 4431" width="84" height="84" transform="translate(-0.266 0.015)" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

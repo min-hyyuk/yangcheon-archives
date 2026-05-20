@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="imagetoolbar" content="no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>양천구 기록관</title>
+	<link rel="icon" type="image/png" href="assets/images/favicon.png" />
+	
+	<!--Core CSS -->
+    <link href="assets/bs3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+	<link href="assets/css/common.css" rel="stylesheet" >
+    
+	<!--Core script -->
+	<script async src="assets/js/analytics.js"></script>
+	<script src="assets/js/jquery-1.8.3.min.js" type="text/javascript"></script>	
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/jquery.easing.1.3.js"></script>
+	<script src="assets/js/common.js"></script>
+    
+	<!-- banner slider -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+</head>
+<body>
+<div id="skip-navigation">
+	<ol>
+		<li><a href="#lnb">상단 메뉴 바로가기</a></li>
+		<li><a href="#contents">본문 바로가기</a></li>
+	</ol>
+	<hr />
+</div>
+
+<div id="wrap" class="main">
+<!-- header -->
+<div id="header-wrap" style="right: 0px;">
+	<!-- pc menu -->
+	<div id="header" style="top: 0px;">			
+		<div class="header-inner">
+			<div class="head-content">   
+				<h1><a href="main.html"><img src="assets/images/logo.svg" alt="양천구 기록관"></a></h1>  
+			</div>       				
+		</div>
+	</div> 
+	<!-- //pc menu -->
+
+	<!-- mobile menu -->  
+	<div id="toputil">
+		<div class="al_box inner-fixed">		
+		  <a href="" class="mob_btn"><span>모바일 메뉴 열기</span></a>
+		</div>	
+	</div>
+
+	<!-- gnb -->
+	<div id="gnb" class="mob " style="height: auto; display: none; right: -300px;">	
+		<div id="blind" style="right: 0px; opacity: 0.9; height: 0px; display: none;"><span></span></div>  
+
+		<div class="mob-box">
+			<h1><a href="main.html"><img src="assets/images/logo.svg" alt="양천구 기록관"></a></h1> 
+			<div class="log-wrap f0"><span onClick="location.href='login.html'" style="cursor:pointer;"><span class="icon-avator mR5"></span>로그인하세요</span> <li class="fr"><span class="icon-setting mR10" onClick="location.href=''" style="cursor:pointer;"></span><span class="icon-power" onClick="location.href=''" style="cursor:pointer;"></span></li></div>
+		</div>
+
+		<div class="al_box">
+			<nav id="nav">
+				<ul class="group">
+					<li class="menu1">
+						<a href="about.html" class="num1">기록관 소개</a>
+						<ul class="menuBox group" style="height: auto; display: none;">
+							<li><a href="about.html"><strong>기록관 소개</strong></a></li>
+							<li><a href="donation.html"><strong>기록물 기증</strong></a>	</li>
+							<li class="contactUs"><a href="contactUs.html"><strong>오시는 길</strong></a>	
+							</li>								
+						</ul>
+					</li>                      
+					<li class="menu2">
+						<a href="content.html" class="num1">기록정보콘텐츠</a>
+					</li>		
+					<li class="menu3">
+						<a href="reference.html" class="num1">양천구 기록 자료실</a>
+						<ul class="menuBox group" style="height: auto; display: none;">
+							<li><a href="reference.html"><strong>시청각기록물</strong></a></li>
+							<li><a href="publication.html"><strong>간행물</strong></a>	</li>
+							<li><a href="private.html"><strong>민간(기증)기록</strong></a>	</li>
+							<li><a href="search.html"><strong>기록검색</strong></a></li>
+						</ul>
+					</li>
+					<li class="menu4">
+						<a href="activities.html" class="num1">구민기록활동</a>
+						<ul class="menuBox group" style="height: auto; display: none;">
+							<li><a href="activities.html" ><strong>활동기록</strong></a></li>
+							<li><a href="activities-notice.html" ><strong>공지</strong></a></li>
+						</ul>
+					</li>
+					<li class="menu5">
+						<a href="notice.html" class="num1">알림마당</a>
+						<ul class="menuBox group" style="height: auto; display: none;">
+							<li><a href="notice.html" ><strong>알림마당</strong></a></li>	
+						</ul>
+					</li>
+				  </ul>
+			</nav>
+		</div>
+
+		<div class="gnb-right" >
+			<a href="login.html" class="icon-login" title="로그인">로그인</a>
+<!--				<a href="#sitemap" class="icon-logout" title="로그아웃">로그아웃</a>-->
+		</div>
+	</div>
+	<!-- //gnb -->
+	<div id="blind_mob" style="opacity: 0; left: 0px; display: none;"></div>
+	<!-- //mobile menu -->
+</div>
+<!-- //header -->
+    <!-- container -->
+    <div id="container"> 
+	<div id="contents">
+		<div class="main-con">
+			<!-- 메인 컨텐츠 -->
+			<section class="main-wrap">
+				<div class="inner-fixed main-visualBox">
+					<h2 class="visual-title">
+						우리의 기억이<br>
+						어제와 오늘을 잇다
+					</h2>
+					<div class="main-search-group">
+						<input type="text" placeholder="찾으시는 기록을 검색하세요.">
+						<a href="" class="icon-search-main">검색</a>
+					</div>
+				</div>
+			</section>
+			<!-- //메인 컨텐츠 -->
+			
+			<!-- 메타버스 -->
+			<section class="metaverse-wrap">
+				<div class="metaverse main-areaBox inner-fixed">
+					<div class="metaverse-info">
+						<h3>메타버스<br>과거와 현재를<br>경험하다!</h3> 
+						<p class="metaverse-text">
+							양천구민의 모든 가치를 높이는 지속가능한 <br>미래를 만들어 갑니다
+						</p>
+						<div class="metaverse-btn">
+							<a href="" class="button button-primary button-lg">체험하기 <i class="icon-arrow-white"></i></a>
+						</div>
+					</div>
+					<div class="metaverse-img">
+						<img src="assets/images/img-metaverse.png" alt="">
+					</div>
+				</div>
+			</section>
+			<!-- //메타버스 -->
+			
+			<!-- 기록 -->
+			<section class="archive-wrap">
+				<div class="archive main-areaBox inner-fixed">
+					<h3>매일 새로운<br>기억을 기록해요.!</h3>
+
+					<div class="swiper-slider-container">
+					  <div class="swiper-tab-content-ctlr">
+						<div class="swiper-tab-con btn-wrap current">
+							<a href="javascript:void(0);" class="btn-prev"></a>
+							<a href="javascript:void(0);" class="btn-next"></a>
+						  <div class="swiper-container">
+							<div class="archive-row swiper-wrapper">
+								<div class="archiveBox swiper-slide">
+									<div class="archive-head">
+										<small class="archive-category">간행물</small>
+										<strong class="archive-title">양천생활소식 제207호</strong>
+									</div>
+									<div class="archive-foot">
+										<div class="archive-img"><img src="assets/images/img-main-02.png" alt=""></div>
+										<span class="archive-date">2025. 11. 20 / 양천구</span>
+									</div>
+								</div>
+								<div class="archiveBox swiper-slide">
+									<div class="archive-head">
+										<small class="archive-category">간행물</small>
+										<strong class="archive-title">양천생활소식 제206호</strong>
+									</div>
+									<div class="archive-foot">
+										<div class="archive-img"><img src="assets/images/img-main-02.png" alt=""></div>
+										<span class="archive-date">2025. 11. 20 / 양천구</span>
+									</div>
+								</div>
+								<div class="archiveBox swiper-slide">
+									<div class="archive-head">
+										<small class="archive-category">간행물</small>
+										<strong class="archive-title">양천생활소식 제205호</strong>
+									</div>
+									<div class="archive-foot">
+										<div class="archive-img"><img src="assets/images/img-main-02.png" alt=""></div>
+										<span class="archive-date">2025. 11. 20 / 양천구</span>
+									</div>
+								</div>
+								<div class="archiveBox swiper-slide">
+									<div class="archive-head">
+										<small class="archive-category">간행물</small>
+										<strong class="archive-title">양천생활소식 제204호</strong>
+									</div>
+									<div class="archive-foot">
+										<div class="archive-img"><img src="assets/images/img-main-02.png" alt=""></div>
+										<span class="archive-date">2025. 11. 20 / 양천구</span>
+									</div>
+								</div>
+								<div class="archiveBox swiper-slide">
+									<div class="archive-head">
+										<small class="archive-category">간행물</small>
+										<strong class="archive-title">양천생활소식 제203호</strong>
+									</div>
+									<div class="archive-foot">
+										<div class="archive-img"><img src="assets/images/img-main-02.png" alt=""></div>
+										<span class="archive-date">2025. 11. 20 / 양천구</span>
+									</div>
+								</div>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				</div>
+					<script>
+						(function(){
+						  var swiper = new Swiper('.swiper-container', {
+							slidesPerView: 3,
+							spaceBetween: 30,
+							pagination: {
+							  el: '.swiper-pagination',
+							  clickable: true,
+							},
+							navigation: {
+								nextEl: '.btn-next',
+								prevEl: '.btn-prev',
+							},
+							  loop: true,
+							observer: true,
+							observeParents: true,
+							breakpoints: {
+							992: {
+							  slidesPerView: 2,
+							  spaceBetween: 20
+							},
+							640: {
+							   slidesPerView: 1.15,
+							   spaceBetween: 20
+							}
+						  }
+						  });
+						})(jQuery);
+					</script>
+
+			</section>
+			<!-- 기록 //-->
+			
+			<!-- 기증하기 -->
+			<section class="donation-wrap">
+				<div class="donation  inner-fixed">
+					<h3>소중한 기록물을 찾고<br class="m-block"> 있습니다.</h3>
+					<p>
+						양천구기록관은 과거에서 이어져 내려온 기록물부터 오늘을 기억할 수 있는 <br>
+						기록물까지 보존할 기록을 찾습니다.
+					</p>
+					<a href="" class="button button-line-white button-lg">기증 문의 <i class="icon-arrow-white"></i></a>
+				</div>
+			</section>
+			<!-- //기증하기 -->
+			
+			<!-- 뉴스 -->
+			<section class="news-wrap">
+				<div class="news inner-fixed">
+					<div class="news-textBox">
+						<h3>양천기록관의 <br>소식을 전합니다.</h3>
+						<a href="notice.html" class="button button-line button-lg">전체보기 <i class="icon-arrow-black"></i></a>
+					</div>
+					<ul class="news-row">
+						<li>
+							<div class="news-dateBox">
+								<div class="news-today">20</div>
+								<span class="news-day">2022-12</span>
+							</div>
+							<span class="news-label">공지사항</span>
+							<a href="notice-view.html" class="news-title">온라인기록관 전시 공지(2022.12.19(월)~ 2023.12.29(금))</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- //뉴스 -->
+			
+		</div>
+		
+		
+	</div>	
+	</div>
+    <!-- //container -->
+    <!-- scrollup -->
+    <a href="#" class="scrollup" style="display: none;">Scroll</a>
+    <!-- //scrollup -->	
+	
+
+	<!-- footer -->
+     <div id="footer">   
+		<div class="goLink"> 
+			<div class="inner-fixed ">
+				<a href="agreement.html" class="mR20"> 이용약관</a>
+				<a href="personal.html" class="mR20">개인정보처리방침 </a> 
+				<a href="email.html" class="">이메일무단수집거부</a> 
+			</div>
+		 </div>
+        <ul class="inner-fixed">  
+            <li class="foot-f01">
+				<span class="address">
+					(08095) 서울특별시 양천구 목동동로 105(신정동)<br>
+					Tel.02-2620-3114(120 다산콜센터로 연결)<br class="m-block">					
+					02-2620-3000(야간,공휴일/당직실)
+				</span>
+				<span class="copy">
+					@ Yangcheon-gu Office all rights reserved.
+				</span>
+			</li>
+			<li class="foot-f02">
+				<select class="select-family" onchange="window.open(value,'_blank');">
+					<option>유관기관 사이트</option>
+					<option value="https://www.yangcheon.go.kr/site/yangcheon/main.do">양천구청 </option>
+					<option value="https://yfac.kr/main/main.do">양천문화재단 </option>
+					<option value="https://xn--z92b72qn1at0nqrn.kr/">양천문화원   </option>
+					<option value="https://www.archives.go.kr/next/viewMain.do">국가기록원</option>
+					<option value="https://archives.seoul.go.kr/">서울기록원 </option>
+					<option value="https://www.mois.go.kr/frt/a02/selectInfoPublish.do">행정안전부 정보공개 </option>
+				</select>
+			</li>
+		 </ul>
+	</div>
+	<!-- //footer -->
+ </div>
+<!--slide table script-->
+<script src="assets/js/jquery.scroltable.min.js"></script>
+<script>
+$('.w3-table-all').scroltable();
+</script>	
+</body>
+</html>

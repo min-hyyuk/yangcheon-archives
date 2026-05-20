@@ -1,0 +1,168 @@
+@charset "utf-8";
+/* 리스트 */
+.tbl-list,.tbl-list th,.tbl-list td{border:0}
+.tbl-list{width:100%; border-top: 2px solid #333;border-bottom: 1px solid #333; line-height:18px; letter-spacing: -.6px }
+.tbl-list caption{display:none}
+.tbl-list th{padding:10px 0; font-weight:500; text-align:center; vertical-align:middle;  line-height:18px; color:#222; background: #f4f5f8; border-bottom: 1px solid #bbb; border-right: 1px solid #DBDBDB; height: 62px }
+.tbl-list th:last-child{border-right: 0}
+.tbl-list td{
+	text-align: center;
+    padding:8px 10px;
+    background: #fff;
+    vertical-align:middle;    
+    line-height: 1.6;
+	border-top: 1px solid #e9e9e9; 
+	height: 90px;
+	font-weight: 300
+}
+.tbl-list td:first-child{border-left: 0}
+.tbl-list tr:last-child td{
+	border-bottom: 1px solid #333; 
+}/*
+.tbl-list tr:hover td{
+	background: #f7f7f7;
+}*/
+.tbl-list.stripe tr:nth-child(even) td{
+	background: #f7f7f7;
+}
+.tbl-list .left{ text-align:left !important; padding-left: 10px }
+.tbl-list .center{ text-align:center !important; padding-left: 0}
+.tbl-list .right{ text-align:right !important; padding-left: 0}
+.tbl-list .top{ vertical-align: top }
+.tbl-list .linkBox{ position: relative; padding-left: 130px;}
+.tbl-list .tbl-label{ border-radius:250px; border:1px solid #ED6D00; width:120px; height: 40px; line-height: 40px; color:#ED6D00; display: inline-block; text-align: center; margin-right: 10px; position: absolute; left:0}
+
+.activitiesBox{ border-bottom:1px dotted #CBCBCB; padding-bottom: 30px;  margin-bottom: 100px; font-weight: 500}
+.activitiesBox > li{ margin-bottom: 20px; }
+.activitiesBox .at-title{ color:#000; font-size:21px; font-weight: bold;  margin-bottom: 20px;}
+
+
+
+/* 수정, 쓰기, 에디터,  */
+.tbl-write,.tbl-write th,.tbl-write td{border:0; }
+.tbl-write{width:100%; border-bottom:1px solid #333;border-top:2px solid #333;}
+.tbl-write caption{display:none}
+.tbl-write > tbody > tr > th{padding:14px 10px 14px 10px;background:#f4f5f8;font-weight:500; text-align:center; border-bottom:1px solid #e9e9e9; line-height:18px; vertical-align:middle; }
+.tbl-write > tbody > tr >  td{padding: 15px; border-bottom:1px solid #e9e9e9; background: #fff; line-height:24px; text-align:left; vertical-align:middle}
+.tbl-write  > tbody > tr:last-child > td, .tbl-write  > tbody > tr:last-child > th{ border-bottom:1px solid #222; }
+.tbl-write .left{ text-align:left; padding-left:10px}
+.tbl-write .center{ text-align:center; padding-left:0}
+.tbl-write .right{ text-align:right; }
+.tbl-write .top{ vertical-align: top; }
+
+.require{ padding-left: 20px !important; position: relative}
+.require:before{ content: "*"; display: inline-block; position: absolute; /* width:3px; height: 3px; background: #2b76b4; margin-top: 7px;*/ margin-top: 2px; margin-left: -16px; color:#ff0000 }
+p.require:before{ margin-top: 0px; }
+.tbl-write .title{ padding:10px 20px; font-size:19px}
+.tbl-write .view{ padding:40px 20px; }
+
+/* bg 없을 때 */
+.tbl-write.bg-none { border:none;}
+.tbl-write.bg-none > tbody > tr > th, .tbl-write.bg-none > tbody > tr > td{ background:#fff; border:none; text-align: left;}
+.tbl-write.bg-none > tbody > tr > th{ background:#fff;}
+.tbl-write.bg-none input, .tbl-write.bg-none textarea{ border:none; background: #F5F7F7}
+
+
+
+/* 표 */
+.tbl-base,.tbl-base th,.tbl-base td{border:0}
+.tbl-base{width:100%; border-top: 2px solid #154AA5; line-height:18px; letter-spacing: -.6px; }
+.tbl-base caption{display:none}
+.tbl-base th{padding:10px 0; font-weight:500; text-align:center; vertical-align:middle; line-height:18px; color:#222;border-right: 1px solid #707070; border-bottom: 1px solid #838383; background: #DFE8EF; height: 54px;  }
+.tbl-base td{
+	text-align: center;
+    padding:15px 10px;
+    background: #fff;
+    vertical-align:middle;    
+    line-height: 22px;
+	border-right: 1px solid #ebebeb; 
+	border-bottom: 1px solid #ebebeb; 
+}
+.tbl-base td.left{ text-align:left}
+.tbl-base th:last-child, .tbl-base td:last-child{border-right: none }
+
+
+/*상세보기*/
+.tbl-view{
+	width:100%; 
+	border-bottom: 1px solid #333; 
+	font-size:18px;
+}
+.tbl-view-head{
+	text-align: center;
+	
+}
+.tbl-view-body{	
+	border-top: 2px solid #252525; 
+	line-height:3; 
+	letter-spacing: -.6px ;
+	text-align: left;
+    background: #fff;
+    vertical-align:middle;    
+    line-height: 30px;
+	margin-top:30px; 
+	padding: 80px 0;
+}
+
+.tbl-category{ font-size:30px; color:#ED6D00; font-weight: 600;}
+.tbl-title{ font-size:36px; color:#000; font-weight: 600; margin: 20px 0}
+.tbl-text{ padding: 30px 20px; text-align: left}
+.tbl-infoBox{ display:flex; justify-content: center; align-items: center; gap:20px;}
+.tbl-infoBox span{ color: #CBCBCB;}
+.tbl-label{ border-radius:250px; border:1px solid #ED6D00; width:120px; height: 40px; line-height: 40px; color:#ED6D00 !important; display: inline-block; text-align: center;}
+.tbl-label.bg-primary{ background: #ED6D00; color:#fff !important;}
+.tbl-bar{ width:6px; height: 6px; background: #DBDDE2; border-radius: 250px;}
+
+.tbl-add{ padding-top:100px;}
+
+
+/* paginate Light Theme Styles */
+.paginate{ position: relative; margin-bottom: 20px; margin-top: 50px;}
+.light-theme{  margin:0 auto; text-align: center;}
+.light-theme li{ display:inline-block}
+.light-theme a{
+    color: #aaa;
+    display: inline-block;
+	float: left;
+    width: 36px;
+    height: 36px;
+	line-height: 36px;
+	margin: 0 2px;
+	text-align:center;
+	border:1px solid #ddd;
+}
+.light-theme .current, .light-theme .current:hover {
+	border:1px solid #ED6D00;
+	color: #ED6D00;
+    cursor: default;
+}
+.light-theme .ellipse {
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-weight: bold;
+    cursor: default;
+}
+.light-theme .first,
+.light-theme .prev,
+.light-theme .next,
+.light-theme .last{
+    font-family: dotum, 돋음;
+} 
+
+.light-theme .first{background: url("../images/bu-paginate-first.png") no-repeat center; background-size: 10px 9px;} 
+.light-theme .next{background: url("../images/bu-paginate-next.png") no-repeat center; background-size: 5px 9px;} 
+.light-theme .prev{background: url("../images/bu-paginate-prev.png") no-repeat center; background-size: 5px 9px;} 
+.light-theme .last{background: url("../images/bu-paginate-last.png") no-repeat center; background-size: 10px 9px;} 
+
+
+/************ table width **************/
+.w3-table-all{ min-width:640px}
+.w3-table-all.w3-table-xl{ min-width:999px}
+.w3-table-all.w3-table-lm{ min-width:767px}
+.w3-table-all.w3-table-sm{ min-width:600px}
+.w3-table-all.w3-table-mini{ min-width:480px}
+.w3-table-all.w3-table-schedule{ min-width:1000px}
+
+.scroltable-container {overflow-y: hidden;}

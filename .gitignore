@@ -1,0 +1,33 @@
+# OS
+Thumbs.db
+ehthumbs.db
+.DS_Store
+Desktop.ini
+
+# Editor / IDE
+*.swp
+*.swo
+*~
+~$*
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
+*.orig
+*.log
+
+# Live Server / dev artifacts
+.vscode/.history/
+
+# Sensitive (just in case)
+*.env
+*.pem
+*.key
+account_info*
+*credentials*
+*password*
+
+# Large media (optional — if needed later use Git LFS)
+# *.mp4
+# *.zip
