@@ -7,12 +7,25 @@
 /navinam/      /navinam/index.htm      200
 /navinam/m/    /navinam/m/index.htm    200
 
+# --- 짧은 URL alias (navinam/ prefix 제거) ---
+# 디스크 폴더는 navinam/ 안에 그대로 두고 URL 만 새로 노출.
+# splat(:splat) 으로 하위 자원도 함께 매핑 → 페이지 내 상대 경로 안 깨짐.
+/town/*                     /navinam/town/:splat                       200
+/mokdong/*                  /navinam/mokdong/:splat                    200
+/yangcheon-archivist/*      /navinam/yangcheon-archivist/:splat        200
+/yangcheon_museum/*         /navinam/yangcheon_museum/html/:splat      200
+# 옛 navinam/ 경로로 들어와도 새 짧은 URL 로 정리해서 보여줌
+/navinam/town/*                  /town/:splat                  301
+/navinam/mokdong/*               /mokdong/:splat               301
+/navinam/yangcheon-archivist/*   /yangcheon-archivist/:splat   301
+/navinam/yangcheon_museum/html/* /yangcheon_museum/:splat      301
+
 # Deep path 의 main.html 은 그 콘텐츠 메인으로 (Cloudflare 404 fallback 루프 방지)
 /navinam/main.html                        /navinam/                        301
-/navinam/yangcheon_museum/main.html       /navinam/yangcheon_museum/html/  301
-/navinam/yangcheon-archivist/main.html    /navinam/yangcheon-archivist/    301
-/navinam/town/main.html                   /navinam/town/                   301
-/navinam/mokdong/main.html                /navinam/mokdong/                301
 /ycpark/main.html                         /ycpark/                         301
 /yclibrary/main.html                      /yclibrary/                      301
 /sinwol07/main.html                       /sinwol07/                       301
+/town/main.html                           /town/                           301
+/mokdong/main.html                        /mokdong/                        301
+/yangcheon-archivist/main.html            /yangcheon-archivist/            301
+/yangcheon_museum/main.html               /yangcheon_museum/               301
