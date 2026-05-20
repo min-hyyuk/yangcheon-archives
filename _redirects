@@ -16,8 +16,6 @@
 # yangcheon_museum: 다른 폴더와 동일하게 splat 매핑.
 # (이전엔 html/ 하위에 페이지가 있어 분리 매핑이었으나 폴더 평탄화로 단순화)
 /yangcheon_museum/*          /navinam/yangcheon_museum/:splat            200
-/mokdong-history/*           /navinam/mokdong-history/:splat             200
-/mokdong-now/*               /navinam/mokdong-now/:splat                 200
 # 옛 navinam/ 경로로 들어와도 새 짧은 URL 로 정리해서 보여줌
 /navinam/town/*                  /town/:splat                  301
 /navinam/mokdong/*               /mokdong/:splat               301
