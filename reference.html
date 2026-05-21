@@ -10,7 +10,7 @@
 	
 	<!--Core CSS -->
     <link href="assets/bs3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="assets/css/common.css" rel="stylesheet" >
     
 	<!--Core script -->
@@ -23,6 +23,125 @@
 	<!-- banner slider -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+
+	<!-- 통합검색 페이지 전용 스타일 -->
+	<style>
+	.search-hero {
+		background: linear-gradient(135deg, #0d2b5e 0%, #1e4a8f 50%, #2563b3 100%);
+		padding: 80px 24px 70px;
+		text-align: center;
+		color: #fff;
+		position: relative; overflow: hidden;
+	}
+	.search-hero::before {
+		content: ""; position: absolute; inset: 0;
+		background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
+		background-size: 28px 28px;
+		pointer-events: none;
+	}
+	.search-hero .sh-inner { position: relative; max-width: 800px; margin: 0 auto; }
+	.search-hero .sh-label {
+		font-size: 13px; letter-spacing: 0.3em; opacity: 0.85;
+		margin: 0 0 14px; font-weight: 500;
+	}
+	.search-hero h2 {
+		font-size: clamp(28px, 4vw, 40px); font-weight: 800;
+		letter-spacing: -0.03em; margin: 0 0 30px;
+	}
+	.search-form {
+		display: flex; background: #fff; border-radius: 999px;
+		padding: 6px 6px 6px 24px;
+		box-shadow: 0 14px 40px rgba(0, 30, 80, 0.25);
+	}
+	.search-form input {
+		flex: 1; border: 0; outline: none;
+		font-size: 17px; padding: 14px 8px;
+		background: transparent; color: #1a2532;
+		font-family: inherit;
+	}
+	.search-form button {
+		border: 0; cursor: pointer;
+		width: 54px; height: 54px; border-radius: 50%;
+		background: #003288; color: #fff;
+		display: flex; align-items: center; justify-content: center;
+		font-size: 19px; transition: background .2s;
+	}
+	.search-form button:hover { background: #1e4a8f; }
+	.adv-toggle {
+		display: inline-block; margin-top: 18px;
+		font-size: 14px; color: rgba(255,255,255,0.85);
+		text-decoration: underline; cursor: pointer;
+	}
+	.adv-toggle:hover { color: #fff; }
+
+	/* 픽토그램 카테고리 */
+	.pictogram-wrap {
+		max-width: 1100px; margin: -32px auto 0;
+		position: relative; z-index: 5;
+		padding: 28px 18px;
+		background: #fff;
+		border-radius: 18px;
+		box-shadow: 0 12px 36px rgba(15, 30, 60, 0.10);
+	}
+	.pictogram-list {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 8px;
+		list-style: none; padding: 0; margin: 0;
+	}
+	.pictogram-list li a {
+		display: flex; flex-direction: column; align-items: center; gap: 12px;
+		padding: 22px 12px;
+		text-decoration: none; color: #1a2532;
+		border-radius: 14px;
+		transition: background .2s, transform .2s;
+	}
+	.pictogram-list li a:hover {
+		background: #f3f6fc;
+		transform: translateY(-2px);
+	}
+	.pictogram-list li.active a {
+		background: #003288; color: #fff;
+	}
+	.pictogram-list li.active a .pict-icon {
+		background: rgba(255,255,255,0.18); color: #fff;
+	}
+	.pict-icon {
+		width: 60px; height: 60px; border-radius: 50%;
+		background: #eef3fa; color: #003288;
+		display: flex; align-items: center; justify-content: center;
+		font-size: 24px; transition: background .2s, color .2s;
+	}
+	.pict-name { font-size: 14.5px; font-weight: 600; letter-spacing: -0.01em; }
+	.pict-count { font-size: 12px; color: #9aa6b4; }
+	.pictogram-list li.active a .pict-count { color: rgba(255,255,255,0.8); }
+
+	/* 결과 영역 */
+	.result-wrap { margin-top: 40px; }
+	.result-head {
+		display: flex; justify-content: space-between; align-items: baseline;
+		margin-bottom: 20px;
+	}
+	.result-head h3 {
+		font-size: 18px; font-weight: 700; margin: 0;
+	}
+	.result-head h3 strong { color: #003288; }
+	.result-sort select {
+		padding: 8px 14px; border: 1px solid #e1e6ec; border-radius: 8px;
+		font-size: 14px; background: #fff;
+	}
+
+	@media (max-width: 720px) {
+		.pictogram-list { grid-template-columns: repeat(3, 1fr); gap: 4px; }
+		.pictogram-wrap { margin-top: -20px; padding: 18px 12px; }
+		.search-hero { padding: 60px 18px 60px; }
+		.search-form { padding: 4px 4px 4px 18px; }
+		.search-form input { font-size: 15px; padding: 12px 6px; }
+		.search-form button { width: 46px; height: 46px; font-size: 16px; }
+		.pict-icon { width: 48px; height: 48px; font-size: 19px; }
+		.pict-name { font-size: 13px; }
+	}
+	</style>
 </head>
 <body>
 <div id="skip-navigation">
@@ -114,227 +233,87 @@
 </div>
 <!-- //header -->
     <!-- container -->
-		<div id="container"> 
+		<div id="container">
 
-		<!-- 서브 비주얼 영역 -->
-		<section class="sub-wrap inner-fixed">
-			<div class="subBox">
-				<ul class="breadcrumb-wrap">
-					<li>기록관 소개</li>
-					<li>양천구 기록 자료실</li>
-					<li>시청각기록물</li>
-				</ul>
-				<h2>양천구 기록 자료실</h2>
-				<div class="title-info">전산화 완료된 2004년 이전 사진·필름, 동영상</div>
+		<!-- 통합검색 hero -->
+		<section class="search-hero">
+			<div class="sh-inner">
+				<p class="sh-label">YANGCHEON ARCHIVES</p>
+				<h2>양천구 기록 자료실 통합검색</h2>
+				<form class="search-form" action="" method="get" onsubmit="return false;">
+					<input type="text" name="q" placeholder="제목, 키워드, 연도 등으로 검색하세요." aria-label="검색어">
+					<button type="submit" aria-label="검색"><i class="fa fa-search"></i></button>
+				</form>
+				<a href="#" class="adv-toggle">상세검색 열기 +</a>
 			</div>
-
-			<div class="snsBox">
-				<a href="" class="icon-sns-copy" onclick="clip(); return false;">URL주소복사</a>
-				<span class="sns-bar"></span>
-				<a href="javascript:window.print();" class="icon-sns-print">프린터</a>
-			</div>					 
 		</section>
-		<!-- //서브 비주얼 영역 -->
+		<!-- //통합검색 hero -->
 		
 		
-		<!-- 서브 컨텐츠 영역 -->	
-		<div id="contents" class="inner-fixed">						
-			<div class="tab">
-				<ul>
-					<li class="active"><a href="reference.html">시청각기록물</a></li>
-					<li><a href="publication.html">간행물</a></li>
-					<li><a href="private.html">민간(기증)기록</a></li>
-				</ul>
+		<!-- 서브 컨텐츠 영역: 픽토그램 + 결과 -->
+		<div class="pictogram-wrap">
+			<ul class="pictogram-list">
+				<li class="active" data-cat="photo">
+					<a href="#"><span class="pict-icon"><i class="fa fa-camera"></i></span><span class="pict-name">사진</span><span class="pict-count">0건</span></a>
+				</li>
+				<li data-cat="video">
+					<a href="#"><span class="pict-icon"><i class="fa fa-video-camera"></i></span><span class="pict-name">영상</span><span class="pict-count">0건</span></a>
+				</li>
+				<li data-cat="publication">
+					<a href="publication.html"><span class="pict-icon"><i class="fa fa-book"></i></span><span class="pict-name">간행물</span><span class="pict-count">0건</span></a>
+				</li>
+				<li data-cat="newsletter">
+					<a href="#"><span class="pict-icon"><i class="fa fa-envelope-o"></i></span><span class="pict-name">소식지</span><span class="pict-count">0건</span></a>
+				</li>
+				<li data-cat="gubo">
+					<a href="#"><span class="pict-icon"><i class="fa fa-newspaper-o"></i></span><span class="pict-name">구보</span><span class="pict-count">0건</span></a>
+				</li>
+				<li data-cat="private">
+					<a href="private.html"><span class="pict-icon"><i class="fa fa-archive"></i></span><span class="pict-name">민간기증기록</span><span class="pict-count">0건</span></a>
+				</li>
+			</ul>
+		</div>
+
+		<div id="contents" class="inner-fixed result-wrap">
+			<div class="result-head">
+				<h3>검색결과 <strong id="totCnt">0</strong>건</h3>
+				<div class="result-sort">
+					<select aria-label="정렬">
+						<option>최신순</option>
+						<option>오래된순</option>
+						<option>제목순</option>
+					</select>
+				</div>
 			</div>
-			
-			<div class="sub-content ">
-				<div class="title-group flex-both mTarea">
-					<div class="tab sm">
-						<ul class="tabs">
-							<li class="active" data-tab="tab-01"><a href="javascript:void(0);">전체</a></li>
-							<li data-tab="tab-02"><a href="javascript:void(0);">사진・필름</a></li>
-							<li data-tab="tab-03"><a href="javascript:void(0);">녹음・영상</a></li>
-						</ul>
-					</div>
-					
-					<div class="search-group">
-						<input type="text" placeholder="제목, 내용을 입력하세요.">
-						<a href="" class="icon-search">검색</a>
-					</div>
-				</div>	
-				
-				<div class="table tab-content  active" id="tab-01">
-					<!-- table  -->		
-					<table class="tbl-list" summary="표 " >
-						<caption>표 </caption>
-						<colgroup>
-							<col style="width:120px" class="m-none">
-							<col style="width:auto">
-							<col style="width:140px" class="m-none">
-							<col style="width:200px" class="m-none">
-						</colgroup>												
-						<tbody>
-							<tr>													
-								<td class="m-none">1</td>
-								<td class="left"><div class="linkBox"><span class="tbl-label">사진・필름</span> <a href="reference-view.html"> 1111111988년 양천구 개청준비 소요예산(양천구청, 양천구보건소) 양천구 개청준비 소요예산(양천구청, 양천구보건소)양천구 개청준비 소요예산(양천구청, 양천구보건소)</span></a></div></td>
-								<td class="m-none"><a href="" class="icon-file">첨부파일</a></td>
-								<td class="right m-none">2022-08-22</td>
-							</tr>
-							<tr>													
-								<td class="m-none">1</td>
-								<td class="left"><div class="linkBox"><span class="tbl-label">사진・필름</span> <a href="reference-view.html">  양천구 개청준비 소요예산(양천구청, 양천구보건소) 양천구 개청준비 소요예산(양천구청, 양천구보건소)양천구 개청준비 소요예산(양천구청, 양천구보건소)</span></a></div></td>
-								<td class="m-none"><a href="" class="icon-file">첨부파일</a></td>
-								<td class="right m-none">2022-08-22</td>
-							</tr>
-							<tr>													
-								<td class="m-none">1</td>
-								<td class="left"><div class="linkBox"><span class="tbl-label">사진・필름</span> <a href="reference-view.html">  양천구 개청준비 소요예산(양천구청, 양천구보건소) 양천구 개청준비 소요예산(양천구청, 양천구보건소)양천구 개청준비 소요예산(양천구청, 양천구보건소)</span></a></div></td>
-								<td class="m-none"><a href="" class="icon-file">첨부파일</a></td>
-								<td class="right m-none">2022-08-22</td>
-							</tr>
-							<tr>													
-								<td class="m-none">1</td>
-								<td class="left"><div class="linkBox"><span class="tbl-label">사진・필름</span> <a href="reference-view.html">  양천구 개청준비 소요예산(양천구청, 양천구보건소) 양천구 개청준비 소요예산(양천구청, 양천구보건소)양천구 개청준비 소요예산(양천구청, 양천구보건소)</span></a></div></td>
-								<td class="m-none"><a href="" class="icon-file">첨부파일</a></td>
-								<td class="right m-none">2022-08-22</td>
-							</tr>
-						</tbody>
-					</table>
-					<!-- //table  -->
-					<!-- paginate-complex start -->
-					<div class="paginate">
-						<div class="light-theme ">
-							<ul>
-								<li><a href="" class="first" title="처음"></a></li>
-								<li><a href="" class="prev" title="이전"></a></li>
-								<li><a href="" class="">1</a></li>
-								<li><a href="" class="current">2</a></li>
-								<li><a href="" class="">3</a></li>
-								<li><a href="" class="">4</a></li>
-								<li><a href="" class="next" title="다음"></a></li>
-								<li><a href="" class="last" title="마지막"></a></li>
-							</ul>                    
-						</div>                
-					</div>
-					<!-- //paginate-complex end -->		
-				</div>
-				
-				<div class="table tab-content" id="tab-02">
-					<!-- table  -->		
-					<table class="tbl-list" summary="표 " >
-						<caption>표 </caption>
-						<colgroup>
-							<col style="width:120px" class="m-none">
-							<col style="width:auto">
-							<col style="width:140px" class="m-none">
-							<col style="width:200px" class="m-none">
-						</colgroup>												
-						<tbody>
-							<tr>													
-								<td class="m-none">1</td>
-								<td class="left"><div class="linkBox"><span class="tbl-label">사진・필름</span> <a href="reference-view.html"> 22222222222 양천구 개청준비 소요예산(양천구청, 양천구보건소) 양천구 개청준비 소요예산(양천구청, 양천구보건소)양천구 개청준비 소요예산(양천구청, 양천구보건소)</span></a></div></td>
-								<td class="m-none"><a href="" class="icon-file">첨부파일</a></td>
-								<td class="right m-none">2022-08-22</td>
-							</tr>
-							<tr>													
-								<td class="m-none">1</td>
-								<td class="left"><div class="linkBox"><span class="tbl-label">사진・필름</span> <a href="reference-view.html">  양천구 개청준비 소요예산(양천구청, 양천구보건소) 양천구 개청준비 소요예산(양천구청, 양천구보건소)양천구 개청준비 소요예산(양천구청, 양천구보건소)</span></a></div></td>
-								<td class="m-none"><a href="" class="icon-file">첨부파일</a></td>
-								<td class="right m-none">2022-08-22</td>
-							</tr>
-							<tr>													
-								<td class="m-none">1</td>
-								<td class="left"><div class="linkBox"><span class="tbl-label">사진・필름</span> <a href="reference-view.html">  양천구 개청준비 소요예산(양천구청, 양천구보건소) 양천구 개청준비 소요예산(양천구청, 양천구보건소)양천구 개청준비 소요예산(양천구청, 양천구보건소)</span></a></div></td>
-								<td class="m-none"><a href="" class="icon-file">첨부파일</a></td>
-								<td class="right m-none">2022-08-22</td>
-							</tr>
-							<tr>													
-								<td class="m-none">1</td>
-								<td class="left"><div class="linkBox"><span class="tbl-label">사진・필름</span> <a href="reference-view.html">  양천구 개청준비 소요예산(양천구청, 양천구보건소) 양천구 개청준비 소요예산(양천구청, 양천구보건소)양천구 개청준비 소요예산(양천구청, 양천구보건소)</span></a></div></td>
-								<td class="m-none"><a href="" class="icon-file">첨부파일</a></td>
-								<td class="right m-none">2022-08-22</td>
-							</tr>
-						</tbody>
-					</table>
-					<!-- //table  -->
-					<!-- paginate-complex start -->
-					<div class="paginate">
-						<div class="light-theme ">
-							<ul>
-								<li><a href="" class="first" title="처음"></a></li>
-								<li><a href="" class="prev" title="이전"></a></li>
-								<li><a href="" class="">1</a></li>
-								<li><a href="" class="current">2</a></li>
-								<li><a href="" class="">3</a></li>
-								<li><a href="" class="">4</a></li>
-								<li><a href="" class="next" title="다음"></a></li>
-								<li><a href="" class="last" title="마지막"></a></li>
-							</ul>                    
-						</div>                
-					</div>
-					<!-- //paginate-complex end -->		
-				</div>
-				
-				<div class="table tab-content " id="tab-03">
-					<!-- table  -->		
-					<table class="tbl-list" summary="표 " >
-						<caption>표 </caption>
-						<colgroup>
-							<col style="width:120px" class="m-none">
-							<col style="width:auto">
-							<col style="width:140px" class="m-none">
-							<col style="width:200px" class="m-none">
-						</colgroup>												
-						<tbody>
-							<tr>													
-								<td class="m-none">1</td>
-								<td class="left"><div class="linkBox"><span class="tbl-label">사진・필름</span> <a href="reference-view.html"> 33333333 양천구 개청준비 소요예산(양천구청, 양천구보건소) 양천구 개청준비 소요예산(양천구청, 양천구보건소)양천구 개청준비 소요예산(양천구청, 양천구보건소)</span></a></div></td>
-								<td class="m-none"><a href="" class="icon-file">첨부파일</a></td>
-								<td class="right m-none">2022-08-22</td>
-							</tr>
-							<tr>													
-								<td class="m-none">1</td>
-								<td class="left"><div class="linkBox"><span class="tbl-label">사진・필름</span> <a href="reference-view.html">  양천구 개청준비 소요예산(양천구청, 양천구보건소) 양천구 개청준비 소요예산(양천구청, 양천구보건소)양천구 개청준비 소요예산(양천구청, 양천구보건소)</span></a></div></td>
-								<td class="m-none"><a href="" class="icon-file">첨부파일</a></td>
-								<td class="right m-none">2022-08-22</td>
-							</tr>
-							<tr>													
-								<td class="m-none">1</td>
-								<td class="left"><div class="linkBox"><span class="tbl-label">사진・필름</span> <a href="reference-view.html">  양천구 개청준비 소요예산(양천구청, 양천구보건소) 양천구 개청준비 소요예산(양천구청, 양천구보건소)양천구 개청준비 소요예산(양천구청, 양천구보건소)</span></a></div></td>
-								<td class="m-none"><a href="" class="icon-file">첨부파일</a></td>
-								<td class="right m-none">2022-08-22</td>
-							</tr>
-							<tr>													
-								<td class="m-none">1</td>
-								<td class="left"><div class="linkBox"><span class="tbl-label">사진・필름</span> <a href="reference-view.html">  양천구 개청준비 소요예산(양천구청, 양천구보건소) 양천구 개청준비 소요예산(양천구청, 양천구보건소)양천구 개청준비 소요예산(양천구청, 양천구보건소)</span></a></div></td>
-								<td class="m-none"><a href="" class="icon-file">첨부파일</a></td>
-								<td class="right m-none">2022-08-22</td>
-							</tr>
-						</tbody>
-					</table>
-					<!-- //table  -->
-					<!-- paginate-complex start -->
-					<div class="paginate">
-						<div class="light-theme ">
-							<ul>
-								<li><a href="" class="first" title="처음"></a></li>
-								<li><a href="" class="prev" title="이전"></a></li>
-								<li><a href="" class="">1</a></li>
-								<li><a href="" class="current">2</a></li>
-								<li><a href="" class="">3</a></li>
-								<li><a href="" class="">4</a></li>
-								<li><a href="" class="next" title="다음"></a></li>
-								<li><a href="" class="last" title="마지막"></a></li>
-							</ul>                    
-						</div>                
-					</div>
-					<!-- //paginate-complex end -->		
-				</div>
-				
+
+			<div class="table tab-content active" id="tab-01">
+				<table class="tbl-list" summary="검색 결과">
+					<caption>검색 결과 목록</caption>
+					<colgroup>
+						<col style="width:120px" class="m-none">
+						<col style="width:auto">
+						<col style="width:140px" class="m-none">
+						<col style="width:200px" class="m-none">
+					</colgroup>
+					<thead>
+						<tr>
+							<th class="m-none">번호</th>
+							<th>제목</th>
+							<th class="m-none">첨부</th>
+							<th class="m-none">등록일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="4" style="padding:60px 20px; text-align:center; color:#9aa6b4; font-size:15px;">
+								위 카테고리에서 항목을 선택하거나 키워드로 검색해주세요.
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
-			
-		</div>	
-		<!-- //서브 컨텐츠 영역 -->	
+		</div>
+		<!-- //서브 컨텐츠 영역 -->
 	</div>
     <!-- //container -->
     <!-- scrollup -->
@@ -380,6 +359,25 @@
 <script src="assets/js/jquery.scroltable.min.js"></script>
 <script>
 $('.w3-table-all').scroltable();
-</script>	
+</script>
+
+<!-- 픽토그램 카테고리 active 토글 -->
+<script>
+(function(){
+	var items = document.querySelectorAll('.pictogram-list li');
+	items.forEach(function(li){
+		var a = li.querySelector('a');
+		if(!a) return;
+		// 별도 페이지로 이동하는 항목(href 가 .html) 은 그대로 두고
+		// 같은 페이지 내 필터(href="#") 만 active 토글.
+		if((a.getAttribute('href')||'').indexOf('#') !== 0) return;
+		a.addEventListener('click', function(e){
+			e.preventDefault();
+			items.forEach(function(x){ x.classList.remove('active'); });
+			li.classList.add('active');
+		});
+	});
+})();
+</script>
 </body>
 </html>

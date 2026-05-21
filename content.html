@@ -23,6 +23,51 @@
 	<!-- banner slider -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+
+	<!-- content.html 전용: 카테고리 탭 + 섹션 -->
+	<style>
+	.cat-tab { border-bottom: 2px solid #e5e8ee; margin: 24px 0 0; }
+	.cat-tab-list { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 0; }
+	.cat-tab-list li { margin: 0; }
+	.cat-tab-list li a {
+		display: inline-flex; align-items: center; gap: 6px;
+		padding: 14px 28px; color: #5a6b7d; font-weight: 500;
+		font-size: 16px; letter-spacing: -0.01em;
+		text-decoration: none; border-bottom: 3px solid transparent;
+		margin-bottom: -2px; transition: color .2s, border-color .2s;
+	}
+	.cat-tab-list li a em {
+		font-style: normal; color: #9aa6b4; font-size: 14px; font-weight: 400;
+	}
+	.cat-tab-list li a:hover { color: #003288; }
+	.cat-tab-list li.active a {
+		color: #003288; border-bottom-color: #003288; font-weight: 700;
+	}
+	.cat-tab-list li.active a em { color: #003288; }
+
+	.cat-section { padding-top: 56px; scroll-margin-top: 100px; }
+	.cat-section + .cat-section { padding-top: 72px; border-top: 1px solid #eef0f4; margin-top: 56px; }
+	.cat-head { margin-bottom: 28px; }
+	.cat-head h3 {
+		font-size: 26px; font-weight: 700; margin: 0 0 8px;
+		letter-spacing: -0.02em; color: #1a2532;
+	}
+	.cat-head .cat-count {
+		display: inline-block; min-width: 28px; height: 28px; line-height: 28px;
+		padding: 0 10px; margin-left: 6px;
+		background: #003288; color: #fff;
+		border-radius: 999px; font-size: 13px; font-weight: 700;
+		vertical-align: middle;
+	}
+	.cat-head p { color: #5a6b7d; margin: 0; font-size: 15px; }
+
+	@media (max-width: 720px) {
+		.cat-tab-list li a { padding: 12px 16px; font-size: 14.5px; }
+		.cat-head h3 { font-size: 22px; }
+		.cat-section { padding-top: 36px; }
+		.cat-section + .cat-section { padding-top: 48px; margin-top: 36px; }
+	}
+	</style>
 </head>
 <body>
 <div id="skip-navigation">
@@ -147,78 +192,125 @@
 					</div>
 				</div>
 
-				<div class="item-wrap">
-					<div class="itemBox">
-						<div class="it-img"><img src="assets/images/img-con-09.png" alt=""></div>
-						<div class="it-title">양천구 신월7동, 우리 마을을 소개합니다</div>
-						<div class="it-text">신월7동 주민과 구민기록활동가 6인이 함께 만들어가는 기록의 공간입니다.</div>
-						<a href="/sinwol07/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+				<!-- 카테고리 nav (페이지 내 anchor) -->
+				<div class="cat-tab">
+					<ul class="cat-tab-list">
+						<li class="active"><a href="#cat-history">역사 <em>(3)</em></a></li>
+						<li><a href="#cat-area">지역 <em>(2)</em></a></li>
+						<li><a href="#cat-town">마을 <em>(4)</em></a></li>
+						<li><a href="#cat-daily">일상 <em>(3)</em></a></li>
+					</ul>
+				</div>
+
+				<!-- 카테고리: 역사 -->
+				<div class="cat-section" id="cat-history">
+					<div class="cat-head">
+						<h3>역사 <span class="cat-count">3</span></h3>
+						<p>양천구·목동의 개청과 도시 형성, 메타버스로 보는 옛 목동까지</p>
 					</div>
-					<div class="itemBox">
-						<div class="it-img"><img src="assets/images/img-con-08.jpg" alt=""></div>
-						<div class="it-title">양천구 온라인 전시관: 우리는 양천을 기록하는 구민기록활동가입니다</div>
-						<div class="it-text">2022년, 17명의 첫 양천구 구민기록활동가가 탄생하였습니다.</div>
-						<a href="/yangcheon_museum/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+					<div class="item-wrap">
+						<div class="itemBox">
+							<div class="it-img"><img src="assets/images/img-con-05.png" alt=""></div>
+							<div class="it-title">양천구 개청과 목동아파트 개발</div>
+							<div class="it-text">1980년대 '목동 신시가지 개발 사업'과 이에 따른 인구 유입으로 강서구에서 양천구가 분구하는 과정을 확인할 수 있습니다.</div>
+							<a href="/mokdong/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+						</div>
+						<div class="itemBox">
+							<div class="it-img"><img src="assets/images/img-con-01.png" alt=""></div>
+							<div class="it-title">역사가 흐르는 목동(메타버스 체험관)</div>
+							<div class="it-text">양천구 목동의 개발 과정과 관련된 문서, 사진, 영상 등을 메타버스 공간에서 직접 체험할 수 있습니다.</div>
+							<a href="https://www.spatial.io/s/yeogsaga-heureuneun-mogdong-636d9952a6af410001264361?share=8603216677730374527" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+						</div>
+						<div class="itemBox">
+							<div class="it-img"><img src="assets/images/img-con-11.jpg" alt=""></div>
+							<div class="it-title">목동의 역사</div>
+							<div class="it-text">서울의 확장과 신시가지 건설을 거쳐 오늘에 이른 양천구·목동의 변천 과정을 사진·지도·기록물로 정리한 콘텐츠입니다.</div>
+							<a href="/mokdong-history/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+						</div>
 					</div>
-					<div class="itemBox">
-						<div class="it-img"><img src="assets/images/img-con-10.png" alt=""></div>
-						<div class="it-title">동행 同行 : 양천과 함께 걷는 사람들(메타버스 체험관)</div>
-						<div class="it-text">양천구의 일상에 자리잡은 자원봉사활동을 조명하여, 메타버스 공간에서 시민들의 동행 이야기를 만나볼 수 있습니다.</div>
-						<a href="https://www.spatial.io/s/donghaeng-Tong-Xing-yangceongwa-hamgge-geodneun-saramdeul-64e839308aaf2900aee1c8e7?share=4310758643950214173" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+				</div>
+
+				<!-- 카테고리: 지역 -->
+				<div class="cat-section" id="cat-area">
+					<div class="cat-head">
+						<h3>지역 <span class="cat-count">2</span></h3>
+						<p>양천공원과 신월7동 — 양천구를 이루는 거점 공간들의 기록</p>
 					</div>
-					<div class="itemBox">
-						<div class="it-img"><img src="assets/images/img-con-01.png" alt=""></div>
-						<div class="it-title">역사가 흐르는 목동(메타버스 체험관)</div>
-						<div class="it-text">양천구 목동의 개발 과정과 관련된 문서, 사진, 영상 등을 메타버스 공간에서 직접 체험할 수 있습니다.</div>
-						<a href="https://www.spatial.io/s/yeogsaga-heureuneun-mogdong-636d9952a6af410001264361?share=8603216677730374527" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+					<div class="item-wrap">
+						<div class="itemBox">
+							<div class="it-img"><img src="assets/images/img-con-03.png" alt=""></div>
+							<div class="it-title">오래된 숲, 새로운 봄 양천공원</div>
+							<div class="it-text">양천공원은 오랜 시간 주민들과 희로애락을 함께 해왔습니다. 양천구의 다양한 행사가 열렸던 양천공원의 옛 모습에서 2020년 리모델링까지, 그간의 과정을 양천구 기록물을 통해 확인할 수 있습니다.</div>
+							<a href="/ycpark/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+						</div>
+						<div class="itemBox">
+							<div class="it-img"><img src="assets/images/img-con-09.png" alt=""></div>
+							<div class="it-title">양천구 신월7동, 우리 마을을 소개합니다</div>
+							<div class="it-text">신월7동 주민과 구민기록활동가 6인이 함께 만들어가는 기록의 공간입니다.</div>
+							<a href="/sinwol07/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+						</div>
 					</div>
-					<div class="itemBox">
-						<div class="it-img"><img src="assets/images/img-con-07.png" alt=""></div>
-						<div class="it-title">마을기록활동가</div>
-						<div class="it-text">양천구의 아키비스트, 마을기록활동가의 활동을 콘텐츠에 담았습니다. 주민들이 직접 마을의 기록을 발굴하고 보존한 결과물을 만나볼 수 있습니다.</div>
-						<a href="/yangcheon-archivist/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+				</div>
+
+				<!-- 카테고리: 마을 -->
+				<div class="cat-section" id="cat-town">
+					<div class="cat-head">
+						<h3>마을 <span class="cat-count">4</span></h3>
+						<p>마을 단위 활동과 기록, 메타버스 전시까지 구민기록활동가들의 결과물</p>
 					</div>
-					<div class="itemBox">
-						<div class="it-img"><img src="assets/images/img-con-06.png" alt=""></div>
-						<div class="it-title">마을과 함께하는 삶</div>
-						<div class="it-text">양천구 주민들은 각 마을의 특성과 문화가 반영된 축제를 진행하고, 양천구는 주민들이 재능 및 역량을 펼칠 수 있도록 지원하는 과정을 확인할 수 있습니다.</div>
-						<a href="/town/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+					<div class="item-wrap">
+						<div class="itemBox">
+							<div class="it-img"><img src="assets/images/img-con-07.png" alt=""></div>
+							<div class="it-title">마을기록활동가</div>
+							<div class="it-text">양천구의 아키비스트, 마을기록활동가의 활동을 콘텐츠에 담았습니다. 주민들이 직접 마을의 기록을 발굴하고 보존한 결과물을 만나볼 수 있습니다.</div>
+							<a href="/yangcheon-archivist/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+						</div>
+						<div class="itemBox">
+							<div class="it-img"><img src="assets/images/img-con-06.png" alt=""></div>
+							<div class="it-title">마을과 함께하는 삶</div>
+							<div class="it-text">양천구 주민들은 각 마을의 특성과 문화가 반영된 축제를 진행하고, 양천구는 주민들이 재능 및 역량을 펼칠 수 있도록 지원하는 과정을 확인할 수 있습니다.</div>
+							<a href="/town/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+						</div>
+						<div class="itemBox">
+							<div class="it-img"><img src="assets/images/img-con-10.png" alt=""></div>
+							<div class="it-title">동행 同行 : 양천과 함께 걷는 사람들(메타버스 체험관)</div>
+							<div class="it-text">양천구의 일상에 자리잡은 자원봉사활동을 조명하여, 메타버스 공간에서 시민들의 동행 이야기를 만나볼 수 있습니다.</div>
+							<a href="https://www.spatial.io/s/donghaeng-Tong-Xing-yangceongwa-hamgge-geodneun-saramdeul-64e839308aaf2900aee1c8e7?share=4310758643950214173" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+						</div>
+						<div class="itemBox">
+							<div class="it-img"><img src="assets/images/img-con-08.jpg" alt=""></div>
+							<div class="it-title">양천구 온라인 전시관: 우리는 양천을 기록하는 구민기록활동가입니다</div>
+							<div class="it-text">2022년, 17명의 첫 양천구 구민기록활동가가 탄생하였습니다.</div>
+							<a href="/yangcheon_museum/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+						</div>
 					</div>
-					<div class="itemBox">
-						<div class="it-img"><img src="assets/images/img-con-03.png" alt=""></div>
-						<div class="it-title">오래된 숲, 새로운 봄 양천공원</div>
-						<div class="it-text">양천공원은 오랜 시간 주민들과 희로애락을 함께 해왔습니다. 양천구의 다양한 행사가 열렸던 양천공원의 옛 모습에서 2020년 리모델링까지, 그간의 과정을 양천구 기록물을 통해 확인할 수 있습니다.</div>
-						<a href="/ycpark/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+				</div>
+
+				<!-- 카테고리: 일상 -->
+				<div class="cat-section" id="cat-daily">
+					<div class="cat-head">
+						<h3>일상 <span class="cat-count">3</span></h3>
+						<p>주민의 삶에 가까운 공동체 · 도서관 · 공원, 그리고 지금의 목동</p>
 					</div>
-					<div class="itemBox">
-						<div class="it-img"><img src="assets/images/img-con-04.png" alt=""></div>
-						<div class="it-title">더 가까이, 우리 마을 작은 도서관</div>
-						<div class="it-text">양천구는 마을 곳곳에 작은도서관이 있습니다. 작은도서관은 보드게임, 음악, 북카페 등 각자 특화 분야에 따라 다양한 프로그램을 운영하고 있습니다. 주민들 가까이 작은도서관이 다가온 과정을 기록물을 통해 확인할 수 있습니다.</div>
-						<a href="/yclibrary/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
-					</div>
-					<div class="itemBox">
-						<div class="it-img"><img src="assets/images/img-con-02.png" alt=""></div>
-						<div class="it-title">나는 혼자가 아니다</div>
-						<div class="it-text">양천구청이 2017년부터 민관의 다양한 주체들과 협력을 통하여 진행한 나비남 프로젝트의 이야기를 담았습니다. 프로젝트 진행과정의 기록물을 포함하여 현장에서 노력한 참여자들의 인터뷰를 확인할 수 있습니다.</div>
-						<a href="/navinam/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
-					</div>
-					<div class="itemBox">
-						<div class="it-img"><img src="assets/images/img-con-05.png" alt=""></div>
-						<div class="it-title">양천구 개청과 목동아파트 개발</div>
-						<div class="it-text">1980년대 '목동 신시가지 개발 사업'과 이에 따른 인구 유입으로 강서구에서 양천구가 분구하는 과정을 확인할 수 있습니다.</div>
-						<a href="/mokdong/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
-					</div>
-					<div class="itemBox">
-						<div class="it-img"><img src="assets/images/img-con-11.jpg" alt=""></div>
-						<div class="it-title">목동의 역사</div>
-						<div class="it-text">서울의 확장과 신시가지 건설을 거쳐 오늘에 이른 양천구-목동의 변천 과정을 사진·지도·기록물로 정리한 콘텐츠입니다.</div>
-						<a href="/mokdong-history/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
-					</div>
-					<div class="itemBox">
-						<div class="it-img"><img src="assets/images/img-con-12.jpg" alt=""></div>
-						<div class="it-title">목동의 현재</div>
-						<div class="it-text">목마·파리·오목·양천·신트리 등 신시가지 5대 근린공원을 중심으로 오늘날 목동을 걷는 콘텐츠입니다.</div>
-						<a href="/mokdong-now/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+					<div class="item-wrap">
+						<div class="itemBox">
+							<div class="it-img"><img src="assets/images/img-con-02.png" alt=""></div>
+							<div class="it-title">나는 혼자가 아니다</div>
+							<div class="it-text">양천구청이 2017년부터 민관의 다양한 주체들과 협력을 통하여 진행한 나비남 프로젝트의 이야기를 담았습니다. 프로젝트 진행과정의 기록물을 포함하여 현장에서 노력한 참여자들의 인터뷰를 확인할 수 있습니다.</div>
+							<a href="/navinam/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+						</div>
+						<div class="itemBox">
+							<div class="it-img"><img src="assets/images/img-con-04.png" alt=""></div>
+							<div class="it-title">더 가까이, 우리 마을 작은 도서관</div>
+							<div class="it-text">양천구는 마을 곳곳에 작은도서관이 있습니다. 작은도서관은 보드게임, 음악, 북카페 등 각자 특화 분야에 따라 다양한 프로그램을 운영하고 있습니다. 주민들 가까이 작은도서관이 다가온 과정을 기록물을 통해 확인할 수 있습니다.</div>
+							<a href="/yclibrary/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+						</div>
+						<div class="itemBox">
+							<div class="it-img"><img src="assets/images/img-con-12.jpg" alt=""></div>
+							<div class="it-title">목동의 현재</div>
+							<div class="it-text">목마·파리·오목·양천·신트리 등 신시가지 5대 근린공원을 중심으로 오늘날 목동을 걷는 콘텐츠입니다.</div>
+							<a href="/mokdong-now/" target="_blank" class="button">바로가기 <i class="btn-arrow"></i></a>
+						</div>
 					</div>
 				</div>
 
@@ -271,6 +363,40 @@
 <script src="assets/js/jquery.scroltable.min.js"></script>
 <script>
 $('.w3-table-all').scroltable();
+</script>
+
+<!-- 카테고리 탭: 부드러운 anchor + 스크롤 시 현재 섹션 active -->
+<script>
+(function(){
+	var tabs = document.querySelectorAll('.cat-tab-list li');
+	var sections = Array.from(document.querySelectorAll('.cat-section'));
+	function activate(id){
+		tabs.forEach(function(t){
+			var a = t.querySelector('a');
+			t.classList.toggle('active', a && a.getAttribute('href') === '#' + id);
+		});
+	}
+	tabs.forEach(function(t){
+		var a = t.querySelector('a');
+		if(!a) return;
+		a.addEventListener('click', function(e){
+			var id = a.getAttribute('href').slice(1);
+			var sec = document.getElementById(id);
+			if(sec){
+				e.preventDefault();
+				window.scrollTo({ top: sec.offsetTop - 80, behavior: 'smooth' });
+				activate(id);
+			}
+		});
+	});
+	// 스크롤 시 현재 섹션 자동 활성화
+	window.addEventListener('scroll', function(){
+		var y = window.scrollY + 120;
+		var current = sections[0] && sections[0].id;
+		sections.forEach(function(s){ if(s.offsetTop <= y) current = s.id; });
+		if(current) activate(current);
+	}, { passive: true });
+})();
 </script>
 </body>
 </html>
