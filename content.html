@@ -24,46 +24,60 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
 
-	<!-- content.html 전용: 카테고리 탭 + 섹션 + 카드 그리드 정돈 -->
+	<!-- content.html 전용: 카테고리 탭 + 섹션 + 카드 그리드 정돈
+	     색감: 2024 서울색 「스카이 코랄」 -->
 	<style>
+	:root {
+		--sc-1:  #FFC2C2;   /* 옅은 코랄 (배경 hover) */
+		--sc-2:  #FF8FA3;   /* 메인 핑크 코랄 */
+		--sc-3:  #E76F7F;   /* 짙은 코랄 (강조) */
+		--sc-4:  #C84A5A;   /* 깊은 코랄 (호버) */
+		--sc-line: #FBE1E4;
+		--sc-soft: #FFF3F4;
+		--sc-ink: #2A1418;
+	}
 	/* 카테고리 탭 */
-	.cat-tab { border-bottom: 2px solid #e5e8ee; margin: 24px 0 36px; }
+	.cat-tab { border-bottom: 2px solid var(--sc-line); margin: 24px 0 36px; }
 	.cat-tab-list { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 0; }
 	.cat-tab-list li { margin: 0; }
 	.cat-tab-list li a {
 		display: inline-flex; align-items: center; gap: 6px;
-		padding: 14px 28px; color: #5a6b7d; font-weight: 500;
+		padding: 14px 28px; color: #6b7686; font-weight: 500;
 		font-size: 16px; letter-spacing: -0.01em;
 		text-decoration: none; border-bottom: 3px solid transparent;
-		margin-bottom: -2px; transition: color .2s, border-color .2s;
+		margin-bottom: -2px; transition: color .2s, border-color .2s, background .2s;
+		border-radius: 8px 8px 0 0;
 	}
 	.cat-tab-list li a em {
-		font-style: normal; color: #9aa6b4; font-size: 14px; font-weight: 400;
+		font-style: normal; color: #b09097; font-size: 14px; font-weight: 400;
 	}
-	.cat-tab-list li a:hover { color: #003288; }
+	.cat-tab-list li a:hover { color: var(--sc-3); background: var(--sc-soft); }
 	.cat-tab-list li.active a {
-		color: #003288; border-bottom-color: #003288; font-weight: 700;
+		color: var(--sc-3); border-bottom-color: var(--sc-3); font-weight: 700;
+		background: transparent;
 	}
-	.cat-tab-list li.active a em { color: #003288; }
+	.cat-tab-list li.active a em { color: var(--sc-3); }
 
 	/* 카테고리 섹션 */
 	.cat-section { padding-top: 36px; }
 	.cat-section + .cat-section {
-		padding-top: 56px; border-top: 1px solid #eef0f4; margin-top: 48px;
+		padding-top: 56px; border-top: 1px solid var(--sc-line); margin-top: 48px;
 	}
 	.cat-head { margin-bottom: 28px; }
 	.cat-head h3 {
 		font-size: 24px; font-weight: 700; margin: 0 0 8px;
-		letter-spacing: -0.02em; color: #1a2532;
+		letter-spacing: -0.02em; color: var(--sc-ink);
 	}
 	.cat-head .cat-count {
 		display: inline-block; min-width: 26px; height: 26px; line-height: 26px;
 		padding: 0 10px; margin-left: 6px;
-		background: #003288; color: #fff;
+		background: linear-gradient(135deg, var(--sc-2) 0%, var(--sc-3) 100%);
+		color: #fff;
 		border-radius: 999px; font-size: 12.5px; font-weight: 700;
 		vertical-align: middle;
+		box-shadow: 0 4px 10px rgba(231, 111, 127, 0.25);
 	}
-	.cat-head p { color: #5a6b7d; margin: 0; font-size: 14.5px; }
+	.cat-head p { color: #8a7079; margin: 0; font-size: 14.5px; }
 
 	/* === 카드 그리드 정돈 === */
 	/* 기본 layout.css 의 큰 gap/큰 폰트를 override. 모든 카드가 같은 크기·비율. */
@@ -78,21 +92,21 @@
 		display: flex;
 		flex-direction: column;
 		background: #fff;
-		border: 1px solid #e8ecf2;
+		border: 1px solid var(--sc-line);
 		border-radius: 14px;
 		overflow: hidden;
 		transition: transform .2s, box-shadow .2s, border-color .2s;
 	}
 	.cat-section .item-wrap .itemBox:hover {
 		transform: translateY(-3px);
-		border-color: #c5d3e6;
-		box-shadow: 0 14px 30px rgba(15, 30, 60, 0.10);
+		border-color: var(--sc-2);
+		box-shadow: 0 14px 30px rgba(231, 111, 127, 0.18);
 	}
 	.cat-section .it-img {
 		width: 100%;
 		aspect-ratio: 16 / 10;
 		overflow: hidden;
-		background: #f3f5f8;
+		background: var(--sc-soft);
 	}
 	.cat-section .it-img img {
 		width: 100% !important;
@@ -105,7 +119,7 @@
 	.cat-section .it-title {
 		font-size: 17px !important;
 		font-weight: 700 !important;
-		color: #1a2532 !important;
+		color: var(--sc-ink) !important;
 		line-height: 1.45;
 		margin: 18px 20px 10px !important;
 		display: -webkit-box;
@@ -116,7 +130,7 @@
 	}
 	.cat-section .it-text {
 		font-size: 14px !important;
-		color: #5a6b7d;
+		color: #6b5961;
 		line-height: 1.65;
 		margin: 0 20px 18px !important;
 		display: -webkit-box;
@@ -136,12 +150,18 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 8px;
-		background: #003288;
+		background: linear-gradient(135deg, var(--sc-2) 0%, var(--sc-3) 100%);
 		color: #fff !important;
 		border-radius: 999px;
 		text-decoration: none;
+		box-shadow: 0 6px 14px rgba(231, 111, 127, 0.28);
+		transition: background .2s, transform .2s, box-shadow .2s;
 	}
-	.cat-section .itemBox .button:hover { background: #1e4a8f; }
+	.cat-section .itemBox .button:hover {
+		background: linear-gradient(135deg, var(--sc-3) 0%, var(--sc-4) 100%);
+		transform: translateX(2px);
+		box-shadow: 0 8px 18px rgba(200, 74, 90, 0.35);
+	}
 	.cat-section .btn-arrow {
 		display: inline-block;
 		width: 0; height: 0;

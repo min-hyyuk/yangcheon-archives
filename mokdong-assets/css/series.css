@@ -1,0 +1,387 @@
+@charset "utf-8";
+
+/* ============================================================
+   양천구-목동 시리즈 전용 추가 스타일
+   (yangcheon25 layout.css 위에 얹힘. base.css 변수 재사용)
+   ============================================================ */
+
+:root{
+  --yc-navy: #002466;
+  --yc-navy-2: #00194a;
+  --yc-blue: #2549B7;
+  --yc-line: #1a1a1a;
+  --yc-bg-soft: #f5f6f8;
+  --yc-bg-paper: #faf9f6;
+  --yc-text: #1a1a1a;
+  --yc-text-sub: #4a4a4a;
+  --yc-muted: #8a8a8a;
+}
+
+html, body{ background:#fff; color:var(--yc-text); }
+a{ color:inherit; }
+
+/* ---------- 헤더 시리즈 라벨 ---------- */
+#header h1 a{
+  display:flex; align-items:center; gap:14px;
+  text-decoration:none;
+}
+#header h1 a .logo-text{
+  font-size:1.6rem; font-weight:700; letter-spacing:.02em; color:var(--yc-navy);
+  border-left:1px solid #d0d0d0; padding-left:14px; line-height:1;
+}
+#header h1 a .logo-text small{
+  display:block; font-size:1.1rem; color:var(--yc-muted); font-weight:500; margin-top:4px;
+}
+
+/* ---------- 메인 시리즈 인트로 ---------- */
+.series-hero{
+  padding: 8rem 1.5rem 2rem;
+  text-align:center;
+}
+.series-hero .eyebrow{
+  display:inline-block;
+  font-size:1.4rem; letter-spacing:.25em; color:var(--yc-navy);
+  font-weight:700;
+  padding:.6rem 1.4rem;
+  border:1px solid var(--yc-navy);
+  border-radius:99px;
+  margin-bottom:2.4rem;
+}
+.series-hero h1{
+  font-size:5.6rem; font-weight:800; line-height:1.2; color:var(--yc-text);
+  margin-bottom:1.6rem;
+}
+.series-hero h1 .accent{ color:var(--yc-navy); }
+.series-hero p.lead{
+  font-size:1.8rem; color:var(--yc-text-sub); line-height:1.7;
+  max-width:760px; margin:0 auto;
+}
+
+/* ---------- 시리즈 카드 (메인 2장) ---------- */
+.series-cards{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:3rem;
+  padding: 4rem 1.5rem 8rem;
+  max-width:1460px; margin:0 auto;
+}
+.series-card{
+  display:block;
+  background:#fff;
+  border:1px solid #e6e6e6;
+  border-radius:6px;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.series-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(0,36,102,.12);
+  border-color:var(--yc-navy);
+}
+.series-card .cover{
+  position:relative;
+  aspect-ratio: 16 / 10;
+  overflow:hidden;
+  background:#0a0a0a;
+}
+.series-card .cover img{
+  width:100%; height:100%; object-fit:cover;
+  transition:transform .6s ease, opacity .3s ease;
+  opacity:.92;
+}
+.series-card:hover .cover img{ transform:scale(1.05); opacity:1; }
+
+.series-card .cover .badge{
+  position:absolute; top:24px; left:24px;
+  background:rgba(255,255,255,.92);
+  color:var(--yc-navy);
+  font-size:1.2rem; font-weight:700; letter-spacing:.2em;
+  padding:.6rem 1.2rem; border-radius:99px;
+}
+
+.series-card .body{
+  padding: 3.2rem 3rem;
+}
+.series-card .body .vol{
+  font-size:1.3rem; color:var(--yc-muted); letter-spacing:.18em;
+  font-weight:700; margin-bottom:1rem;
+}
+.series-card .body h2{
+  font-size:3.4rem; font-weight:800; line-height:1.25;
+  margin:0 0 1.2rem; text-align:left; color:var(--yc-text);
+}
+.series-card .body h2 small{
+  display:block; font-size:1.6rem; font-weight:500; color:var(--yc-text-sub);
+  margin-top:.6rem;
+}
+.series-card .body p{
+  font-size:1.5rem; line-height:1.7; color:var(--yc-text-sub); margin-bottom:2rem;
+}
+.series-card .body .more{
+  display:inline-flex; align-items:center; gap:.8rem;
+  font-size:1.4rem; font-weight:700; color:var(--yc-navy);
+  border-bottom:1px solid var(--yc-navy); padding-bottom:.4rem;
+  letter-spacing:.02em;
+}
+
+/* ---------- 챕터 인덱스 페이지 (역사/현재 진입) ---------- */
+.index-hero{
+  padding: 6rem 1.5rem 2rem;
+  text-align:left;
+  max-width:1460px; margin:0 auto;
+}
+.index-hero .crumb{
+  font-size:1.3rem; color:var(--yc-muted); letter-spacing:.12em; margin-bottom:1.6rem;
+}
+.index-hero .crumb a{ color:var(--yc-muted); text-decoration:none; }
+.index-hero .crumb a:hover{ color:var(--yc-navy); }
+.index-hero h1{
+  font-size:5rem; font-weight:800; line-height:1.25; margin-bottom:1.4rem;
+}
+.index-hero p.lead{
+  font-size:1.7rem; color:var(--yc-text-sub); line-height:1.7; max-width:780px;
+}
+.index-hero hr.sep{
+  margin: 4rem 0 0; border:0; border-top:2px solid var(--yc-text);
+}
+
+/* 챕터 카드 그리드 */
+.chapter-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:2rem 2.4rem;
+  padding: 5rem 1.5rem 8rem;
+  max-width:1460px; margin:0 auto;
+}
+.chapter-card{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  background:#fff;
+  border:1px solid #e6e6e6;
+  border-radius:6px;
+  overflow:hidden;
+  text-decoration:none; color:inherit;
+  min-height:240px;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.chapter-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 30px rgba(0,36,102,.08);
+  border-color:var(--yc-navy);
+}
+.chapter-card .thumb{ overflow:hidden; background:#eee; }
+.chapter-card .thumb img{ width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+.chapter-card:hover .thumb img{ transform:scale(1.06); }
+.chapter-card .info{ padding:2.4rem 2.4rem; display:flex; flex-direction:column; justify-content:space-between; }
+.chapter-card .info .num{
+  font-size:1.3rem; font-weight:700; color:var(--yc-navy);
+  letter-spacing:.2em; margin-bottom:1rem;
+}
+.chapter-card .info h3{
+  font-size:2.4rem; font-weight:700; line-height:1.25; margin:0 0 1rem; color:var(--yc-text);
+}
+.chapter-card .info p{
+  font-size:1.4rem; color:var(--yc-text-sub); line-height:1.6; margin:0;
+}
+.chapter-card .info .arr{
+  display:inline-flex; align-items:center; gap:.5rem; margin-top:1.4rem;
+  font-size:1.3rem; color:var(--yc-navy); font-weight:700;
+}
+
+/* ---------- 디테일 페이지 (공원/챕터 본문) ---------- */
+.detail-hero{
+  position:relative;
+  padding: 0;
+  margin-bottom: 6rem;
+  background:#0a0a0a;
+}
+.detail-hero .hero-img{
+  width:100%; aspect-ratio:21/9; object-fit:cover; opacity:.78;
+}
+.detail-hero .hero-text{
+  position:absolute; left:0; right:0; bottom:0;
+  padding: 4rem 1.5rem 4rem;
+  max-width:1460px; margin:0 auto;
+  color:#fff;
+}
+.detail-hero .hero-text .crumb{
+  font-size:1.3rem; color:#cfd6e3; letter-spacing:.16em; margin-bottom:1.4rem;
+}
+.detail-hero .hero-text .crumb a{ color:#cfd6e3; text-decoration:none; }
+.detail-hero .hero-text h1{
+  font-size:5.6rem; font-weight:800; line-height:1.15; margin:0;
+}
+.detail-hero .hero-text h1 small{
+  display:block; font-size:1.6rem; font-weight:500; color:#cfd6e3; letter-spacing:.05em; margin-top:1rem;
+}
+
+.detail-wrap{
+  max-width:1200px; margin:0 auto; padding:0 1.5rem 8rem;
+}
+.detail-wrap .section-block{ margin-bottom:8rem; }
+.detail-wrap h2.sec-title{
+  font-size:3.6rem; font-weight:800; line-height:1.25; text-align:left;
+  margin:0 0 2.4rem; padding-bottom:1.2rem;
+  border-bottom:2px solid var(--yc-text);
+}
+.detail-wrap .lead-text{
+  font-size:1.8rem; line-height:1.8; color:var(--yc-text);
+  margin-bottom:3rem;
+}
+.detail-wrap .lead-text .em{
+  background:linear-gradient(transparent 60%, rgba(0,36,102,.12) 60%);
+  font-weight:700; color:var(--yc-navy);
+}
+
+/* 사진 그리드 */
+.photo-grid{
+  display:grid; gap:1.6rem;
+  margin: 2rem 0 3rem;
+}
+.photo-grid.cols-2{ grid-template-columns: repeat(2,1fr); }
+.photo-grid.cols-3{ grid-template-columns: repeat(3,1fr); }
+.photo-grid figure{ margin:0; }
+.photo-grid figure a{ display:block; overflow:hidden; border-radius:4px; }
+.photo-grid figure img{
+  width:100%; height:100%; object-fit:cover; display:block;
+  transition:transform .5s ease;
+}
+.photo-grid figure:hover img{ transform:scale(1.04); }
+.photo-grid figure figcaption{
+  font-size:1.3rem; color:var(--yc-text-sub); margin-top:.8rem;
+  line-height:1.4;
+}
+
+/* 가로 1장 큰 사진 */
+.figure-wide{ margin:3rem 0; }
+.figure-wide a{ display:block; overflow:hidden; border-radius:4px; }
+.figure-wide img{ width:100%; display:block; }
+.figure-wide figcaption{
+  font-size:1.3rem; color:var(--yc-text-sub); margin-top:.8rem;
+}
+
+/* 시간선/연혁 변화 비교 (과거→현재 위성사진) */
+.change-timeline{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:1.4rem;
+  margin: 2rem 0 3rem;
+}
+.change-timeline figure{ margin:0; text-align:center; }
+.change-timeline figure .year{
+  display:inline-block; background:var(--yc-navy); color:#fff;
+  font-size:1.2rem; font-weight:700; letter-spacing:.1em;
+  padding:.4rem 1.2rem; border-radius:99px; margin-bottom:.8rem;
+}
+.change-timeline figure img{
+  width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:4px;
+  border:1px solid #e0e0e0;
+}
+.change-timeline figure figcaption{
+  font-size:1.2rem; color:var(--yc-text-sub); margin-top:.6rem;
+}
+
+/* 년도별 (도면+항공) 짝 — 파리공원 등 */
+.change-pair{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+.change-pair > .col{ text-align:center; }
+.change-pair .year{
+  display:inline-block; background:var(--yc-navy); color:#fff;
+  font-size:1.2rem; font-weight:700; letter-spacing:.1em;
+  padding:.4rem 1.2rem; border-radius:99px; margin-bottom:1rem;
+}
+.change-pair .stack{
+  display:flex; flex-direction:column; gap:.8rem;
+}
+.change-pair .stack a{ display:block; overflow:hidden; border-radius:4px; }
+.change-pair .stack img{
+  width:100%; display:block; border:1px solid #e0e0e0; border-radius:4px;
+  transition:transform .4s ease;
+}
+.change-pair .stack a:hover img{ transform:scale(1.03); }
+.change-pair .cap{
+  font-size:1.2rem; color:var(--yc-text-sub); margin-top:.6rem; line-height:1.4;
+}
+@media (max-width: 768px){
+  .change-pair{ grid-template-columns: 1fr; gap: 2.4rem; }
+}
+
+/* 인용 / 키 메시지 */
+.callout{
+  background:var(--yc-bg-paper);
+  border-left:4px solid var(--yc-navy);
+  padding: 3rem 3rem;
+  margin: 3rem 0;
+  font-size:1.7rem; line-height:1.8; color:var(--yc-text);
+}
+.callout strong{ color:var(--yc-navy); }
+
+/* 정보 박스 (개요/숫자 등) */
+.info-box{
+  background:var(--yc-bg-soft);
+  border-radius:6px;
+  padding: 2.4rem 2.8rem;
+  margin: 2rem 0;
+}
+.info-box dl{
+  display:grid; grid-template-columns: 14rem 1fr; gap:1rem 2rem;
+  font-size:1.5rem; line-height:1.6;
+}
+.info-box dt{ font-weight:700; color:var(--yc-navy); }
+.info-box dd{ color:var(--yc-text); }
+
+/* 페이지 푸터 - 이전/다음 */
+.detail-nav{
+  display:flex; justify-content:space-between; align-items:stretch;
+  gap:1.6rem; margin-top:6rem; padding-top:3rem; border-top:1px solid #e0e0e0;
+}
+.detail-nav a{
+  flex:1; padding:2rem 2.4rem; background:#fff; border:1px solid #e0e0e0;
+  border-radius:6px; text-decoration:none; color:inherit; min-height:90px;
+  display:flex; flex-direction:column; justify-content:center;
+  transition:border-color .2s ease, transform .2s ease;
+}
+.detail-nav a:hover{ border-color:var(--yc-navy); transform:translateY(-2px); }
+.detail-nav .label{ font-size:1.2rem; color:var(--yc-muted); letter-spacing:.15em; font-weight:700; }
+.detail-nav .ttl{ font-size:1.6rem; font-weight:700; color:var(--yc-text); margin-top:.6rem; }
+.detail-nav a.next{ text-align:right; }
+.detail-nav a.disabled{ opacity:.4; pointer-events:none; }
+
+/* 홈 버튼 */
+.btn-home-wrap{ text-align:center; margin-top:4rem; }
+.btn-home{
+  display:inline-block; padding:1.4rem 4rem;
+  background:var(--yc-navy); color:#fff;
+  font-size:1.5rem; font-weight:700;
+  border-radius:99px; text-decoration:none;
+  transition:background .2s ease;
+}
+.btn-home:hover{ background:var(--yc-navy-2); color:#fff; }
+
+/* 반응형 */
+@media (max-width: 1024px){
+  .series-cards{ grid-template-columns:1fr; }
+  .chapter-grid{ grid-template-columns:1fr; }
+  .chapter-card{ grid-template-columns:1fr; }
+  .chapter-card .thumb{ aspect-ratio:16/9; }
+  .change-timeline{ grid-template-columns:repeat(2,1fr); }
+  .series-hero h1{ font-size:4.2rem; }
+  .index-hero h1{ font-size:3.8rem; }
+  .detail-hero .hero-text h1{ font-size:4rem; }
+  .detail-wrap h2.sec-title{ font-size:2.8rem; }
+}
+@media (max-width: 640px){
+  .series-hero{ padding-top:5rem; }
+  .series-hero h1{ font-size:3.4rem; }
+  .series-card .body{ padding:2.4rem 2rem; }
+  .series-card .body h2{ font-size:2.6rem; }
+  .photo-grid.cols-2, .photo-grid.cols-3{ grid-template-columns:1fr; }
+  .info-box dl{ grid-template-columns:1fr; gap:.4rem 0; }
+  .detail-nav{ flex-direction:column; }
+}

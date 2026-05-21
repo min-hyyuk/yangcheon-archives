@@ -1,0 +1,200 @@
+﻿@charset "utf-8";
+/* // font
+// → font-color, font-size */
+
+/* font-family */
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Pretendard-Thin.woff2') format('woff2'),
+        url('../fonts/Pretendard-Thin.woff') format('woff'),
+        url('../fonts/Pretendard-Thin.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Pretendard-ExtraLight.woff2') format('woff2'),
+        url('../fonts/Pretendard-ExtraLight.woff') format('woff'),
+        url('../fonts/Pretendard-ExtraLight.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Pretendard-Light.woff2') format('woff2'),
+        url('../fonts/Pretendard-Light.woff') format('woff'),
+        url('../fonts/Pretendard-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Pretendard-Regular.woff2') format('woff2'),
+        url('../fonts/Pretendard-Regular.woff') format('woff'),
+        url('../fonts/Pretendard-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Pretendard-Medium.woff2') format('woff2'),
+        url('../fonts/Pretendard-Medium.woff') format('woff'),
+        url('../fonts/Pretendard-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Pretendard-SemiBold.woff2') format('woff2'),
+        url('../fonts/Pretendard-SemiBold.woff') format('woff'),
+        url('../fonts/Pretendard-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Pretendard-Bold.woff2') format('woff2'),
+        url('../fonts/Pretendard-Bold.woff') format('woff'),
+        url('../fonts/Pretendard-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Pretendard-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Pretendard-ExtraBold.woff') format('woff'),
+        url('../fonts/Pretendard-ExtraBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Pretendard-Black.woff2') format('woff2'),
+        url('../fonts/Pretendard-Black.woff') format('woff'),
+        url('../fonts/Pretendard-Black.otf') format('opentype');
+}
+
+/* //font-color
+// primaries color */
+
+.label.primary {
+    background: var(--primary);
+}
+
+.label.sub {
+    background: var(--secondary);
+}
+
+.label.danger {
+    background: var(--danger);
+}
+
+.text-primary {
+    color: var(--blue-03);
+}
+
+.text-secondary {
+    color: var(--secondary);
+}
+
+.text-danger {
+    color: var(--danger);
+}
+
+.text-success {
+    color: var(--success);
+}
+
+.text-gray {
+    color: #6B6B6B !important
+}
+
+.text-gray2 {
+    color: #C3C3C3
+}
+
+.text-gray3 {
+    color: #FEFEFE
+}
+
+.text-gray4 {
+    color: #EAEAEA
+}
+
+.text-gray5 {
+    color: #F7F7F7
+}
+
+.text-gray6 {
+    color: #FEFEFE
+}
+.text-gray7{
+    color: #ABABAB !important;
+}
+.text-darkgray{
+    color: #787878 !important;
+}
+.text-red {
+    color: #E36E6E !important;
+}
+
+.text-green {
+    color: #55B733 !important;
+}
+
+.text-default {
+    color: #303030 !important;
+}
+
+.text-sm {
+    font-size: 11px !important;
+}
+.text-nm {
+    font-size: 14px !important;
+}
+.text-lg {
+    font-size: 16px !important;
+}
+.text-xl {
+    font-size: 24px !important;
+}
+.l22{
+    line-height: 22px !important;
+}
+
+.text-normal{ 
+	font-weight: normal;
+}
+
+.text-bold{ 
+	font-weight: bold !important;
+}
+
+.text-underline{
+    text-decoration: underline;
+}
+
+
+
+
+
+
