@@ -161,6 +161,53 @@
 		font-size: 14px; background: #fff; color: var(--my-ink);
 	}
 
+	/* 카테고리 패널 (픽토그램 클릭 시 표시) */
+	.cat-panel { display: none; }
+	.cat-panel.active { display: block; animation: fadeUp .3s ease-out; }
+	@keyframes fadeUp {
+		from { opacity: 0; transform: translateY(8px); }
+		to   { opacity: 1; transform: translateY(0); }
+	}
+
+	/* breadcrumb */
+	.cat-breadcrumb {
+		display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+		font-size: 14px; color: #8a755a;
+		margin-bottom: 22px; padding-bottom: 18px;
+		border-bottom: 1px dashed var(--my-line);
+	}
+	.cat-breadcrumb i { font-size: 11px; color: #c9b48f; }
+	.cat-breadcrumb strong { color: var(--my-3); font-weight: 700; }
+
+	/* 내부 카테고리 탭 */
+	.inner-tabs {
+		display: flex; flex-wrap: wrap; gap: 6px;
+		list-style: none; padding: 0; margin: 0 0 28px;
+	}
+	.inner-tabs li a {
+		display: inline-block; padding: 9px 18px;
+		font-size: 14.5px; font-weight: 500;
+		color: var(--my-ink);
+		border: 1px solid var(--my-line);
+		background: #fff;
+		border-radius: 999px;
+		text-decoration: none;
+		transition: background .15s, color .15s, border-color .15s;
+	}
+	.inner-tabs li a:hover { background: var(--my-soft); border-color: var(--my-2); }
+	.inner-tabs li.active a {
+		background: var(--my-3); color: #fff; border-color: var(--my-3);
+	}
+
+	/* 빈 결과 안내 */
+	.result-empty {
+		padding: 80px 24px; text-align: center;
+		color: #b29672; font-size: 15px;
+		background: var(--my-soft);
+		border: 1px dashed var(--my-line);
+		border-radius: 14px;
+	}
+
 	@media (max-width: 720px) {
 		.pictogram-list { grid-template-columns: repeat(3, 1fr); gap: 4px; }
 		.pictogram-wrap { margin-top: -24px; padding: 18px 12px; }
@@ -285,64 +332,109 @@
 		<div class="pictogram-wrap">
 			<ul class="pictogram-list">
 				<li class="active" data-cat="photo">
-					<a href="#"><span class="pict-icon"><i class="fa fa-camera"></i></span><span class="pict-name">사진</span><span class="pict-count">0건</span></a>
+					<a href="#cat-photo"><span class="pict-icon"><i class="fa fa-camera"></i></span><span class="pict-name">사진</span><span class="pict-count">0건</span></a>
 				</li>
 				<li data-cat="video">
-					<a href="#"><span class="pict-icon"><i class="fa fa-video-camera"></i></span><span class="pict-name">영상</span><span class="pict-count">0건</span></a>
+					<a href="#cat-video"><span class="pict-icon"><i class="fa fa-video-camera"></i></span><span class="pict-name">영상</span><span class="pict-count">0건</span></a>
 				</li>
 				<li data-cat="publication">
-					<a href="publication.html"><span class="pict-icon"><i class="fa fa-book"></i></span><span class="pict-name">간행물</span><span class="pict-count">0건</span></a>
+					<a href="#cat-publication"><span class="pict-icon"><i class="fa fa-book"></i></span><span class="pict-name">간행물</span><span class="pict-count">0건</span></a>
 				</li>
 				<li data-cat="newsletter">
-					<a href="#"><span class="pict-icon"><i class="fa fa-envelope-o"></i></span><span class="pict-name">소식지</span><span class="pict-count">0건</span></a>
+					<a href="#cat-newsletter"><span class="pict-icon"><i class="fa fa-envelope-o"></i></span><span class="pict-name">소식지</span><span class="pict-count">0건</span></a>
 				</li>
 				<li data-cat="gubo">
-					<a href="#"><span class="pict-icon"><i class="fa fa-newspaper-o"></i></span><span class="pict-name">구보</span><span class="pict-count">0건</span></a>
+					<a href="#cat-gubo"><span class="pict-icon"><i class="fa fa-newspaper-o"></i></span><span class="pict-name">구보</span><span class="pict-count">0건</span></a>
 				</li>
 				<li data-cat="private">
-					<a href="private.html"><span class="pict-icon"><i class="fa fa-archive"></i></span><span class="pict-name">민간기증기록</span><span class="pict-count">0건</span></a>
+					<a href="#cat-private"><span class="pict-icon"><i class="fa fa-archive"></i></span><span class="pict-name">민간기증기록</span><span class="pict-count">0건</span></a>
 				</li>
 			</ul>
 		</div>
 
 		<div id="contents" class="inner-fixed result-wrap">
-			<div class="result-head">
-				<h3>검색결과 <strong id="totCnt">0</strong>건</h3>
-				<div class="result-sort">
-					<select aria-label="정렬">
-						<option>최신순</option>
-						<option>오래된순</option>
-						<option>제목순</option>
-					</select>
-				</div>
-			</div>
 
-			<div class="table tab-content active" id="tab-01">
-				<table class="tbl-list" summary="검색 결과">
-					<caption>검색 결과 목록</caption>
-					<colgroup>
-						<col style="width:120px" class="m-none">
-						<col style="width:auto">
-						<col style="width:140px" class="m-none">
-						<col style="width:200px" class="m-none">
-					</colgroup>
-					<thead>
-						<tr>
-							<th class="m-none">번호</th>
-							<th>제목</th>
-							<th class="m-none">첨부</th>
-							<th class="m-none">등록일</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td colspan="4" style="padding:60px 20px; text-align:center; color:#9aa6b4; font-size:15px;">
-								위 카테고리에서 항목을 선택하거나 키워드로 검색해주세요.
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+			<!-- 사진 패널 -->
+			<section class="cat-panel active" id="cat-photo">
+				<nav class="cat-breadcrumb"><span>양천구 기록 자료실</span><i class="fa fa-angle-right"></i><span>시청각기록물</span><i class="fa fa-angle-right"></i><strong>사진</strong></nav>
+				<ul class="inner-tabs">
+					<li class="active" data-sub="all"><a href="#">전체</a></li>
+					<li data-sub="scenery"><a href="#">양천의 풍경</a></li>
+					<li data-sub="history"><a href="#">양천의 역사</a></li>
+					<li data-sub="culture"><a href="#">양천의 문화·체육</a></li>
+					<li data-sub="admin"><a href="#">양천의 행정</a></li>
+					<li data-sub="etc"><a href="#">기타</a></li>
+				</ul>
+				<div class="result-head">
+					<h3>검색결과 <strong>0</strong>건</h3>
+					<div class="result-sort"><select aria-label="정렬"><option>최신순</option><option>오래된순</option><option>제목순</option></select></div>
+				</div>
+				<div class="result-empty">선택한 카테고리에 등록된 자료가 아직 없습니다.</div>
+			</section>
+
+			<!-- 영상 패널 -->
+			<section class="cat-panel" id="cat-video">
+				<nav class="cat-breadcrumb"><span>양천구 기록 자료실</span><i class="fa fa-angle-right"></i><span>시청각기록물</span><i class="fa fa-angle-right"></i><strong>영상</strong></nav>
+				<ul class="inner-tabs">
+					<li class="active" data-sub="all"><a href="#">전체</a></li>
+					<li data-sub="scenery"><a href="#">양천의 풍경</a></li>
+					<li data-sub="history"><a href="#">양천의 역사</a></li>
+					<li data-sub="culture"><a href="#">양천의 문화·체육</a></li>
+					<li data-sub="admin"><a href="#">양천의 행정</a></li>
+					<li data-sub="etc"><a href="#">기타</a></li>
+				</ul>
+				<div class="result-head">
+					<h3>검색결과 <strong>0</strong>건</h3>
+					<div class="result-sort"><select aria-label="정렬"><option>최신순</option><option>오래된순</option><option>제목순</option></select></div>
+				</div>
+				<div class="result-empty">선택한 카테고리에 등록된 자료가 아직 없습니다.</div>
+			</section>
+
+			<!-- 간행물 패널 -->
+			<section class="cat-panel" id="cat-publication">
+				<nav class="cat-breadcrumb"><span>양천구 기록 자료실</span><i class="fa fa-angle-right"></i><strong>간행물</strong></nav>
+				<ul class="inner-tabs">
+					<li class="active" data-sub="all"><a href="#">전체</a></li>
+					<li data-sub="pub"><a href="#">간행물</a></li>
+					<li data-sub="collected"><a href="#">수집 간행물</a></li>
+				</ul>
+				<div class="result-head">
+					<h3>검색결과 <strong>0</strong>건</h3>
+					<div class="result-sort"><select aria-label="정렬"><option>최신순</option><option>오래된순</option><option>제목순</option></select></div>
+				</div>
+				<div class="result-empty">선택한 카테고리에 등록된 자료가 아직 없습니다.</div>
+			</section>
+
+			<!-- 소식지 패널 -->
+			<section class="cat-panel" id="cat-newsletter">
+				<nav class="cat-breadcrumb"><span>양천구 기록 자료실</span><i class="fa fa-angle-right"></i><strong>소식지</strong></nav>
+				<div class="result-head">
+					<h3>검색결과 <strong>0</strong>건</h3>
+					<div class="result-sort"><select aria-label="정렬"><option>최신순</option><option>오래된순</option><option>제목순</option></select></div>
+				</div>
+				<div class="result-empty">소식지 등록 준비 중입니다.</div>
+			</section>
+
+			<!-- 구보 패널 -->
+			<section class="cat-panel" id="cat-gubo">
+				<nav class="cat-breadcrumb"><span>양천구 기록 자료실</span><i class="fa fa-angle-right"></i><strong>구보</strong></nav>
+				<div class="result-head">
+					<h3>검색결과 <strong>0</strong>건</h3>
+					<div class="result-sort"><select aria-label="정렬"><option>최신순</option><option>오래된순</option><option>제목순</option></select></div>
+				</div>
+				<div class="result-empty">구보 등록 준비 중입니다.</div>
+			</section>
+
+			<!-- 민간(기증)기록 패널 -->
+			<section class="cat-panel" id="cat-private">
+				<nav class="cat-breadcrumb"><span>양천구 기록 자료실</span><i class="fa fa-angle-right"></i><strong>민간(기증)기록</strong></nav>
+				<div class="result-head">
+					<h3>검색결과 <strong>0</strong>건</h3>
+					<div class="result-sort"><select aria-label="정렬"><option>최신순</option><option>오래된순</option><option>제목순</option></select></div>
+				</div>
+				<div class="result-empty">민간(기증)기록 등록 준비 중입니다.</div>
+			</section>
+
 		</div>
 		<!-- //서브 컨텐츠 영역 -->
 	</div>
@@ -392,22 +484,55 @@
 $('.w3-table-all').scroltable();
 </script>
 
-<!-- 픽토그램 카테고리 active 토글 -->
+<!-- 픽토그램 클릭 시 해당 카테고리 패널 활성화 -->
 <script>
 (function(){
-	var items = document.querySelectorAll('.pictogram-list li');
-	items.forEach(function(li){
+	var picts = document.querySelectorAll('.pictogram-list li');
+	var panels = document.querySelectorAll('.cat-panel');
+	function showPanel(targetId){
+		picts.forEach(function(li){
+			var a = li.querySelector('a');
+			li.classList.toggle('active', a && a.getAttribute('href') === '#' + targetId);
+		});
+		panels.forEach(function(p){
+			p.classList.toggle('active', p.id === targetId);
+		});
+		// 결과 영역으로 부드러운 스크롤 (모바일에서 픽토그램에 가려지지 않게)
+		var contents = document.getElementById('contents');
+		if (contents) {
+			var top = contents.getBoundingClientRect().top + window.scrollY - 12;
+			window.scrollTo({ top: top, behavior: 'smooth' });
+		}
+	}
+	picts.forEach(function(li){
 		var a = li.querySelector('a');
 		if(!a) return;
-		// 별도 페이지로 이동하는 항목(href 가 .html) 은 그대로 두고
-		// 같은 페이지 내 필터(href="#") 만 active 토글.
-		if((a.getAttribute('href')||'').indexOf('#') !== 0) return;
 		a.addEventListener('click', function(e){
+			var href = a.getAttribute('href') || '';
+			if (href.charAt(0) !== '#') return;
 			e.preventDefault();
-			items.forEach(function(x){ x.classList.remove('active'); });
-			li.classList.add('active');
+			showPanel(href.slice(1));
 		});
 	});
+
+	// 패널 내부 탭 (전체/양천의 풍경/…)
+	document.querySelectorAll('.cat-panel').forEach(function(panel){
+		var tabs = panel.querySelectorAll('.inner-tabs li');
+		tabs.forEach(function(li){
+			var a = li.querySelector('a');
+			if(!a) return;
+			a.addEventListener('click', function(e){
+				e.preventDefault();
+				tabs.forEach(function(t){ t.classList.remove('active'); });
+				li.classList.add('active');
+			});
+		});
+	});
+
+	// 초기 진입 시 hash 가 있으면 그쪽 패널로
+	if (location.hash && document.getElementById(location.hash.slice(1))) {
+		showPanel(location.hash.slice(1));
+	}
 })();
 </script>
 </body>
