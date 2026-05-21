@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>메인 시안 ① 옛 목동 항공사진 + 현재 디졸브</title>
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Pretendard', sans-serif; color: #2A2D30; background: #fff; }
+
+/* 시안 선택 바 */
+.preview-bar {
+	position: sticky; top: 0; z-index: 100;
+	background: #fff; border-bottom: 1px solid #e5e5e5;
+	padding: 12px 24px;
+	display: flex; align-items: center; gap: 22px;
+	font-size: 13px;
+}
+.preview-bar .pb-logo img { height: 28px; vertical-align: middle; }
+.preview-bar .pb-tag { font-weight: 700; color: #4F5358; letter-spacing: -0.01em; }
+.preview-bar .pb-nav { margin-left: auto; display: flex; gap: 6px; }
+.preview-bar .pb-nav a {
+	padding: 6px 12px; border-radius: 999px;
+	text-decoration: none; color: #777;
+	border: 1px solid #ddd;
+}
+.preview-bar .pb-nav a:hover { background: #f3f2ec; }
+.preview-bar .pb-nav a.active { background: #4F5358; color: #fff; border-color: #4F5358; }
+
+/* 시안 ① 히어로 */
+.hero-1 {
+	position: relative;
+	height: 720px;
+	overflow: hidden;
+	background: #1a1a1a;
+}
+.hero-1 .layer {
+	position: absolute; inset: 0;
+	background-size: cover; background-position: center;
+}
+.hero-1 .layer-old {
+	background-image: url('mokdong-assets/images/main/cover-history.jpg');
+	filter: sepia(0.35) contrast(0.95) brightness(0.6);
+}
+.hero-1 .layer-new {
+	background-image: url('mokdong-assets/images/main/cover-present.jpg');
+	clip-path: polygon(55% 0, 100% 0, 100% 100%, 45% 100%);
+	filter: brightness(0.65) saturate(0.85);
+}
+.hero-1::before {
+	content: ""; position: absolute; inset: 0; z-index: 2;
+	background:
+		linear-gradient(to right, rgba(20,22,25,0.55) 0%, rgba(20,22,25,0.25) 45%, rgba(20,22,25,0.25) 55%, rgba(20,22,25,0.55) 100%);
+}
+.hero-1::after {
+	content: ""; position: absolute; left: 50%; top: 0; bottom: 0;
+	width: 2px;
+	background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.4) 20%, rgba(255,255,255,0.4) 80%, transparent);
+	z-index: 3; transform: translateX(-50%);
+}
+.hero-1 .h-content {
+	position: relative; z-index: 4;
+	height: 100%; display: flex; flex-direction: column;
+	justify-content: center; align-items: center;
+	color: #fff; text-align: center; padding: 0 24px;
+}
+.hero-1 .h-eyebrow {
+	font-size: 13px; letter-spacing: 0.35em; font-weight: 600;
+	margin-bottom: 24px; color: rgba(255,255,255,0.85);
+}
+.hero-1 .h-title {
+	font-size: clamp(38px, 5.5vw, 72px); font-weight: 800;
+	letter-spacing: -0.03em; line-height: 1.2;
+	text-shadow: 0 4px 24px rgba(0,0,0,0.5);
+	margin-bottom: 20px;
+}
+.hero-1 .h-sub {
+	font-size: 17px; font-weight: 400; line-height: 1.7;
+	max-width: 640px; color: rgba(255,255,255,0.92);
+	margin-bottom: 36px;
+}
+.hero-1 .h-search {
+	display: flex; background: #fff; border-radius: 999px;
+	padding: 6px 6px 6px 26px;
+	width: clamp(320px, 60vw, 580px);
+	box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+}
+.hero-1 .h-search input {
+	flex: 1; border: 0; outline: none; font-size: 16px;
+	padding: 14px 8px; background: transparent;
+	font-family: inherit;
+}
+.hero-1 .h-search button {
+	border: 0; cursor: pointer; width: 54px; height: 54px;
+	border-radius: 50%; background: #4F5358; color: #fff;
+	font-size: 18px;
+}
+.hero-1 .h-labels {
+	position: absolute; bottom: 32px; left: 0; right: 0;
+	display: flex; justify-content: space-between;
+	padding: 0 64px; z-index: 4;
+	font-size: 13px; color: rgba(255,255,255,0.85);
+	letter-spacing: 0.18em;
+}
+.hero-1 .h-labels span { font-weight: 600; }
+.hero-1 .h-labels .year { font-size: 22px; font-weight: 800; display: block; }
+
+/* 미리보기 노트 */
+.preview-note {
+	max-width: 900px; margin: 40px auto; padding: 24px 28px;
+	background: #f3f2ec; border-left: 3px solid #4F5358; border-radius: 8px;
+	font-size: 14px; line-height: 1.7;
+}
+.preview-note h4 { font-size: 15px; margin-bottom: 8px; color: #4F5358; }
+.preview-note ul { padding-left: 18px; margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<div class="preview-bar">
+	<a href="main.html" class="pb-logo"><img src="assets/images/logo.svg" alt="양천구 기록관"></a>
+	<span class="pb-tag">메인 이미지 시안 미리보기</span>
+	<div class="pb-nav">
+		<a href="main-preview-1.html" class="active">① 옛↔현재</a>
+		<a href="main-preview-2.html">② 타이포</a>
+		<a href="main-preview-3.html">③ 콜라주</a>
+		<a href="main-preview-4.html">④ 슬라이드</a>
+		<a href="main.html" style="margin-left:8px;">현재 메인</a>
+	</div>
+</div>
+
+<section class="hero-1">
+	<div class="layer layer-old"></div>
+	<div class="layer layer-new"></div>
+	<div class="h-content">
+		<p class="h-eyebrow">YANGCHEON ARCHIVES</p>
+		<h2 class="h-title">우리의 기억이<br>어제와 오늘을 잇다</h2>
+		<p class="h-sub">1980년대 신시가지 개발의 격동에서 오늘의 양천구까지 — 양천구의 시간을 사진·영상·기록물로 만나보세요.</p>
+		<div class="h-search">
+			<input type="text" placeholder="찾으시는 기록을 검색하세요.">
+			<button><i class="fa fa-search"></i></button>
+		</div>
+	</div>
+	<div class="h-labels">
+		<span><span class="year">1980's</span>YESTERDAY</span>
+		<span style="text-align:right"><span class="year">TODAY</span>2026</span>
+	</div>
+</section>
+
+<div class="preview-note">
+	<h4>① 옛 목동 ↔ 현재 디졸브</h4>
+	왼쪽엔 옛 목동(세피아 톤) / 오른쪽엔 현재 양천(자연색). 가운데 라이트 라인이 "어제와 오늘"을 시각적으로 분리.
+	<ul>
+		<li><strong>강점:</strong> "기억을 잇다" 카피를 즉시 시각화. 최근 작업한 목동의 역사·현재 콘텐츠와 직접 연결.</li>
+		<li><strong>약점:</strong> 더 좋은 1980년대 항공사진 소스가 있으면 임팩트 ↑ (현재 cover-history.jpg 활용).</li>
+		<li><strong>변형 가능:</strong> 마우스 드래그로 좌우 분할선 이동 (Before/After 슬라이더), 자동 페이드 등.</li>
+	</ul>
+</div>
+
+</body>
+</html>

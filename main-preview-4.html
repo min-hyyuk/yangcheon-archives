@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>메인 시안 ④ Swiper 슬라이드쇼</title>
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Pretendard', sans-serif; color: #2A2D30; background: #fff; }
+
+.preview-bar {
+	position: sticky; top: 0; z-index: 100;
+	background: #fff; border-bottom: 1px solid #e5e5e5;
+	padding: 12px 24px;
+	display: flex; align-items: center; gap: 22px;
+	font-size: 13px;
+}
+.preview-bar .pb-logo img { height: 28px; vertical-align: middle; }
+.preview-bar .pb-tag { font-weight: 700; color: #4F5358; }
+.preview-bar .pb-nav { margin-left: auto; display: flex; gap: 6px; }
+.preview-bar .pb-nav a {
+	padding: 6px 12px; border-radius: 999px;
+	text-decoration: none; color: #777;
+	border: 1px solid #ddd;
+}
+.preview-bar .pb-nav a:hover { background: #f3f2ec; }
+.preview-bar .pb-nav a.active { background: #4F5358; color: #fff; border-color: #4F5358; }
+
+/* 시안 ④ Swiper 자동 슬라이드 */
+.hero-4 {
+	position: relative;
+	height: 720px;
+	overflow: hidden;
+	background: #1a1a1a;
+}
+.hero-4 .swiper-container { width: 100%; height: 100%; }
+.hero-4 .swiper-slide {
+	position: relative;
+	background-size: cover; background-position: center;
+}
+.hero-4 .swiper-slide::before {
+	content: ""; position: absolute; inset: 0;
+	background:
+		linear-gradient(180deg, rgba(20,22,25,0.2) 0%, rgba(20,22,25,0.55) 60%, rgba(20,22,25,0.85) 100%);
+}
+.hero-4 .slide-content {
+	position: absolute; left: 64px; bottom: 88px; right: 64px;
+	color: #fff; z-index: 3;
+	max-width: 660px;
+}
+.hero-4 .slide-tag {
+	display: inline-block; font-size: 12px; letter-spacing: 0.32em;
+	font-weight: 700; padding: 5px 14px;
+	background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.32);
+	border-radius: 999px; margin-bottom: 18px;
+	backdrop-filter: blur(8px);
+}
+.hero-4 .slide-title {
+	font-size: clamp(36px, 5vw, 64px); font-weight: 800;
+	letter-spacing: -0.03em; line-height: 1.18;
+	margin-bottom: 14px;
+	text-shadow: 0 4px 28px rgba(0,0,0,0.55);
+}
+.hero-4 .slide-sub {
+	font-size: 17px; line-height: 1.7;
+	color: rgba(255,255,255,0.92);
+	max-width: 540px;
+	text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+.hero-4 .slide-btn {
+	display: inline-block; margin-top: 24px;
+	padding: 11px 24px; background: #fff; color: #2A2D30;
+	border-radius: 999px; font-size: 14px; font-weight: 700;
+	text-decoration: none;
+	transition: background .2s, transform .2s;
+}
+.hero-4 .slide-btn:hover { background: #DAD7CE; transform: translateX(3px); }
+
+/* Swiper UI */
+.hero-4 .swiper-pagination {
+	position: absolute; left: 64px; bottom: 40px; z-index: 5;
+	width: auto !important;
+}
+.hero-4 .swiper-pagination-bullet {
+	width: 30px; height: 3px; border-radius: 0;
+	background: rgba(255,255,255,0.35); opacity: 1;
+	margin-right: 8px !important;
+}
+.hero-4 .swiper-pagination-bullet-active { background: #fff; width: 50px; }
+.hero-4 .nav-btn {
+	position: absolute; top: 50%; transform: translateY(-50%);
+	width: 54px; height: 54px; border-radius: 50%;
+	background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3);
+	color: #fff; font-size: 18px;
+	display: flex; align-items: center; justify-content: center;
+	z-index: 6; cursor: pointer;
+	transition: background .2s;
+}
+.hero-4 .nav-btn:hover { background: rgba(255,255,255,0.25); }
+.hero-4 .nav-prev { left: 30px; }
+.hero-4 .nav-next { right: 30px; }
+
+/* 하단 검색바 */
+.hero-4-search {
+	position: absolute; left: 50%; bottom: -28px;
+	transform: translateX(-50%); z-index: 10;
+	display: flex; background: #fff; border-radius: 999px;
+	padding: 6px 6px 6px 26px;
+	width: clamp(320px, 50vw, 520px);
+	box-shadow: 0 24px 50px rgba(0,0,0,0.25);
+}
+.hero-4-search input {
+	flex: 1; border: 0; outline: none; font-size: 16px;
+	padding: 14px 8px; background: transparent; font-family: inherit;
+}
+.hero-4-search button {
+	border: 0; cursor: pointer; width: 54px; height: 54px;
+	border-radius: 50%; background: #4F5358; color: #fff; font-size: 18px;
+}
+
+.preview-note {
+	max-width: 900px; margin: 60px auto 40px; padding: 24px 28px;
+	background: #f3f2ec; border-left: 3px solid #4F5358; border-radius: 8px;
+	font-size: 14px; line-height: 1.7;
+}
+.preview-note h4 { font-size: 15px; margin-bottom: 8px; color: #4F5358; }
+.preview-note ul { padding-left: 18px; margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<div class="preview-bar">
+	<a href="main.html" class="pb-logo"><img src="assets/images/logo.svg" alt="양천구 기록관"></a>
+	<span class="pb-tag">메인 이미지 시안 미리보기</span>
+	<div class="pb-nav">
+		<a href="main-preview-1.html">① 옛↔현재</a>
+		<a href="main-preview-2.html">② 타이포</a>
+		<a href="main-preview-3.html">③ 콜라주</a>
+		<a href="main-preview-4.html" class="active">④ 슬라이드</a>
+		<a href="main.html" style="margin-left:8px;">현재 메인</a>
+	</div>
+</div>
+
+<section class="hero-4">
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+
+			<div class="swiper-slide" style="background-image:url('mokdong-assets/images/main/cover-history.jpg')">
+				<div class="slide-content">
+					<span class="slide-tag">YANGCHEON ARCHIVES &middot; HISTORY</span>
+					<h2 class="slide-title">우리의 기억이<br>어제와 오늘을 잇다</h2>
+					<p class="slide-sub">양천구·목동의 1980년대 신시가지 개발부터 오늘까지, 도시의 시간을 사진과 기록물로 만나보세요.</p>
+					<a href="mokdong-history/" class="slide-btn">목동의 역사 보기 →</a>
+				</div>
+			</div>
+
+			<div class="swiper-slide" style="background-image:url('assets/images/img-metaverse.png'); background-color:#2D5934;">
+				<div class="slide-content">
+					<span class="slide-tag">METAVERSE</span>
+					<h2 class="slide-title">메타버스로<br>되살아나는 옛 목동</h2>
+					<p class="slide-sub">메타버스 공간에서 양천구의 옛 모습을 직접 걸어보고, 기록과 사진으로 그 시간을 체험하세요.</p>
+					<a href="#" class="slide-btn">체험하기 →</a>
+				</div>
+			</div>
+
+			<div class="swiper-slide" style="background-image:url('mokdong-assets/images/main/cover-present.jpg')">
+				<div class="slide-content">
+					<span class="slide-tag">CONTENTS &middot; TODAY</span>
+					<h2 class="slide-title">오늘의 양천,<br>공원과 마을의 기록</h2>
+					<p class="slide-sub">양천공원·신트리공원·신월7동 — 우리 동네의 어제와 오늘을 함께 기록합니다.</p>
+					<a href="mokdong-now/" class="slide-btn">목동의 현재 보기 →</a>
+				</div>
+			</div>
+
+			<div class="swiper-slide" style="background-image:url('assets/images/img-donation.png'); background-color:#3B3E42;">
+				<div class="slide-content">
+					<span class="slide-tag">DONATION</span>
+					<h2 class="slide-title">기록물 기증,<br>함께 보존하는 양천의 시간</h2>
+					<p class="slide-sub">소중한 사진과 자료를 기증해 주세요. 안전하게 관리되어 다음 세대에 전해집니다.</p>
+					<a href="donation.html" class="slide-btn">기증 안내 →</a>
+				</div>
+			</div>
+
+			<div class="swiper-slide" style="background-image:url('assets/images/img-con-09.png'); background-color:#4F5358;">
+				<div class="slide-content">
+					<span class="slide-tag">CITIZEN ACTIVITIES</span>
+					<h2 class="slide-title">시민이 기록하는<br>우리 동네 이야기</h2>
+					<p class="slide-sub">구민기록활동가가 직접 남기는 양천의 일상과 풍경. 함께 만드는 마을의 기록을 만나보세요.</p>
+					<a href="activities.html" class="slide-btn">구민기록활동 →</a>
+				</div>
+			</div>
+
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<button class="nav-btn nav-prev"><i class="fa fa-chevron-left"></i></button>
+	<button class="nav-btn nav-next"><i class="fa fa-chevron-right"></i></button>
+
+	<div class="hero-4-search">
+		<input type="text" placeholder="찾으시는 기록을 검색하세요.">
+		<button><i class="fa fa-search"></i></button>
+	</div>
+</section>
+
+<div class="preview-note">
+	<h4>④ Swiper 자동 슬라이드</h4>
+	5개 슬라이드(역사·메타버스·현재·기증·구민활동) 자동 전환. 각 슬라이드별 CTA 버튼으로 하위 콘텐츠 진입 유도. 검색바는 하단에 고정.
+	<ul>
+		<li><strong>강점:</strong> 메인에서 사이트 전반의 콘텐츠 5분야를 한 번에 노출. CTA로 진입률 ↑. Swiper 라이브러리 이미 설치되어 있어 비용 0.</li>
+		<li><strong>약점:</strong> 정적인 단일 이미지보다 시선이 분산. 슬라이드 콘텐츠 큐레이션 유지보수 필요.</li>
+		<li><strong>변형 가능:</strong> Fade 전환, 자동재생 시간 조정, 슬라이드 수 5→3개로 축소 등.</li>
+	</ul>
+</div>
+
+<script>
+new Swiper('.hero-4 .swiper-container', {
+	loop: true,
+	autoplay: { delay: 5000, disableOnInteraction: false },
+	speed: 800,
+	effect: 'slide',
+	pagination: { el: '.hero-4 .swiper-pagination', clickable: true },
+	navigation: {
+		nextEl: '.hero-4 .nav-next',
+		prevEl: '.hero-4 .nav-prev'
+	}
+});
+</script>
+
+</body>
+</html>

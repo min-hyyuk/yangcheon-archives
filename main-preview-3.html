@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>메인 시안 ③ 기록물 콜라주</title>
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Pretendard', sans-serif; color: #2A2D30; background: #fff; }
+
+.preview-bar {
+	position: sticky; top: 0; z-index: 100;
+	background: #fff; border-bottom: 1px solid #e5e5e5;
+	padding: 12px 24px;
+	display: flex; align-items: center; gap: 22px;
+	font-size: 13px;
+}
+.preview-bar .pb-logo img { height: 28px; vertical-align: middle; }
+.preview-bar .pb-tag { font-weight: 700; color: #4F5358; }
+.preview-bar .pb-nav { margin-left: auto; display: flex; gap: 6px; }
+.preview-bar .pb-nav a {
+	padding: 6px 12px; border-radius: 999px;
+	text-decoration: none; color: #777;
+	border: 1px solid #ddd;
+}
+.preview-bar .pb-nav a:hover { background: #f3f2ec; }
+.preview-bar .pb-nav a.active { background: #4F5358; color: #fff; border-color: #4F5358; }
+
+/* 시안 ③ 기록물 모자이크 콜라주 */
+.hero-3 {
+	position: relative;
+	height: 720px;
+	overflow: hidden;
+	background: #2A2D30;
+}
+.hero-3 .mosaic {
+	position: absolute; inset: 0;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	gap: 2px;
+}
+.hero-3 .mosaic .tile {
+	background-size: cover; background-position: center;
+	filter: brightness(0.55) saturate(0.85);
+	transition: filter .35s, transform .35s;
+}
+.hero-3 .mosaic .tile.t-big { grid-column: span 2; grid-row: span 2; }
+.hero-3:hover .mosaic .tile { filter: brightness(0.7) saturate(0.95); }
+.hero-3:hover .mosaic .tile:hover { filter: brightness(1) saturate(1); z-index: 5; transform: scale(1.05); }
+
+.hero-3::after {
+	content: ""; position: absolute; inset: 0; z-index: 2;
+	background:
+		radial-gradient(circle at 50% 50%, transparent 0%, rgba(20,22,25,0.55) 70%),
+		linear-gradient(180deg, rgba(20,22,25,0.45) 0%, rgba(20,22,25,0.35) 50%, rgba(20,22,25,0.7) 100%);
+	pointer-events: none;
+}
+
+.hero-3 .h-content {
+	position: absolute; inset: 0; z-index: 4;
+	display: flex; flex-direction: column;
+	justify-content: center; align-items: center;
+	color: #fff; text-align: center; padding: 0 24px;
+}
+.hero-3 .h-eyebrow {
+	font-size: 13px; letter-spacing: 0.35em; font-weight: 600;
+	margin-bottom: 22px;
+	padding: 6px 18px; border: 1px solid rgba(255,255,255,0.4);
+	border-radius: 999px;
+	background: rgba(20,22,25,0.45); backdrop-filter: blur(8px);
+}
+.hero-3 .h-title {
+	font-size: clamp(38px, 5.6vw, 76px); font-weight: 800;
+	letter-spacing: -0.03em; line-height: 1.15;
+	margin-bottom: 18px;
+	text-shadow: 0 6px 30px rgba(0,0,0,0.6);
+}
+.hero-3 .h-sub {
+	font-size: 17px; line-height: 1.7;
+	max-width: 620px; color: rgba(255,255,255,0.92);
+	margin-bottom: 36px;
+	text-shadow: 0 2px 14px rgba(0,0,0,0.6);
+}
+.hero-3 .h-search {
+	display: flex; background: #fff; border-radius: 999px;
+	padding: 6px 6px 6px 26px;
+	width: clamp(320px, 60vw, 580px);
+	box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+}
+.hero-3 .h-search input {
+	flex: 1; border: 0; outline: none; font-size: 16px;
+	padding: 14px 8px; background: transparent; font-family: inherit;
+}
+.hero-3 .h-search button {
+	border: 0; cursor: pointer; width: 54px; height: 54px;
+	border-radius: 50%; background: #4F5358; color: #fff; font-size: 18px;
+}
+.hero-3 .h-counts {
+	margin-top: 28px; display: flex; gap: 36px;
+	color: rgba(255,255,255,0.9); font-size: 13px;
+	text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+.hero-3 .h-counts strong { display: block; font-size: 26px; font-weight: 800; color: #fff; }
+
+.preview-note {
+	max-width: 900px; margin: 40px auto; padding: 24px 28px;
+	background: #f3f2ec; border-left: 3px solid #4F5358; border-radius: 8px;
+	font-size: 14px; line-height: 1.7;
+}
+.preview-note h4 { font-size: 15px; margin-bottom: 8px; color: #4F5358; }
+.preview-note ul { padding-left: 18px; margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<div class="preview-bar">
+	<a href="main.html" class="pb-logo"><img src="assets/images/logo.svg" alt="양천구 기록관"></a>
+	<span class="pb-tag">메인 이미지 시안 미리보기</span>
+	<div class="pb-nav">
+		<a href="main-preview-1.html">① 옛↔현재</a>
+		<a href="main-preview-2.html">② 타이포</a>
+		<a href="main-preview-3.html" class="active">③ 콜라주</a>
+		<a href="main-preview-4.html">④ 슬라이드</a>
+		<a href="main.html" style="margin-left:8px;">현재 메인</a>
+	</div>
+</div>
+
+<section class="hero-3">
+	<div class="mosaic">
+		<div class="tile t-big" style="background-image:url('mokdong-assets/images/main/cover-history.jpg')"></div>
+		<div class="tile" style="background-image:url('assets/images/img-con-05.png')"></div>
+		<div class="tile" style="background-image:url('mokdong-assets/images/history/ch1/oldmap-1.png')"></div>
+		<div class="tile" style="background-image:url('assets/images/img-con-01.png')"></div>
+		<div class="tile" style="background-image:url('assets/images/img-con-11.jpg')"></div>
+		<div class="tile" style="background-image:url('assets/images/img-con-09.png')"></div>
+		<div class="tile" style="background-image:url('mokdong-assets/images/present/sintree/change-1989.jpg')"></div>
+		<div class="tile t-big" style="background-image:url('mokdong-assets/images/main/cover-present.jpg')"></div>
+		<div class="tile" style="background-image:url('assets/images/img-con-03.png')"></div>
+		<div class="tile" style="background-image:url('mokdong-assets/images/present/sintree/change-2008.jpg')"></div>
+		<div class="tile" style="background-image:url('assets/images/img-con-12.jpg')"></div>
+		<div class="tile" style="background-image:url('assets/images/img-con-08.jpg')"></div>
+		<div class="tile" style="background-image:url('mokdong-assets/images/present/sintree/entrance-2016.jpg')"></div>
+		<div class="tile" style="background-image:url('assets/images/img-metaverse.png')"></div>
+		<div class="tile" style="background-image:url('assets/images/img-donation.png')"></div>
+		<div class="tile" style="background-image:url('mokdong-assets/images/history/ch1/build-completion.jpg')"></div>
+	</div>
+	<div class="h-content">
+		<span class="h-eyebrow">YANGCHEON ARCHIVES &middot; SINCE 1988</span>
+		<h2 class="h-title">함께 기억하는<br>양천의 시간</h2>
+		<p class="h-sub">21만 점이 넘는 기록물이 시민과 함께 살아 숨쉽니다. 사진·영상·간행물·메타버스 — 양천구 기록관에서 만나보세요.</p>
+		<div class="h-search">
+			<input type="text" placeholder="찾으시는 기록을 검색하세요.">
+			<button><i class="fa fa-search"></i></button>
+		</div>
+		<div class="h-counts">
+			<div><strong>219,153</strong>총 보유 기록물</div>
+			<div><strong>7,124</strong>시청각 기록</div>
+			<div><strong>1,729</strong>간행물</div>
+		</div>
+	</div>
+</section>
+
+<div class="preview-note">
+	<h4>③ 기록물 콜라주 (모자이크)</h4>
+	16장의 기록 이미지를 모자이크로 깔고 어둡게 처리. 가운데로 갈수록 어두워지는 비네팅으로 본문 가독성 확보. 호버 시 타일이 살짝 밝아지는 인터랙션.
+	<ul>
+		<li><strong>강점:</strong> "기록의 양"을 즉시 느낄 수 있음. 21만점 보유 현황 카운트와 결합 시 신뢰감 ↑.</li>
+		<li><strong>약점:</strong> 인물 사진이 포함될 경우 초상권 처리 필요. 기록물 종류별 큐레이션 가이드 필요.</li>
+		<li><strong>변형 가능:</strong> 타일 자동 페이드/교체, 클릭 시 해당 콘텐츠로 점프.</li>
+	</ul>
+</div>
+
+</body>
+</html>

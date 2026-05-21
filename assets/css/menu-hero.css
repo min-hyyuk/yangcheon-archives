@@ -8,7 +8,10 @@
    ────────────────────────────────────────────────────────────── */
 
 .menu-hero {
-	padding: 86px 24px 72px;
+	/* 상단 padding 은 fixed header(120px) 를 피해서 콘텐츠가 보이게 한다.
+	   - 1500px↓ : header 90px
+	   - 999px↓  : header 70px */
+	padding: 168px 24px 78px;
 	text-align: center;
 	color: #fff;
 	position: relative;
@@ -89,14 +92,15 @@
 	margin: 0 auto 28px;
 }
 
-/* hero 우측상단 미니 액션 (URL 복사 / 프린트) */
+/* hero 우측상단 미니 액션 (URL 복사 / 프린트)
+   - top 값은 fixed header(120px) 아래로 내려 잘림 방지 */
 .menu-hero .mh-actions {
 	position: absolute;
-	top: 20px;
-	right: 22px;
+	top: 138px;
+	right: 28px;
 	z-index: 2;
 	display: inline-flex;
-	gap: 6px;
+	gap: 8px;
 }
 .menu-hero .mh-actions a {
 	display: inline-flex;
@@ -124,8 +128,18 @@
 	border-color: rgba(255,255,255,0.55);
 	transform: translateY(-1px);
 }
+/* 1500px↓ : header 90px → top 108 */
+@media (max-width: 1500px) {
+	.menu-hero { padding-top: 138px; }
+	.menu-hero .mh-actions { top: 108px; }
+}
+/* 999px↓ : header 70px → top 90 */
+@media (max-width: 999px) {
+	.menu-hero { padding-top: 120px; }
+	.menu-hero .mh-actions { top: 90px; right: 18px; }
+	.menu-hero .mh-actions a { width: 32px; height: 32px; }
+}
 @media (max-width: 720px) {
-	.menu-hero .mh-actions { top: 12px; right: 12px; }
 	.menu-hero .mh-actions a { width: 30px; height: 30px; font-size: 12px; }
 }
 
@@ -170,7 +184,7 @@ body.theme-kiwa-page .cat-head .cat-count {
 
 /* 반응형 */
 @media (max-width: 720px) {
-	.menu-hero { padding: 62px 18px 52px; }
+	.menu-hero { padding-bottom: 52px; padding-left: 18px; padding-right: 18px; }
 	.menu-hero::after { width: 240px; }
 	.menu-hero h2 { font-size: 24px; }
 	.menu-hero .mh-desc { font-size: 13.5px; margin-bottom: 22px; }
