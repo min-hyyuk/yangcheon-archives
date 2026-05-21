@@ -24,64 +24,91 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
 
-	<!-- 통합검색 페이지 전용 스타일 -->
+	<!-- 통합검색 페이지 전용 스타일 (2026 서울색 모닝 옐로우 톤) -->
 	<style>
+	:root {
+		/* 2026 SEOUL Morning Yellow */
+		--my-1: #FFD23F;   /* 밝은 옐로우(아침 해) */
+		--my-2: #F5A623;   /* 메인 옐로우/오렌지 */
+		--my-3: #E07B2A;   /* 짙은 노을 오렌지 */
+		--my-4: #B0441A;   /* 깊은 그림자 (텍스트/액센트) */
+		--my-ink: #2A1A0E; /* 진한 갈색 톤 본문 */
+		--my-soft: #FFF7E3;/* 픽토 호버 배경 */
+		--my-line: #F1E5C8;/* 라인 */
+	}
 	.search-hero {
-		background: linear-gradient(135deg, #0d2b5e 0%, #1e4a8f 50%, #2563b3 100%);
-		padding: 80px 24px 70px;
+		background:
+			radial-gradient(ellipse at 30% 0%,  #FFE375 0%, transparent 55%),
+			radial-gradient(ellipse at 80% 100%, #E07B2A 0%, transparent 60%),
+			linear-gradient(135deg, var(--my-1) 0%, var(--my-2) 55%, var(--my-3) 100%);
+		padding: 96px 24px 80px;
 		text-align: center;
 		color: #fff;
 		position: relative; overflow: hidden;
 	}
 	.search-hero::before {
 		content: ""; position: absolute; inset: 0;
-		background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
+		background-image: radial-gradient(rgba(255,255,255,0.16) 1px, transparent 1px);
 		background-size: 28px 28px;
 		pointer-events: none;
 	}
-	.search-hero .sh-inner { position: relative; max-width: 800px; margin: 0 auto; }
+	/* 떠오르는 해 모티프 (이미지의 흰 원) */
+	.search-hero::after {
+		content: ""; position: absolute;
+		top: 50%; left: 50%; transform: translate(-50%, -52%);
+		width: clamp(280px, 50vw, 460px); aspect-ratio: 1;
+		border: 1.5px solid rgba(255,255,255,0.55);
+		border-radius: 50%; pointer-events: none;
+	}
+	.search-hero .sh-inner { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
 	.search-hero .sh-label {
-		font-size: 13px; letter-spacing: 0.3em; opacity: 0.85;
-		margin: 0 0 14px; font-weight: 500;
+		font-size: 13px; letter-spacing: 0.3em;
+		margin: 0 0 14px; font-weight: 600;
+		color: rgba(255,255,255,0.95);
+		text-shadow: 0 2px 12px rgba(176, 68, 26, 0.3);
 	}
 	.search-hero h2 {
-		font-size: clamp(28px, 4vw, 40px); font-weight: 800;
+		font-size: clamp(28px, 4vw, 42px); font-weight: 800;
 		letter-spacing: -0.03em; margin: 0 0 30px;
+		color: #fff;
+		text-shadow: 0 2px 16px rgba(176, 68, 26, 0.35);
 	}
 	.search-form {
 		display: flex; background: #fff; border-radius: 999px;
 		padding: 6px 6px 6px 24px;
-		box-shadow: 0 14px 40px rgba(0, 30, 80, 0.25);
+		box-shadow: 0 16px 44px rgba(176, 68, 26, 0.28);
 	}
 	.search-form input {
 		flex: 1; border: 0; outline: none;
 		font-size: 17px; padding: 14px 8px;
-		background: transparent; color: #1a2532;
+		background: transparent; color: var(--my-ink);
 		font-family: inherit;
 	}
+	.search-form input::placeholder { color: #b09478; }
 	.search-form button {
 		border: 0; cursor: pointer;
 		width: 54px; height: 54px; border-radius: 50%;
-		background: #003288; color: #fff;
+		background: var(--my-3); color: #fff;
 		display: flex; align-items: center; justify-content: center;
-		font-size: 19px; transition: background .2s;
+		font-size: 19px; transition: background .2s, transform .2s;
 	}
-	.search-form button:hover { background: #1e4a8f; }
+	.search-form button:hover { background: var(--my-4); transform: rotate(-8deg); }
 	.adv-toggle {
 		display: inline-block; margin-top: 18px;
-		font-size: 14px; color: rgba(255,255,255,0.85);
+		font-size: 14px; color: rgba(255,255,255,0.92);
 		text-decoration: underline; cursor: pointer;
+		text-underline-offset: 4px;
 	}
 	.adv-toggle:hover { color: #fff; }
 
 	/* 픽토그램 카테고리 */
 	.pictogram-wrap {
-		max-width: 1100px; margin: -32px auto 0;
+		max-width: 1100px; margin: -36px auto 0;
 		position: relative; z-index: 5;
 		padding: 28px 18px;
 		background: #fff;
 		border-radius: 18px;
-		box-shadow: 0 12px 36px rgba(15, 30, 60, 0.10);
+		box-shadow: 0 14px 40px rgba(176, 68, 26, 0.12);
 	}
 	.pictogram-list {
 		display: grid;
@@ -92,29 +119,31 @@
 	.pictogram-list li a {
 		display: flex; flex-direction: column; align-items: center; gap: 12px;
 		padding: 22px 12px;
-		text-decoration: none; color: #1a2532;
+		text-decoration: none; color: var(--my-ink);
 		border-radius: 14px;
 		transition: background .2s, transform .2s;
 	}
 	.pictogram-list li a:hover {
-		background: #f3f6fc;
+		background: var(--my-soft);
 		transform: translateY(-2px);
 	}
 	.pictogram-list li.active a {
-		background: #003288; color: #fff;
+		background: linear-gradient(135deg, var(--my-2) 0%, var(--my-3) 100%);
+		color: #fff;
 	}
 	.pictogram-list li.active a .pict-icon {
-		background: rgba(255,255,255,0.18); color: #fff;
+		background: rgba(255,255,255,0.22); color: #fff;
 	}
 	.pict-icon {
 		width: 60px; height: 60px; border-radius: 50%;
-		background: #eef3fa; color: #003288;
+		background: var(--my-soft); color: var(--my-3);
 		display: flex; align-items: center; justify-content: center;
-		font-size: 24px; transition: background .2s, color .2s;
+		font-size: 24px;
+		transition: background .2s, color .2s;
 	}
 	.pict-name { font-size: 14.5px; font-weight: 600; letter-spacing: -0.01em; }
-	.pict-count { font-size: 12px; color: #9aa6b4; }
-	.pictogram-list li.active a .pict-count { color: rgba(255,255,255,0.8); }
+	.pict-count { font-size: 12px; color: #b89976; }
+	.pictogram-list li.active a .pict-count { color: rgba(255,255,255,0.85); }
 
 	/* 결과 영역 */
 	.result-wrap { margin-top: 40px; }
@@ -124,17 +153,19 @@
 	}
 	.result-head h3 {
 		font-size: 18px; font-weight: 700; margin: 0;
+		color: var(--my-ink);
 	}
-	.result-head h3 strong { color: #003288; }
+	.result-head h3 strong { color: var(--my-3); }
 	.result-sort select {
-		padding: 8px 14px; border: 1px solid #e1e6ec; border-radius: 8px;
-		font-size: 14px; background: #fff;
+		padding: 8px 14px; border: 1px solid var(--my-line); border-radius: 8px;
+		font-size: 14px; background: #fff; color: var(--my-ink);
 	}
 
 	@media (max-width: 720px) {
 		.pictogram-list { grid-template-columns: repeat(3, 1fr); gap: 4px; }
-		.pictogram-wrap { margin-top: -20px; padding: 18px 12px; }
-		.search-hero { padding: 60px 18px 60px; }
+		.pictogram-wrap { margin-top: -24px; padding: 18px 12px; }
+		.search-hero { padding: 70px 18px 70px; }
+		.search-hero::after { width: 280px; }
 		.search-form { padding: 4px 4px 4px 18px; }
 		.search-form input { font-size: 15px; padding: 12px 6px; }
 		.search-form button { width: 46px; height: 46px; font-size: 16px; }
