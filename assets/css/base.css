@@ -74,7 +74,7 @@ a {color:#444; text-decoration:none;}	a:hover, a:active {text-decoration:underli
 
 /* form controls */
 .label-01{ border:1px solid #e21a22; color:#e21a22; padding: 3px 10px; border-radius: 2px; margin-right: 10px; font-size:14px;}
-.label-02{ border:1px solid #f58024; color:#f58024; padding: 3px 10px; border-radius: 2px; margin-right: 10px; font-size:14px;}
+.label-02{ border:1px solid #4F5358; color:#4F5358; padding: 3px 10px; border-radius: 2px; margin-right: 10px; font-size:14px;}
 label.lb {font-size:13px;font-weight:400;color:#757271}
 .label-num{background: #e21a22;display: inline-block;margin-left: 5px;
     min-width: 10px;
@@ -264,7 +264,7 @@ h7{ font-size:15px; font-weight:normal; display: block}
 .font-blue{ color:#125aac !important}
 .font-green{ color:#2fa865 !important}
 .font-orange{ color:#B5B2A8 !important}
-.font-yellow{ color:#ffcc00 !important}
+.font-yellow{ color:#B5B2A8 !important}
 .font-down{ color:#496ff5 !important}
 .font-black{ color:#000 !important}
 .font-white{ color:#fff !important}
@@ -651,7 +651,7 @@ a.button {
 
 
 .label.yellow {
-	border:1px solid #ffb400; color:#ffb400
+	border:1px solid #B5B2A8; color:#B5B2A8
 }
 .label.green {
 	border:1px solid #00ba39; color:#00ba39
@@ -823,7 +823,7 @@ a.button {
 	background:#3B3E42; color:#fff !important; border:none;
 }
 .button-orange:hover, .button-orange:focus {
-  background:#ed5f01 !important; color:#fff !important
+  background:#4F5358 !important; color:#fff !important
 }
 
 .button-blue {
