@@ -504,12 +504,7 @@ $('.w3-table-all').scroltable();
 		panels.forEach(function(p){
 			p.classList.toggle('active', p.id === targetId);
 		});
-		// 결과 영역으로 부드러운 스크롤 (모바일에서 픽토그램에 가려지지 않게)
-		var contents = document.getElementById('contents');
-		if (contents) {
-			var top = contents.getBoundingClientRect().top + window.scrollY - 12;
-			window.scrollTo({ top: top, behavior: 'smooth' });
-		}
+		// 자동 스크롤 없음: 픽토그램과 결과 영역이 가까이 보이도록 페이지 위치 유지.
 	}
 	picts.forEach(function(li){
 		var a = li.querySelector('a');
