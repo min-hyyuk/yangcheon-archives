@@ -24,22 +24,22 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
 
-	<!-- 통합검색 페이지 전용 스타일 (2026 서울색 모닝 옐로우 톤) -->
+	<!-- 통합검색 페이지 전용 스타일 (2025 서울색 그린 오로라 톤) -->
 	<style>
 	:root {
-		/* 2026 SEOUL Morning Yellow */
-		--my-1: #FFD23F;   /* 밝은 옐로우(아침 해) */
-		--my-2: #F5A623;   /* 메인 옐로우/오렌지 */
-		--my-3: #E07B2A;   /* 짙은 노을 오렌지 */
-		--my-4: #B0441A;   /* 깊은 그림자 (텍스트/액센트) */
-		--my-ink: #2A1A0E; /* 진한 갈색 톤 본문 */
-		--my-soft: #FFF7E3;/* 픽토 호버 배경 */
-		--my-line: #F1E5C8;/* 라인 */
+		/* 2025 SEOUL Green Aurora */
+		--my-1: #87E5D2;   /* 밝은 민트(빛) */
+		--my-2: #2EBBA5;   /* 메인 청록 */
+		--my-3: #1A8F7E;   /* 짙은 청록 (강조) */
+		--my-4: #056F61;   /* 깊은 그림자 */
+		--my-ink: #0F2E2A; /* 진한 청록 본문 */
+		--my-soft: #E7F8F3;/* 픽토 호버/아이콘 베이스 */
+		--my-line: #C7E9DE;/* 라인 */
 	}
 	.search-hero {
 		background:
-			radial-gradient(ellipse at 30% 0%,  #FFE375 0%, transparent 55%),
-			radial-gradient(ellipse at 80% 100%, #E07B2A 0%, transparent 60%),
+			radial-gradient(ellipse at 25% 0%, #B7EFE0 0%, transparent 55%),
+			radial-gradient(ellipse at 80% 100%, #056F61 0%, transparent 60%),
 			linear-gradient(135deg, var(--my-1) 0%, var(--my-2) 55%, var(--my-3) 100%);
 		padding: 96px 24px 80px;
 		text-align: center;
@@ -48,11 +48,11 @@
 	}
 	.search-hero::before {
 		content: ""; position: absolute; inset: 0;
-		background-image: radial-gradient(rgba(255,255,255,0.16) 1px, transparent 1px);
+		background-image: radial-gradient(rgba(255,255,255,0.18) 1px, transparent 1px);
 		background-size: 28px 28px;
 		pointer-events: none;
 	}
-	/* 떠오르는 해 모티프 (이미지의 흰 원) */
+	/* 떠오르는 빛 원형 모티프 */
 	.search-hero::after {
 		content: ""; position: absolute;
 		top: 50%; left: 50%; transform: translate(-50%, -52%);
@@ -65,18 +65,18 @@
 		font-size: 13px; letter-spacing: 0.3em;
 		margin: 0 0 14px; font-weight: 600;
 		color: rgba(255,255,255,0.95);
-		text-shadow: 0 2px 12px rgba(176, 68, 26, 0.3);
+		text-shadow: 0 2px 12px rgba(5, 111, 97, 0.35);
 	}
 	.search-hero h2 {
 		font-size: clamp(28px, 4vw, 42px); font-weight: 800;
 		letter-spacing: -0.03em; margin: 0 0 30px;
 		color: #fff;
-		text-shadow: 0 2px 16px rgba(176, 68, 26, 0.35);
+		text-shadow: 0 2px 16px rgba(5, 111, 97, 0.4);
 	}
 	.search-form {
 		display: flex; background: #fff; border-radius: 999px;
 		padding: 6px 6px 6px 24px;
-		box-shadow: 0 16px 44px rgba(176, 68, 26, 0.28);
+		box-shadow: 0 16px 44px rgba(5, 111, 97, 0.28);
 	}
 	.search-form input {
 		flex: 1; border: 0; outline: none;
@@ -84,7 +84,7 @@
 		background: transparent; color: var(--my-ink);
 		font-family: inherit;
 	}
-	.search-form input::placeholder { color: #b09478; }
+	.search-form input::placeholder { color: #7a9c95; }
 	.search-form button {
 		border: 0; cursor: pointer;
 		width: 54px; height: 54px; border-radius: 50%;
@@ -108,7 +108,7 @@
 		padding: 28px 18px;
 		background: #fff;
 		border-radius: 18px;
-		box-shadow: 0 14px 40px rgba(176, 68, 26, 0.12);
+		box-shadow: 0 14px 40px rgba(5, 111, 97, 0.14);
 	}
 	.pictogram-list {
 		display: grid;
@@ -142,7 +142,7 @@
 		transition: background .2s, color .2s;
 	}
 	.pict-name { font-size: 14.5px; font-weight: 600; letter-spacing: -0.01em; }
-	.pict-count { font-size: 12px; color: #b89976; }
+	.pict-count { font-size: 12px; color: #7ea69e; }
 	.pictogram-list li.active a .pict-count { color: rgba(255,255,255,0.85); }
 
 	/* 결과 영역 */
@@ -172,11 +172,11 @@
 	/* breadcrumb */
 	.cat-breadcrumb {
 		display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
-		font-size: 14px; color: #8a755a;
+		font-size: 14px; color: #5b837b;
 		margin-bottom: 22px; padding-bottom: 18px;
 		border-bottom: 1px dashed var(--my-line);
 	}
-	.cat-breadcrumb i { font-size: 11px; color: #c9b48f; }
+	.cat-breadcrumb i { font-size: 11px; color: #99c5bb; }
 	.cat-breadcrumb strong { color: var(--my-3); font-weight: 700; }
 
 	/* 내부 카테고리 탭 */
@@ -202,7 +202,7 @@
 	/* 빈 결과 안내 */
 	.result-empty {
 		padding: 80px 24px; text-align: center;
-		color: #b29672; font-size: 15px;
+		color: #6e9b91; font-size: 15px;
 		background: var(--my-soft);
 		border: 1px dashed var(--my-line);
 		border-radius: 14px;
