@@ -12,6 +12,7 @@
     <link href="assets/bs3/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="assets/css/common.css" rel="stylesheet" >
+	<link href="assets/css/menu-hero.css" rel="stylesheet">
 
 	<!--Core script -->
 	<script async src="assets/js/analytics.js"></script>
@@ -188,7 +189,7 @@
 	}
 	</style>
 </head>
-<body>
+<body class="theme-kiwa-page">
 <div id="skip-navigation">
 	<ol>
 		<li><a href="#lnb">상단 메뉴 바로가기</a></li>
@@ -289,21 +290,20 @@
     <!-- container -->
 		<div id="container">
 
-		<!-- 서브 비주얼 영역 -->
-		<section class="sub-wrap inner-fixed">
-			<div class="subBox">
-				<ul class="breadcrumb-wrap">
-					<li>기록정보콘텐츠</li>
-					<li>기록정보콘텐츠</li>
+		<!-- 서브 비주얼 영역 (메뉴 hero — SC2940 기와진회색, 흰글씨) -->
+		<section class="menu-hero theme-kiwa">
+			<div class="mh-inner">
+				<ul class="mh-breadcrumb">
+					<li><a href="main.html">홈</a></li>
+					<li class="active">기록정보콘텐츠</li>
 				</ul>
+				<p class="mh-label">YANGCHEON ARCHIVES &middot; CONTENTS</p>
 				<h2>기록정보콘텐츠</h2>
-				<div class="title-info">기록 유형별로 콘텐츠 제작하여 웹 전시 및 오프라인 전시 제공</div>
-			</div>
-
-			<div class="snsBox">
-				<a href="" class="icon-sns-copy" onclick="clip(); return false;">URL주소복사</a>
-				<span class="sns-bar"></span>
-				<a href="javascript:window.print();" class="icon-sns-print">프린터</a>
+				<div class="mh-desc">기록 유형별로 콘텐츠를 제작하여 웹 전시와 오프라인 전시를 제공합니다.<br>양천구의 시간을 사진·영상·메타버스로 만나보세요.</div>
+				<div class="mh-actions">
+					<a href="" onclick="clip(); return false;"><i class="fa fa-link"></i> URL 복사</a>
+					<a href="javascript:window.print();"><i class="fa fa-print"></i> 프린트</a>
+				</div>
 			</div>
 		</section>
 		<!-- //서브 비주얼 영역 -->

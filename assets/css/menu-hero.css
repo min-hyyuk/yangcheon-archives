@@ -1,0 +1,178 @@
+@charset "utf-8";
+/* ──────────────────────────────────────────────────────────────
+   메뉴별 hero 영역 (서브 비주얼)
+   - reference.html 의 search-hero 패턴을 기반으로 메뉴 그룹별
+     색 테마만 다르게 적용
+   - 테마: doldam (SC2920 돌담회색) / kiwa (SC2940 기와진회색) /
+           namsan (SC4907 남산초록색)
+   ────────────────────────────────────────────────────────────── */
+
+.menu-hero {
+	padding: 86px 24px 72px;
+	text-align: center;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+}
+.menu-hero::before {
+	content: "";
+	position: absolute; inset: 0;
+	background-image: radial-gradient(rgba(255,255,255,0.16) 1px, transparent 1px);
+	background-size: 28px 28px;
+	pointer-events: none;
+}
+.menu-hero::after {
+	content: "";
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -52%);
+	width: clamp(260px, 46vw, 440px);
+	aspect-ratio: 1;
+	border: 1.5px solid rgba(255,255,255,0.5);
+	border-radius: 50%;
+	pointer-events: none;
+}
+
+.menu-hero .mh-inner {
+	position: relative;
+	z-index: 1;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.menu-hero .mh-breadcrumb {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 6px;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 18px;
+	font-size: 13px;
+	color: rgba(255,255,255,0.88);
+}
+.menu-hero .mh-breadcrumb li { position: relative; }
+.menu-hero .mh-breadcrumb li + li::before {
+	content: "›";
+	margin: 0 8px 0 2px;
+	opacity: 0.65;
+}
+.menu-hero .mh-breadcrumb a {
+	color: rgba(255,255,255,0.88);
+	text-decoration: none;
+}
+.menu-hero .mh-breadcrumb a:hover { color: #fff; }
+.menu-hero .mh-breadcrumb .active { font-weight: 600; color: #fff; }
+
+.menu-hero .mh-label {
+	font-size: 12px;
+	letter-spacing: 0.3em;
+	font-weight: 600;
+	margin: 0 0 12px;
+	color: rgba(255,255,255,0.9);
+}
+
+.menu-hero h2 {
+	font-size: clamp(26px, 3.6vw, 38px);
+	font-weight: 800;
+	letter-spacing: -0.03em;
+	margin: 0 0 14px;
+	color: #fff;
+	text-shadow: 0 2px 14px rgba(0,0,0,0.25);
+}
+
+.menu-hero .mh-desc {
+	font-size: 15px;
+	line-height: 1.7;
+	color: rgba(255,255,255,0.93);
+	max-width: 720px;
+	margin: 0 auto 28px;
+}
+
+/* hero 우측상단 미니 액션 (URL 복사 / 프린트) */
+.menu-hero .mh-actions {
+	position: absolute;
+	top: 20px;
+	right: 22px;
+	z-index: 2;
+	display: inline-flex;
+	gap: 6px;
+}
+.menu-hero .mh-actions a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	padding: 0;
+	font-size: 0;
+	color: rgba(255,255,255,0.85);
+	background: rgba(255,255,255,0.10);
+	border: 1px solid rgba(255,255,255,0.25);
+	border-radius: 50%;
+	text-decoration: none;
+	overflow: hidden;
+	transition: background .2s, color .2s, border-color .2s, transform .2s;
+}
+.menu-hero .mh-actions a i {
+	font-size: 13.5px;
+	line-height: 1;
+}
+.menu-hero .mh-actions a:hover {
+	background: rgba(255,255,255,0.22);
+	color: #fff;
+	border-color: rgba(255,255,255,0.55);
+	transform: translateY(-1px);
+}
+@media (max-width: 720px) {
+	.menu-hero .mh-actions { top: 12px; right: 12px; }
+	.menu-hero .mh-actions a { width: 30px; height: 30px; font-size: 12px; }
+}
+
+/* ─────── 테마: SC2920 돌담회색 (기록관 소개 / 구민기록활동) ─────── */
+.menu-hero.theme-doldam {
+	background:
+		radial-gradient(ellipse at 25% 0%, #DAD7CE 0%, transparent 55%),
+		radial-gradient(ellipse at 80% 100%, #5A5852 0%, transparent 60%),
+		linear-gradient(135deg, #A39F95 0%, #8B8780 55%, #5F5D58 100%);
+}
+
+/* ─────── 테마: SC2940 기와진회색 (기록정보콘텐츠) — 흰글씨 강조 ─────── */
+.menu-hero.theme-kiwa {
+	background:
+		radial-gradient(ellipse at 25% 0%, #6E727A 0%, transparent 55%),
+		radial-gradient(ellipse at 80% 100%, #1F2123 0%, transparent 60%),
+		linear-gradient(135deg, #4F5358 0%, #3B3E42 55%, #25272A 100%);
+}
+
+/* ─────── 테마: SC4907 남산초록색 (알림마당) ─────── */
+.menu-hero.theme-namsan {
+	background:
+		radial-gradient(ellipse at 25% 0%, #B5D4A0 0%, transparent 55%),
+		radial-gradient(ellipse at 80% 100%, #133621 0%, transparent 60%),
+		linear-gradient(135deg, #4A7C44 0%, #2D5934 55%, #133621 100%);
+}
+
+/* ─────── 메뉴 그룹별 sub-content 영역 추가 보정 ─────── */
+/* 본문 영역과 hero 사이 여백 */
+.menu-hero + #contents,
+.menu-hero + #container,
+.menu-hero + .sub-content { margin-top: 0; }
+
+/* 기록정보콘텐츠 (kiwa) — 페이지 전반에 다크 강조 적용 */
+body.theme-kiwa-page .cat-tab { border-bottom-color: #d5d3cc; }
+body.theme-kiwa-page .cat-tab-list li a:hover { color: #4F5358; }
+body.theme-kiwa-page .cat-tab-list li.active a { color: #4F5358; border-bottom-color: #4F5358; }
+body.theme-kiwa-page .cat-head h3 strong,
+body.theme-kiwa-page .cat-head .cat-count {
+	background: linear-gradient(135deg, #4F5358 0%, #25272A 100%);
+}
+
+/* 반응형 */
+@media (max-width: 720px) {
+	.menu-hero { padding: 62px 18px 52px; }
+	.menu-hero::after { width: 240px; }
+	.menu-hero h2 { font-size: 24px; }
+	.menu-hero .mh-desc { font-size: 13.5px; margin-bottom: 22px; }
+	.menu-hero .mh-label { font-size: 11px; }
+}
