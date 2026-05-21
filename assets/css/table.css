@@ -30,7 +30,7 @@
 .tbl-list .right{ text-align:right !important; padding-left: 0}
 .tbl-list .top{ vertical-align: top }
 .tbl-list .linkBox{ position: relative; padding-left: 130px;}
-.tbl-list .tbl-label{ border-radius:250px; border:1px solid #ED6D00; width:120px; height: 40px; line-height: 40px; color:#ED6D00; display: inline-block; text-align: center; margin-right: 10px; position: absolute; left:0}
+.tbl-list .tbl-label{ border-radius:250px; border:1px solid #4F5358; width:120px; height: 40px; line-height: 40px; color:#4F5358; display: inline-block; text-align: center; margin-right: 10px; position: absolute; left:0}
 
 .activitiesBox{ border-bottom:1px dotted #CBCBCB; padding-bottom: 30px;  margin-bottom: 100px; font-weight: 500}
 .activitiesBox > li{ margin-bottom: 20px; }
@@ -104,13 +104,13 @@ p.require:before{ margin-top: 0px; }
 	padding: 80px 0;
 }
 
-.tbl-category{ font-size:30px; color:#ED6D00; font-weight: 600;}
+.tbl-category{ font-size:30px; color:#4F5358; font-weight: 600;}
 .tbl-title{ font-size:36px; color:#000; font-weight: 600; margin: 20px 0}
 .tbl-text{ padding: 30px 20px; text-align: left}
 .tbl-infoBox{ display:flex; justify-content: center; align-items: center; gap:20px;}
 .tbl-infoBox span{ color: #CBCBCB;}
-.tbl-label{ border-radius:250px; border:1px solid #ED6D00; width:120px; height: 40px; line-height: 40px; color:#ED6D00 !important; display: inline-block; text-align: center;}
-.tbl-label.bg-primary{ background: #ED6D00; color:#fff !important;}
+.tbl-label{ border-radius:250px; border:1px solid #4F5358; width:120px; height: 40px; line-height: 40px; color:#4F5358 !important; display: inline-block; text-align: center;}
+.tbl-label.bg-primary{ background: #4F5358; color:#fff !important;}
 .tbl-bar{ width:6px; height: 6px; background: #DBDDE2; border-radius: 250px;}
 
 .tbl-add{ padding-top:100px;}
@@ -132,8 +132,8 @@ p.require:before{ margin-top: 0px; }
 	border:1px solid #ddd;
 }
 .light-theme .current, .light-theme .current:hover {
-	border:1px solid #ED6D00;
-	color: #ED6D00;
+	border:1px solid #4F5358;
+	color: #4F5358;
     cursor: default;
 }
 .light-theme .ellipse {

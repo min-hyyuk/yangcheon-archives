@@ -25,16 +25,16 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
 
 	<!-- content.html 전용: 카테고리 탭 + 섹션 + 카드 그리드 정돈
-	     색감: 2024 서울색 「스카이 코랄」 -->
+	     색감: 서울색 SC2940 기와진회색 · SC2920 돌담회색 -->
 	<style>
 	:root {
-		--sc-1:  #FFC2C2;   /* 옅은 코랄 (배경 hover) */
-		--sc-2:  #FF8FA3;   /* 메인 핑크 코랄 */
-		--sc-3:  #E76F7F;   /* 짙은 코랄 (강조) */
-		--sc-4:  #C84A5A;   /* 깊은 코랄 (호버) */
-		--sc-line: #FBE1E4;
-		--sc-soft: #FFF3F4;
-		--sc-ink: #2A1418;
+		--sc-1:  #DAD7CE;   /* 옅은 돌담 (배경 hover) */
+		--sc-2:  #B5B2A8;   /* 돌담회색 (SC2920) */
+		--sc-3:  #4F5358;   /* 기와진회색 (SC2940, 강조) */
+		--sc-4:  #3B3E42;   /* 깊은 기와 (호버) */
+		--sc-line: #E4E2DA;
+		--sc-soft: #F3F2EC;
+		--sc-ink: #2A2D30;
 	}
 	/* 카테고리 탭 */
 	.cat-tab { border-bottom: 2px solid var(--sc-line); margin: 24px 0 36px; }
@@ -42,14 +42,14 @@
 	.cat-tab-list li { margin: 0; }
 	.cat-tab-list li a {
 		display: inline-flex; align-items: center; gap: 6px;
-		padding: 14px 28px; color: #6b7686; font-weight: 500;
+		padding: 14px 28px; color: #6b7176; font-weight: 500;
 		font-size: 16px; letter-spacing: -0.01em;
 		text-decoration: none; border-bottom: 3px solid transparent;
 		margin-bottom: -2px; transition: color .2s, border-color .2s, background .2s;
 		border-radius: 8px 8px 0 0;
 	}
 	.cat-tab-list li a em {
-		font-style: normal; color: #b09097; font-size: 14px; font-weight: 400;
+		font-style: normal; color: #9a9690; font-size: 14px; font-weight: 400;
 	}
 	.cat-tab-list li a:hover { color: var(--sc-3); background: var(--sc-soft); }
 	.cat-tab-list li.active a {
@@ -75,9 +75,9 @@
 		color: #fff;
 		border-radius: 999px; font-size: 12.5px; font-weight: 700;
 		vertical-align: middle;
-		box-shadow: 0 4px 10px rgba(231, 111, 127, 0.25);
+		box-shadow: 0 4px 10px rgba(79, 83, 88, 0.25);
 	}
-	.cat-head p { color: #8a7079; margin: 0; font-size: 14.5px; }
+	.cat-head p { color: #7a766f; margin: 0; font-size: 14.5px; }
 
 	/* === 카드 그리드 정돈 === */
 	/* 기본 layout.css 의 큰 gap/큰 폰트를 override. 모든 카드가 같은 크기·비율. */
@@ -100,7 +100,7 @@
 	.cat-section .item-wrap .itemBox:hover {
 		transform: translateY(-3px);
 		border-color: var(--sc-2);
-		box-shadow: 0 14px 30px rgba(231, 111, 127, 0.18);
+		box-shadow: 0 14px 30px rgba(79, 83, 88, 0.18);
 	}
 	.cat-section .it-img {
 		width: 100%;
@@ -130,7 +130,7 @@
 	}
 	.cat-section .it-text {
 		font-size: 14px !important;
-		color: #6b5961;
+		color: #5e5a52;
 		line-height: 1.65;
 		margin: 0 20px 18px !important;
 		display: -webkit-box;
@@ -154,13 +154,13 @@
 		color: #fff !important;
 		border-radius: 999px;
 		text-decoration: none;
-		box-shadow: 0 6px 14px rgba(231, 111, 127, 0.28);
+		box-shadow: 0 6px 14px rgba(79, 83, 88, 0.28);
 		transition: background .2s, transform .2s, box-shadow .2s;
 	}
 	.cat-section .itemBox .button:hover {
 		background: linear-gradient(135deg, var(--sc-3) 0%, var(--sc-4) 100%);
 		transform: translateX(2px);
-		box-shadow: 0 8px 18px rgba(200, 74, 90, 0.35);
+		box-shadow: 0 8px 18px rgba(59, 62, 66, 0.35);
 	}
 	.cat-section .btn-arrow {
 		display: inline-block;

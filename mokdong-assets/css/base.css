@@ -24,8 +24,8 @@
 	--blue-02:#2549B7;
 	--blue-03:#2D76F7;
 	--blue-04:#3BABFF;
-	--orange-01:#FF683D;
-	--orange-02:#D74944;
+	--orange-01:#4F5358;   /* (구) #FF683D — SC2940 기와진회색 */
+	--orange-02:#3B3E42;   /* (구) #D74944 — 짙은 기와 hover */
 	--gray: #FDFDFD;
 	--gray-01: #E3E3E3;
 	--gray-02: #F0F0F0;
