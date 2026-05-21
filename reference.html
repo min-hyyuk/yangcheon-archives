@@ -12,7 +12,8 @@
     <link href="assets/bs3/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="assets/css/common.css" rel="stylesheet" >
-    
+	<link href="assets/css/menu-hero.css" rel="stylesheet">
+
 	<!--Core script -->
 	<script async src="assets/js/analytics.js"></script>
 	<script src="assets/js/jquery-1.8.3.min.js" type="text/javascript"></script>	
@@ -36,79 +37,60 @@
 		--my-soft: #EEF5EA;/* 픽토 호버/아이콘 베이스 */
 		--my-line: #DCE9D2;/* 라인 */
 	}
-	.search-hero {
-		background:
-			radial-gradient(ellipse at 25% 0%, #B5D4A0 0%, transparent 55%),
-			radial-gradient(ellipse at 80% 100%, #133621 0%, transparent 60%),
-			linear-gradient(135deg, var(--my-2) 0%, var(--my-3) 55%, var(--my-4) 100%);
-		padding: 96px 24px 80px;
-		text-align: center;
-		color: #fff;
-		position: relative; overflow: hidden;
-	}
-	.search-hero::before {
-		content: ""; position: absolute; inset: 0;
-		background-image: radial-gradient(rgba(255,255,255,0.18) 1px, transparent 1px);
-		background-size: 28px 28px;
-		pointer-events: none;
-	}
-	/* 떠오르는 빛 원형 모티프 */
-	.search-hero::after {
-		content: ""; position: absolute;
-		top: 50%; left: 50%; transform: translate(-50%, -52%);
-		width: clamp(280px, 50vw, 460px); aspect-ratio: 1;
-		border: 1.5px solid rgba(255,255,255,0.55);
-		border-radius: 50%; pointer-events: none;
-	}
-	.search-hero .sh-inner { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
-	.search-hero .sh-label {
-		font-size: 13px; letter-spacing: 0.3em;
-		margin: 0 0 14px; font-weight: 600;
-		color: rgba(255,255,255,0.95);
-		text-shadow: 0 2px 12px rgba(19, 54, 33, 0.4);
-	}
-	.search-hero h2 {
-		font-size: clamp(28px, 4vw, 42px); font-weight: 800;
-		letter-spacing: -0.03em; margin: 0 0 30px;
-		color: #fff;
-		text-shadow: 0 2px 16px rgba(19, 54, 33, 0.45);
-	}
-	.search-form {
-		display: flex; background: #fff; border-radius: 999px;
-		padding: 6px 6px 6px 24px;
-		box-shadow: 0 16px 44px rgba(45, 89, 52, 0.28);
-	}
-	.search-form input {
-		flex: 1; border: 0; outline: none;
-		font-size: 17px; padding: 14px 8px;
-		background: transparent; color: var(--my-ink);
-		font-family: inherit;
-	}
-	.search-form input::placeholder { color: #7a9080; }
-	.search-form button {
-		border: 0; cursor: pointer;
-		width: 54px; height: 54px; border-radius: 50%;
-		background: var(--my-3); color: #fff;
-		display: flex; align-items: center; justify-content: center;
-		font-size: 19px; transition: background .2s, transform .2s;
-	}
-	.search-form button:hover { background: var(--my-4); transform: rotate(-8deg); }
-	.adv-toggle {
-		display: inline-block; margin-top: 18px;
-		font-size: 14px; color: rgba(255,255,255,0.92);
-		text-decoration: underline; cursor: pointer;
-		text-underline-offset: 4px;
-	}
-	.adv-toggle:hover { color: #fff; }
-
-	/* 픽토그램 카테고리 */
-	.pictogram-wrap {
-		max-width: 1100px; margin: -36px auto 0;
-		position: relative; z-index: 5;
-		padding: 28px 18px;
+	/* 통합검색 섹션 (hero 아래로 떠올리기) */
+	.search-section {
+		max-width: 1100px;
+		margin: -44px auto 18px;
+		position: relative;
+		z-index: 5;
+		padding: 28px 32px 24px;
 		background: #fff;
 		border-radius: 18px;
 		box-shadow: 0 14px 40px rgba(45, 89, 52, 0.18);
+		text-align: center;
+	}
+	.search-section .ss-title {
+		font-size: 12px;
+		letter-spacing: 0.32em;
+		font-weight: 700;
+		color: var(--my-3);
+		margin: 0 0 14px;
+	}
+	.search-form {
+		display: flex; background: #fff; border-radius: 999px;
+		padding: 5px 5px 5px 22px;
+		max-width: 720px; margin: 0 auto;
+		border: 1.5px solid var(--my-line);
+		transition: border-color .2s, box-shadow .2s;
+	}
+	.search-form:focus-within {
+		border-color: var(--my-2);
+		box-shadow: 0 10px 30px rgba(74, 124, 68, 0.18);
+	}
+	.search-form input {
+		flex: 1; border: 0; outline: none;
+		font-size: 16px; padding: 13px 8px;
+		background: transparent; color: var(--my-ink);
+		font-family: inherit;
+	}
+	.search-form input::placeholder { color: #9bb0a0; }
+	.search-form button {
+		border: 0; cursor: pointer;
+		width: 48px; height: 48px; border-radius: 50%;
+		background: var(--my-3); color: #fff;
+		display: flex; align-items: center; justify-content: center;
+		font-size: 17px; transition: background .2s, transform .2s;
+	}
+	.search-form button:hover { background: var(--my-4); transform: rotate(-8deg); }
+
+	/* 픽토그램 카테고리 */
+	.pictogram-wrap {
+		max-width: 1100px; margin: 0 auto;
+		position: relative; z-index: 4;
+		padding: 22px 18px;
+		background: #fff;
+		border-radius: 18px;
+		border: 1px solid var(--my-line);
 	}
 	.pictogram-list {
 		display: grid;
@@ -210,12 +192,11 @@
 
 	@media (max-width: 720px) {
 		.pictogram-list { grid-template-columns: repeat(3, 1fr); gap: 4px; }
-		.pictogram-wrap { margin-top: -24px; padding: 18px 12px; }
-		.search-hero { padding: 70px 18px 70px; }
-		.search-hero::after { width: 280px; }
+		.search-section { margin: -28px 12px 14px; padding: 22px 18px 18px; }
+		.pictogram-wrap { margin: 0 12px; padding: 16px 10px; }
 		.search-form { padding: 4px 4px 4px 18px; }
-		.search-form input { font-size: 15px; padding: 12px 6px; }
-		.search-form button { width: 46px; height: 46px; font-size: 16px; }
+		.search-form input { font-size: 15px; padding: 11px 6px; }
+		.search-form button { width: 42px; height: 42px; font-size: 15px; }
 		.pict-icon { width: 48px; height: 48px; font-size: 19px; }
 		.pict-name { font-size: 13px; }
 	}
@@ -322,19 +303,33 @@
     <!-- container -->
 		<div id="container">
 
-		<!-- 통합검색 hero -->
-		<section class="search-hero">
-			<div class="sh-inner">
-				<p class="sh-label">YANGCHEON ARCHIVES</p>
-				<h2>양천구 기록 자료실 통합검색</h2>
-				<form class="search-form" action="" method="get" onsubmit="return false;">
-					<input type="text" name="q" placeholder="제목, 키워드, 연도 등으로 검색하세요." aria-label="검색어">
-					<button type="submit" aria-label="검색"><i class="fa fa-search"></i></button>
-				</form>
-				<a href="#" class="adv-toggle">상세검색 열기 +</a>
+		<!-- 서브 비주얼 영역 (메뉴 hero — SC4907 남산초록색) -->
+		<section class="menu-hero theme-namsan">
+			<div class="mh-inner">
+				<ul class="mh-breadcrumb">
+					<li><a href="main.html">홈</a></li>
+					<li class="active">양천구 기록 자료실</li>
+				</ul>
+				<p class="mh-label">YANGCHEON ARCHIVES &middot; ARCHIVE</p>
+				<h2>양천구 기록 자료실</h2>
+				<div class="mh-desc">양천구의 기록을 한자리에 모은 통합 자료실입니다.<br>사진·영상·간행물·소식지·구보·민간기증기록까지 시민 누구나 통합 검색이 가능합니다.</div>
+			</div>
+			<div class="mh-actions">
+				<a href="" onclick="clip(); return false;" title="URL 복사"><i class="fa fa-link"></i> URL 복사</a>
+				<a href="javascript:window.print();" title="프린트"><i class="fa fa-print"></i> 프린트</a>
 			</div>
 		</section>
-		<!-- //통합검색 hero -->
+		<!-- //서브 비주얼 영역 -->
+
+		<!-- 통합 검색 -->
+		<div class="search-section">
+			<p class="ss-title">통합 검색</p>
+			<form class="search-form" action="" method="get" onsubmit="return false;">
+				<input type="text" name="q" placeholder="제목, 키워드, 연도 등으로 검색하세요." aria-label="검색어">
+				<button type="submit" aria-label="검색"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+		<!-- //통합 검색 -->
 		
 		
 		<!-- 서브 컨텐츠 영역: 픽토그램 + 결과 -->

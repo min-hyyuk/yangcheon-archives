@@ -12,7 +12,8 @@
     <link href="assets/bs3/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="assets/css/common.css" rel="stylesheet" >
-    
+	<link href="assets/css/main-hero.css" rel="stylesheet">
+
 	<!--Core script -->
 	<script async src="assets/js/analytics.js"></script>
 	<script src="assets/js/jquery-1.8.3.min.js" type="text/javascript"></script>	
@@ -126,17 +127,22 @@
     <div id="container"> 
 	<div id="contents">
 		<div class="main-con">
-			<!-- 메인 컨텐츠 -->
-			<section class="main-wrap">
-				<div class="inner-fixed main-visualBox">
-					<h2 class="visual-title">
-						우리의 기억이<br>
-						어제와 오늘을 잇다
-					</h2>
-					<div class="main-search-group">
-						<input type="text" placeholder="찾으시는 기록을 검색하세요.">
-						<a href="" class="icon-search-main">검색</a>
-					</div>
+			<!-- 메인 컨텐츠 (옛 목동 ↔ 현재 디졸브) -->
+			<section class="main-hero">
+				<div class="mh-layer mh-layer-old"></div>
+				<div class="mh-layer mh-layer-new"></div>
+				<div class="mh-content">
+					<p class="mh-eyebrow">YANGCHEON ARCHIVES</p>
+					<h2 class="mh-title">우리의 기억이<br>어제와 오늘을 잇다</h2>
+					<p class="mh-sub">1980년대 신시가지 개발의 격동에서 오늘의 양천구까지 —<br>양천의 시간을 사진·영상·기록물로 만나보세요.</p>
+					<form class="mh-search" onsubmit="return false;">
+						<input type="text" placeholder="찾으시는 기록을 검색하세요." aria-label="기록 검색">
+						<button type="submit" aria-label="검색"><i class="fa fa-search"></i></button>
+					</form>
+				</div>
+				<div class="mh-labels">
+					<span class="mh-label"><span class="year">1980's</span>YESTERDAY</span>
+					<span class="mh-label right"><span class="year">TODAY</span>2026</span>
 				</div>
 			</section>
 			<!-- //메인 컨텐츠 -->

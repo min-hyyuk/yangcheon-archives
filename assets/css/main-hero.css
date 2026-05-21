@@ -1,0 +1,176 @@
+@charset "utf-8";
+/* ──────────────────────────────────────────────────────────────
+   메인 홈 hero — 옛 목동 ↔ 현재 디졸브
+   (main-preview-1 시안을 정식 적용)
+   - 좌: 1980년대 옛 목동(세피아) / 우: 현재 양천(자연색)
+   - 가운데 라이트 라인이 "어제와 오늘" 시각 분리
+   - 양쪽 모서리에 연도 라벨
+   ────────────────────────────────────────────────────────────── */
+
+.main-hero {
+	position: relative;
+	height: 760px;
+	overflow: hidden;
+	background: #1a1a1a;
+	color: #fff;
+}
+
+/* 좌우 레이어 */
+.main-hero .mh-layer {
+	position: absolute; inset: 0;
+	background-size: cover; background-position: center;
+}
+.main-hero .mh-layer-old {
+	background-image: url('../../mokdong-assets/images/main/cover-history.jpg');
+	filter: sepia(0.35) contrast(0.95) brightness(0.6);
+}
+.main-hero .mh-layer-new {
+	background-image: url('../../mokdong-assets/images/main/cover-present.jpg');
+	clip-path: polygon(55% 0, 100% 0, 100% 100%, 45% 100%);
+	filter: brightness(0.65) saturate(0.85);
+}
+
+/* 좌우 양 끝 vignette */
+.main-hero::before {
+	content: ""; position: absolute; inset: 0; z-index: 2;
+	background:
+		linear-gradient(to right,
+			rgba(20,22,25,0.55) 0%,
+			rgba(20,22,25,0.25) 45%,
+			rgba(20,22,25,0.25) 55%,
+			rgba(20,22,25,0.55) 100%);
+	pointer-events: none;
+}
+/* 가운데 라이트 라인 */
+.main-hero::after {
+	content: "";
+	position: absolute; left: 50%; top: 0; bottom: 0;
+	width: 2px;
+	background: linear-gradient(to bottom,
+		transparent,
+		rgba(255,255,255,0.4) 20%,
+		rgba(255,255,255,0.4) 80%,
+		transparent);
+	z-index: 3;
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+
+/* 본문 컨테이너 */
+.main-hero .mh-content {
+	position: relative; z-index: 4;
+	height: 100%;
+	display: flex; flex-direction: column;
+	justify-content: center; align-items: center;
+	color: #fff; text-align: center;
+	padding: 120px 24px 80px; /* top padding 으로 fixed header(120px) 클리어 */
+}
+.main-hero .mh-eyebrow {
+	font-size: 13px; letter-spacing: 0.35em; font-weight: 600;
+	margin-bottom: 24px;
+	color: rgba(255,255,255,0.85);
+}
+.main-hero .mh-title {
+	font-size: clamp(38px, 5.5vw, 72px);
+	font-weight: 800;
+	letter-spacing: -0.03em;
+	line-height: 1.2;
+	margin: 0 0 20px;
+	text-shadow: 0 4px 24px rgba(0,0,0,0.5);
+}
+.main-hero .mh-sub {
+	font-size: 17px; font-weight: 400; line-height: 1.7;
+	max-width: 640px;
+	margin: 0 0 36px;
+	color: rgba(255,255,255,0.92);
+}
+
+/* 검색 바 */
+.main-hero .mh-search {
+	display: flex;
+	background: #fff; border-radius: 999px;
+	padding: 6px 6px 6px 26px;
+	width: clamp(320px, 60vw, 580px);
+	box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+}
+.main-hero .mh-search input {
+	flex: 1; border: 0; outline: none;
+	font-size: 16px;
+	padding: 14px 8px;
+	background: transparent;
+	font-family: inherit;
+	color: #2A2D30;
+}
+.main-hero .mh-search input::placeholder { color: #a0a0a0; }
+.main-hero .mh-search button {
+	border: 0; cursor: pointer;
+	width: 54px; height: 54px;
+	border-radius: 50%;
+	background: #4F5358; color: #fff;
+	font-size: 18px;
+	display: flex; align-items: center; justify-content: center;
+	transition: background .2s, transform .2s;
+}
+.main-hero .mh-search button:hover {
+	background: #3B3E42;
+	transform: scale(1.05);
+}
+
+/* 좌우 연도 라벨 */
+.main-hero .mh-labels {
+	position: absolute; bottom: 36px;
+	left: 0; right: 0;
+	display: flex; justify-content: space-between;
+	padding: 0 64px;
+	z-index: 5;
+	color: rgba(255,255,255,0.88);
+	font-size: 13px; letter-spacing: 0.2em;
+	pointer-events: none;
+}
+.main-hero .mh-labels .mh-label {
+	display: flex; flex-direction: column; gap: 2px;
+	font-weight: 600;
+}
+.main-hero .mh-labels .mh-label .year {
+	font-size: 24px; font-weight: 800; letter-spacing: -0.01em;
+	color: #fff;
+}
+.main-hero .mh-labels .mh-label.right { text-align: right; }
+
+/* 살짝 떠오르는 진입 애니메이션 */
+.main-hero .mh-content > * {
+	opacity: 0;
+	transform: translateY(14px);
+	animation: mh-rise .9s ease-out forwards;
+}
+.main-hero .mh-content > *:nth-child(1) { animation-delay: 0.05s; }
+.main-hero .mh-content > *:nth-child(2) { animation-delay: 0.15s; }
+.main-hero .mh-content > *:nth-child(3) { animation-delay: 0.25s; }
+.main-hero .mh-content > *:nth-child(4) { animation-delay: 0.35s; }
+@keyframes mh-rise {
+	to { opacity: 1; transform: translateY(0); }
+}
+
+/* 반응형 */
+@media (max-width: 1500px) {
+	.main-hero { height: 700px; }
+	.main-hero .mh-content { padding-top: 100px; }
+}
+@media (max-width: 999px) {
+	.main-hero { height: 640px; }
+	.main-hero .mh-content { padding-top: 90px; padding-bottom: 60px; }
+	.main-hero .mh-labels { padding: 0 30px; font-size: 11px; }
+	.main-hero .mh-labels .mh-label .year { font-size: 20px; }
+}
+@media (max-width: 720px) {
+	.main-hero { height: 560px; }
+	.main-hero .mh-layer-new { clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%); }
+	.main-hero .mh-content { padding: 80px 18px 60px; }
+	.main-hero .mh-title { font-size: 28px; }
+	.main-hero .mh-sub { font-size: 14px; margin-bottom: 26px; }
+	.main-hero .mh-eyebrow { font-size: 11px; margin-bottom: 18px; }
+	.main-hero .mh-labels { bottom: 18px; padding: 0 18px; }
+	.main-hero .mh-labels .mh-label .year { font-size: 16px; }
+	.main-hero .mh-search input { font-size: 14px; padding: 12px 6px; }
+	.main-hero .mh-search button { width: 46px; height: 46px; }
+}
